@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../schema/tei_Eustacio_tfm_v1.0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transcripción del Cant. U.L. Kk.VI.29</title>
+            <author xml:id="EdT">Eustacio de Tesalónica</author>
+            <respStmt>
+               <resp>Transcripción y anotación en TEI de </resp>
+               <name xml:id="CGB">Carmen García Bueno</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition n="1">
+               <title>Versión electrónica enriquecida con marcado semántico con TEI.</title>
+               <date when="2022">2022</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Proyecto «El vuelo de Hermes»</publisher>
+            <pubPlace>Madrid</pubPlace>
+            <address>
+               <name type="institution">Centro de Ciencias Humanas y Sociales (CCHS)</name>
+               <name type="institution">Consejo Superior de Investigaciones Científicas (CSIC)</name>
+               <street>C/ Albasanz 26-28, despacho 1B5</street>
+               <postCode>28037</postCode>
+               <name type="city">Madrid</name>
+               <name type="country">España</name>
+            </address>
+            <!-- <availability> Indicar tipo de licencia </availability> -->
+            <date when="2022-09-01">septiembre de 2022</date>
+         </publicationStmt>
+         <notesStmt>
+            <note>Transcrito a partir de las fotografías disponibles en el repositorio digital de la Biblioteca de la
+               Universidad de Cambridge.</note>
+         </notesStmt>
+         <sourceDesc>
+            <!-- LISTA DE PERSONAS VARIAS -->
+            <listPerson>
+               <person xml:id="copista_l">
+                  <p>Copista del Cant. U.L. Kk.VI.29.</p>
+               </person>
+            </listPerson>
+            <!-- BIBLIOGRAFÍA -->
+            <listBibl>
+               <biblStruct xml:id="Muller">
+                  <monogr>
+                     <title level="a">Eustathii Commentarii</title>
+                     <title level="m"> Geographi Graeci Minores. E codicibus recognovit, prolegomenis, annotatione,
+                        indicibus instruxit, tabulis aeri incisis illustravit. Volumen secundum </title>
+                     <editor role="text curator">Carolus Müller</editor>
+                     <imprint>
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Firmin Didot</publisher>
+                        <date when="1882">1882</date>
+                        <biblScope>pp. 311-315</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <!-- 
+                    se puede incluir:
+                    <correction method="markup"><p>: explica cómo se han solucionado los errores
+                    <normalization method="markup"><p>: explica si se ha hecho algo con la "pronunciación". Con source y una url se puede indicar qué se ha seguido como norma (OED, RAE...)
+                    <quotation marks="all"><p>: si es una transcripción diplomática y se mantienen las citas originales   
+                -->
+            <interpretation>
+               <p>Cuando aparece un número en forma de cifra se ha optado por utilizar el marcado de abreviatura y
+                  expansión. En la primera etiqueta se incluye la cifra y en la segunda el número en texto. Además, la
+                  cifra está también etiquetada con &lt;num&gt; para indicar que es un numeral griego y dar su valor en
+                  cifras arábigas.</p>
+               <p>Hemos utilizado el atributo @rend de la etiqueta &lt;hi&gt; con el valor <hi rend="italic">sup</hi>
+                  para indicar el texto que está en posición supralineal. Esto no significa que el tamaño de la letra
+                  del texto que se ubica en el interlineado sea más pequeño (lo que entendemos actualmente como
+                  superíndice).</p>
+               <p>Hemos marcado las abreviaturas y su expansión con el juego de etiquetas que ofrece TEI para estos
+                  casos (&lt;choice&gt;, &lt;abbr&gt; y &lt;expan&gt;)</p>
+            </interpretation>
+            <hyphenation>
+               <p>Se mantienen los saltos de línea del original.</p>
+            </hyphenation>
+            <quotation>
+               <p>Las citas directas se han marcado con comillas angulares o españolas («...»). En el texto original no
+                  tienen ningún tipo de marca.</p>
+            </quotation>
+         </editorialDecl>
+         <projectDesc>
+            <p>Texto codificado para la edición crítica del texto de Eustacio que va a realizar el grupo de
+               investigación «El vuelo de Hermes».</p>
+         </projectDesc>
+         <refsDecl>
+            <p>El texto original está dividido en secciones llamadas <hi rend="italic">parécbolas</hi>. En algunos
+               manuscritos se incluye el o los versos a los que hace referencia del poema original de Dionisio
+               Periegeta. Este valor (el número de verso(s)) es el que se ha tomado para identificar cada parécbola, de
+               ahí que sean números alternos. En los manuscritos las parécbolas no están numeradas. Se identifican (no
+               siempre) porque el copista deja delante del comienzo de cada una un espacio en blanco o utiliza una tinta
+               distintiva para la primera letra.</p>
+            <p>La numeración de líneas por página es nuestra.</p>
+         </refsDecl>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="grc">Griego clásico</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="Dik12218_surf_f108v" corresp="#Dik12218_f108v">
+         <graphic url="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00224.jp2/full/full/0/default.jpg"
+            width="3794px" height="6186px">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik12218_f108v" rend="visible"/>
+      </surface>
+      <surface xml:id="Dik12218_surf_f109r" corresp="#Dik12218_f109r">
+         <graphic url="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00225.jp2/full/full/0/default.jpg"
+            width="3794px" height="6186px">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik12218_f109r" rend="visible" rendition="HotSpot"/>
+      </surface>
+      <surface xml:id="Dik12218_surf_f109v" corresp="#Dik12218_f109v">
+         <graphic url="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00226.jp2/full/full/0/default.jpg"
+            width="3794px" height="6186px">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik12218_f109v" rend="visible" rendition="HotSpot"/>
+      </surface>
+      <surface xml:id="Dik12218_surf_f110r" corresp="#Dik12218_f110r">
+         <graphic url="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00227.jp2/full/full/0/default.jpg"
+            width="3794px" height="6186px">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik12218_f110r" rend="visible" rendition="HotSpot"/>
+      </surface>
+      <surface xml:id="Dik12218_surf_f110v" corresp="#Dik12218_f110v">
+         <graphic url="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00228.jp2/full/full/0/default.jpg"
+            width="3794px" height="6186px">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik12218_f110v" rend="visible" rendition="HotSpot"/>
+      </surface>
+      <surface xml:id="Dik12218_surf_f111r" corresp="#Dik12218_f111r">
+         <graphic url="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00229.jp2/full/full/0/default.jpg"
+            width="3794px" height="6186px">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik12218_f108v" rend="visible" rendition="HotSpot"/>
+      </surface>
+      <surface xml:id="Dik12218_surf_f111v" corresp="#Dik12218_f111v">
+         <graphic url="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00230.jp2/full/full/0/default.jpg"
+            width="3794px" height="6186px">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik12218_f111v" rend="visible" rendition="HotSpot"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div n="de l" type="Transcripción" xml:id="Dik12218_transcr">
+            <pb n="Cant. U.L. Kk.VI.29, f. 108v"
+               facs="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00224.jp2/full/full/0/default.jpg"
+               xml:id="Dik12218_f108v"/>
+            <p xml:lang="grc"><lb n="1"/>(<seg>§ <num type="cardinal" value="503">503</num></seg>) ἡ Ἄιγινα· τοῦ Μυρτώου
+               ἤδη αὐτὴ πελάγους οὖσα, ὡς καὶ τὰ Κύ-<lb n="&#8195;"/> θηρα· καὶ ἡ Καλαυρία· καὶ ὴ Σαλαμὶν· ἔχειν φασὶ
+               καὶ ἱερὸν Πο-<lb n="&#8195;"/> σειδῶνος ἄσυλον, τὴν Καλαυρίαν ταύτην νῆσον· διὸ καὶ <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὸν</ex></expan>
+               </choice><choice>
+                  <abbr>Δημοσθέν<am>¤</am></abbr>
+                  <expan>Δημοσθέν<ex>ην</ex></expan>
+               </choice><lb n="&#8195;"/> ἐκεῖ φυγόντα, σταλεὶς ὁ Ἀρχίας ὑπ᾽ Ἀντιπάτρου οὐκ ἐβίασατο, ἀλλὰ<lb n="5"/>
+               πείσειν ἐπειράθη· εἰ καὶ μὴ ἐπείσθη ἐκεῖνος, ἀλλὰ τοῦ ζῆν ἑκὼν ἑαυτὸν<lb n="&#8195;"/> παρέλυσεν.
+               Ἠλλάξατο δὲ, φάσιν, ὁ Ποσειδῶν τὴν Καλαυρίαν ταύτην<lb n="&#8195;"/> πρὸς τὴν Λητὼ, ἀντιδοὺς τὴν Δῆλον,
+               ὥσπερ καὶ τὴν Πυθὼ ἀντιδοὺς<lb n="&#8195;"/> ἔσχε τὸ Ταίναρον. Ὅθεν καὶ λόγος παροιμιώδης ἐπὶ τῶν ἶσα
+                  ἀνθαι-<lb n="&#8195;"/> ρουμένων καὶ ἀντικαταλλασσόντων ὡς αὐτοῖς βουλητὸν, Ἶσον τοι<lb n="10"/> Δῆλον
+               τὲ Καλαυρίαν τὲ νέμεσθαι, Πυθώ τ᾽ ἠγαγέην καὶ Ταίναρ<hi rend="sup">ον</hi> τ᾽<lb n="&#8195;"/> ἠνεμόεντα.
+               Τῇ δὲ Καρπάθῳ λυμῄνασθαί ποτὲ φησι τοὺς<lb n="&#8195;"/> λαγωούς· κακὸν γενομένους ἐπακτὸν ἔξοθεν, ὡς καὶ
+               ἡ παροιμί<hi rend="sup">α</hi>,<lb n="&#8195;"/> δηλοῖ ἡ λέγουσα, ὡς καρπάθιος τὸν λαγών. Κρήτης δὲ
+               πόλεις μέ-<lb n="&#8195;"/> γισται, καθὰ καὶ προγέγραπται, Γόρτυνα, Κυδωνία, καὶ Κνηωσσ<hi rend="sup"
+                  >ὸς</hi>,<lb n="15"/> βασίλειον Μίνως, ἥτις καὶ Κέρατος ἐκαλεῖτο, ὁμωνυμοῦσα<lb n="&#8195;"/> ποταμῷ
+               τινι παραρρέοντι· Μίνως δὲ πρῶτος τὴν νῆσον ἐξη-<lb n="&#8195;"/> μέρωσε νόμοις καὶ πολιτεῖαις καὶ πόλεων
+               συνοικισμῷ. Εἴρηκε <hi rend="sup">δὲ</hi><lb n="&#8195;"/> περὶ αὐτῆς καὶ Ὅμηρος ἐν Ὀδυσσείᾳ· καὶ
+               γέγραπται ἐκεῖ ὅσα ἔδει.<lb n="&#8195;"/> Ἰστέον δὲ ὅτι ἀντὶ τοῦ εἰπεῖν βορειότεραι νῆσοι Κρήτης,
+                  βορειότεραι<lb n="20"/> Ἀμνισοῦ εἶπεν ὁ Περιηγητὴς, ἀπὸ μέρους δηλώσας τὸ ὅλον. Μέρος γ<hi rend="sup"
+                  >ά</hi>ρ<lb n="&#8195;"/> τι Κρήτης ὁ Ἀμνισὸς, ἔνθα καὶ σπήλαιον Εἰλειθείας, ὡς ἐν Ὀδυσσείᾳ<lb
+                  n="&#8195;"/> ὁ Ποιητὴς ἱστορεῖ. (<seg>§ <num type="cardinal" value="504">504</num>-<num
+                     type="cardinal" value="507">507</num></seg>) <hi rend="red_ink">Ὅ</hi>τι ἀντικρὺ τῆς Αἰγυπτίας
+               πέζης, <choice>
+                  <abbr>ἤ<am>¤</am></abbr>
+                  <expan>ἤ<ex>γουν</ex></expan>
+               </choice> τῆς τοῦ<lb n="&#8195;"/> Δέλτα βορείας κρηπῖδος, <choice>
+                  <abbr>ἤ<am>¤</am></abbr>
+                  <expan>ἤ<ex>γουν</ex></expan>
+               </choice> στάσεως ἢ βάσεως, ἡ Ῥόδος κεῖται,<lb n="&#8195;"/> ἧς ὁ κύκλος σταδίων ἐστί <choice>
+                  <abbr><num type="numGro" value="920">ϡκ᾽</num></abbr>
+                  <expan>ἐννεακοσίων εἴκοσι</expan>
+               </choice>. Περὶ ἣν πόλις Λίνδος, ἡ καὶ μέχρι<lb n="&#8195;"/>
+            </p>
+            <pb n="Cant. U.L. Kk.VI.29, f. 109r"
+               facs="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00225.jp2/full/full/0/default.jpg"
+               xml:id="Dik12218_f109r"/>
+            <p xml:lang="grc"><lb n="1"/> νῦν περιᾳδομένη, ἀφ᾽ ἧς πλοῖα Λινδικά, ἔτι καὶ Ἰηλυσσὸς, καὶ<lb n="&#8195;"/>
+               Κάμιρος διὰ τοῦ ι γραφομένη πρὸς ἀντιδιαστολὴν τοῦ κυρίου·<lb n="&#8195;"/> ὁ γὰρ Κάμειρος τὸ κύριον, διὰ <choice>
+                  <abbr>δφ</abbr>
+                  <expan>διφθόγγ<hi rend="sup"><ex>ου</ex></hi></expan>
+               </choice>
+               <choice>
+                  <abbr>γρ</abbr>
+                  <expan>γράφετ<hi rend="sup">αι</hi></expan>
+               </choice>. Μεθ᾽ ἣν πρὸς ἀνατολὰς ἐν ἀρχῇ<lb n="&#8195;"/> τῆς τῶν Παμφ<add hand="#copista_l">υ</add>λίων
+               παραλίας, ἔνδον τῆς τῶν Πατάρων μεγάλης<lb n="5"/> ἄκρας, αἱ Χελιδόνιαι τρεῖς νῆσοι κεῖνται, πάρισοι τὸ
+               μέγεθος· διέ-<lb n="&#8195;"/> χουσαι ἀλλήλων, ὅσον πέντε σταδίους, τῆς δὲ γῆς ἀφεστηκυῖας, ἑξα-<lb
+                  n="&#8195;"/> στάδιον. Ἀφ᾽ ὧν οἴονταί τινες ἄρχεσθαι τὸ ᾀδόμενον ὄρος <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὸν</ex></expan>
+               </choice> Ταῦρ<hi rend="sup">ον</hi>,<lb n="&#8195;"/> ἀρχόμενον τῇ ἀληθείᾳ ἀπὸ τῆς τῶν Ῥοδίων περαίας.
+               Ἰστέον δὲ<lb n="&#8195;"/> ὅτι Ἡρωδιανὸς ἐν τῇ καθόλου προσῳδίᾳ, Χιλιδονιαὶ ἀναγινώσκ<hi rend="sup"
+                  >ει</hi><lb n="10"/> ὀξυτόνως, ὡς πυρκαϊαί. Πάταρα δὲ κτίσμα Πατάρου, πόλις<lb n="&#8195;"/> μεγάλη,
+               περὶ ἧς προεγράφη πλατύτερον. Ἡ Ῥόδος δὲ ἄλλα τὲ<lb n="&#8195;"/> ἔσχε θαυμαστὰ καὶ τὸν τοῦ Ἡλίου
+               κολοσσόν, Χάρητος ἔργον, ἀνδρ<hi rend="sup">ὸς</hi><lb n="&#8195;"/> λινδίου, πηχέων ἑβδομήκοντα· καὶ ἦν
+               καὶ αὐτὸς ἓν τῶν ἑπτὰ<lb n="&#8195;"/> θεαμάτων, ὃς ἔπεσε σεισμῷ κλασθεὶς ἀπὸ τῶν γονάτων. Πολλὰ δὲ<lb
+                  n="15"/> καὶ ἄλλα εἴχων ἡ Ῥόδος ἀγάλματα, ὧν τὸ τεχνικὸν καὶ μικροῦ δεῖν ἔμ-<lb n="&#8195;"/> ψυχον
+               αἰνιττόμενοι οἱ τεχνίται ἀλύσεσιν ἐδέσμουν αὐτὰ, μὴ<lb n="&#8195;"/> καὶ λάθοιεν τάχα κινηθέντα
+               μεταστῆναί που ἀλλαχοῦ. Εἰ δὲ<lb n="&#8195;"/> χρῆ τὴν νῆσον ταύτην οὐ μέσον τῷ μέγιστῳ κολοσσῷ σεμνύναι,
+                  ἀλλὰ<lb n="&#8195;"/> καὶ σμικροτάτῳ τινί ἐπᾶραι ἀναθήματι· ἐκεῖ καὶ ὁ καλὸς πέρδιξ ἦν,<lb n="20"/> τὸ
+               τοῦ Πρωτογένους ὑμνούμενον πάρεργον. Διὰ δὲ τὸν ἀνωτέρω ῥη-<lb n="&#8195;"/> θέντα μέγαν κολοσσόν καὶ
+               Κολασαεῖς ὡς ἐκ μεγάλου παρασήμου<lb n="&#8195;"/> ἐκαλοῦντο οἱ Ῥόδιοι. Λέγεται δὲ καὶ ναύσταθμα ἔχειν ἡ
+                  Ῥόδος<lb n="&#8195;"/> κρυπτὰ καὶ ἀπόρρητα τοῖς πολλοῖς, καὶ τῷ κατοπτεύσαντι αὐτὰ, θά-<lb n="&#8195;"
+               /> νατον εἶναι τὴν ζημίαν. Ἐκλήθη δέ ποτε, φασὶν, Ὀφιοῦσσα· εἶτα<lb n="&#8195;"/>
+            </p>
+            <pb n="Cant. U.L. Kk.VI.29, f. 109v"
+               facs="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00226.jp2/full/full/0/default.jpg"
+               xml:id="Dik12218_f109v"/>
+            <p xml:lang="grc"><lb n="1"/> Τελχινὶς, διὰ τοὺς ἐκ Κρήτης Τελχῖνας οἰκῆσαντας ἐκεῖ, ἄνδρας<lb n="&#8195;"/>
+               γόητας καὶ βασκάνους. Καίτοι τινὲς μάτην δυσφημηθῆναι τούτους<lb n="&#8195;"/> φασί· βασκανθῆναι γὰρ
+               μᾶλλον ὑπὸ τῶν ἀντιτέχνων αὐτοὺς, ἀρίστους<lb n="&#8195;"/> ὑπάρξαντας ἐργάτας χαλκοῦ καὶ σιδήρου, οἳ καὶ
+               τὴν ἅρπην τῷ<lb n="5"/> Κρόνῳ ἐδημιούργησαν. Ὁ δὲ Γεωγράφος φησὶ καὶ ὅτι πλεύσαντ<hi rend="sup"
+                  >ες</hi><lb n="&#8195;"/> οἱ Ῥόδιοι μέχρι Ἰβηρίας, ἔκτισαν ἐκεῖ πόλιν Ῥόδον. (<seg>§ <num
+                     type="cardinal" value="508">508</num>-<num type="cardinal" value="509">509</num></seg>) <hi
+                  rend="red_ink">Ὅ</hi>τι ἡ Κύρπ<hi rend="sup">ος</hi><lb n="&#8195;"/> οὑδεμῖας νήσου λειπομένη τῇ
+               ἀρετῇ τῇ Παμφυλίῳ καὶ Ἰσσικῷ<lb n="&#8195;"/> κλύζεται κόλπῳ, ἧς οὐδεμία ἔτι ἀνατολικωτέρα νῆσός ἐστι.<lb
+                  n="&#8195;"/> Λέγει δὲ αὐτὴν Ἀφροδίτης ἄστυ ἐπήρατον, ὡς καὶ τὴν Σαμοθράκ<hi rend="sup">ην</hi><lb
+                  n="10"/> Κορυβάντιον ἄστυ, μικροπρεπῶς μὲν, οὐ γὰρ μεγαλόφωνον τὸ<lb n="&#8195;"/> τὴν τοσαύτην νῆσον
+               εἰπεῖν ἄστυ, ἀκολούθως δ᾽οὖν τῷ μύθῳ, διὰ<lb n="&#8195;"/> τὴν ἐκεῖ τῆς Ἀφροδίτης μάλιστα διατριβήν.
+               Ἄθυρμα γὰρ ἦν ἡ νῆσ<hi rend="sup">ος</hi><lb n="&#8195;"/> τῇ δαίμονι, ἀφ᾽ ἧς καὶ Κύπρις παρωνόμασται·
+               τοῦτο δὲ διὰ τὴν τῶν<lb n="&#8195;"/> ἐκεῖ μαχλοσύνην καὶ τὸ ἐπαφρόδιτον. Τινὲς δέ φασι Κύπρον κλη-<lb
+                  n="15"/> θῆναι αὐτὴν ἀπὸ Κύπρου υἱοῦ Κινήρου, ἢ ἀπὸ ἄνθους ἐκεῖ πολλὰ φυο-<lb n="&#8195;"/> μένου,
+               κύπρου καλουμένου. Οἱ δὲ Κρύπτον ποτὲ κληθῆναι αὐτὴν<lb n="&#8195;"/> λέγουσι, διὰ τὸ κεκρύφθαι ὑπὸ
+               θαλάσσης· ὅπερ καὶ περὶ Δήλου μυ-<lb n="&#8195;"/> θεύεται, καὶ περὶ Ῥόδου δὲ κατὰ Πίνδαρον. Ὅτι δὲ καὶ
+               Σφήκεια ἐ-<lb n="&#8195;"/> κλήθη ποτὲ καὶ Κεραστία, ὁ Λυκόφρων δηλοῖ. Ὀλβιώτατοι δὲ<lb n="20"/> νησιωτῶν
+               οἱ Κύπριοι. Λέγονται δέ ποτε θαλαττοκρατῆσαι καιρόν<lb n="&#8195;"/> τινα καὶ αὐτοί. Κύκλος δὲ τῆς νήσου
+               σταδίων <choice>
+                  <abbr><num type="numGro" value="3420">,γυκ᾽</num></abbr>
+                  <expan>τρισχίλια τετρακόσια εἴκοσιν</expan>
+               </choice> τοῖς κατα-<lb n="&#8195;"/> κολπίζουσι. Πολλαχοῦ δὲ καὶ ἰσθμοὺς ποιεῖ, διὰ τὸ τοῦ σχήματος
+                  ἑτ<hi rend="sup">ε</hi>ρό-<lb n="&#8195;"/> μηκες· (<seg>§ <num type="cardinal" value="511"
+                     >511</num>-<num type="cardinal" value="512">512</num></seg>) <hi rend="red_ink">Ὅ</hi>τι πρόσθεν
+               Σουνίαδος κορυφῆς, ἐφύπερθεν ἢ<lb n="&#8195;"/> ὑπένερθεν τῶν Ἀβάντων, φαίνεται Σαλαμίς τε καὶ Αἴγινα.
+               Δεῖ δὲ<lb n="&#8195;"/>
+            </p>
+            <pb n="Cant. U.L. Kk.VI.29, f. 110r"
+               facs="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00227.jp2/full/full/0/default.jpg"
+               xml:id="Dik12218_f110r"/>
+            <p xml:lang="grc"><lb n="1"/> εἰδέναι ὅτι ταὐτὸν ἐνταῦθα δηλοῖ καὶ τὸ ἐφύπερθεν Ἀβάντων καὶ<lb n="&#8195;"/>
+               τὸ ὑπένερθεν, ἵνα λέγῃ δι᾽ ἀμφοῖν τὸ νοτιώτερον· ὅπερ εἰ καὶ ὑπέ-<lb n="&#8195;"/> νερθέν ἐστι, διὰ τὸ
+               καθ᾽ ἡμᾶς βόρειον ὕψος, ἀλλὰ κατὰ τὴν τοῦ Περιητοῦ<lb n="&#8195;"/> συνήθειαν ὕπερθέν ἐστιν, ὡς τιθέντος
+               ἐπὶ τῶν νοτίων τὴν ὑπερ πρόθεσιν.<lb n="5"/> Ἀκρωτήριον δὲ ἀδόμενον Ἀττικῆς καὶ Εὐβοῖας τὸ Σούνιον.
+                  Περὶ<lb n="&#8195;"/> ἣν Εὔβοιάν εἰσιν οἱ Ἄβαντες, περὶ ὧν ἐροῦμεν μετὰ ὀλίγα. Ἡ δὲ<lb n="&#8195;"/>
+               Σαλαμὶς πρώτη ἐν τῷ Σαρωνικῷ πελάγει, πρὸς ἀνατολὴν Κορίν<hi rend="sup">θου</hi>.<lb n="&#8195;"/> Καὶ
+               μετ᾽ αὐτὴν ἡ Αἴγινα, ἣν ἐν πολλοῖς καὶ ὁ Πίνδαρος ἐξυμνεῖ. Περὶ<lb n="&#8195;"/> ἧς καὶ τοιαῦτα
+               γράφονται· Νῆσος πρὸ τῆς Ἐπιδαυρίας ἡ Αἴγινα ἐνδο-<lb n="10"/> ξότατε, κύκλου σταδίων <choice>
+                  <abbr><num type="numGro" value="180">ρπ᾽</num></abbr>
+                  <expan>ἑκατὸν ὀγδοήκοντα</expan>
+               </choice>, κλυζομένη τῷ τε Κρητικῷ πελάγει,<lb n="&#8195;"/> καὶ τῷ Μυρτώῳ, τῷ μεταξὺ Κρήτης καὶ Ἀργείας
+               καὶ Ἀττικῆς, ἐν βάθει <choice>
+                  <abbr><hi rend="sup">μ</hi><am>¤</am></abbr>
+                  <expan>μ<ex>ὲν</ex></expan>
+               </choice><lb n="&#8195;"/> γεώδης, ἐπιπολῆς δὲ πετρώδης, διὸ καὶ ψιλή ἐστι, κριθοφόρος δὲ ἱκαν<hi
+                  rend="sup">ῶς</hi>,<lb n="&#8195;"/> Οἰνώνη ποτὲ ὀνομαζομένη. Ἐξ αὐτῆς ὁ Αἰακός. Οἱ δὲ ἐν αὐτῇ
+                  πρώτοι<lb n="&#8195;"/> Μυρμιδόνες ἐκλήθησαν, οὐχ ὅτι κατὰ τὸν μῦθον λοιμοῦ τῇ νήσῳ συμ-<lb n="15"/>
+               πεσόντος καὶ τῶν ἐκεῖ ἐκτριβέντων τῇ νόσῳ, οἱ μύρμηκες <choice>
+                  <abbr>ἄνοι</abbr>
+                  <expan>ἄνθροποι</expan>
+               </choice><lb n="&#8195;"/> ἐγένοντο, Αἰακοῦ εὐξαμένου, ἀλλ᾽ ὅτι μυρμήκων δίκην τὴν<lb n="&#8195;"/>
+               ἀγαθὴν γῆν κάτω οὖσαν ὑπορύττοντες ἐπέβαλον ταῖς πέτραις,<lb n="&#8195;"/> ἵνα τὴν μὲν ἔχωσι γεωργεῖν, ἐν
+               δὲ τοῖς ὀρύγμασι κατοικεῖν,<lb n="&#8195;"/> φειδόμενοι τοῦ πλινθοποιεῖν, ἵνα ἔχωσι γῆν. Δωριεῖς δὲ
+                  ἀνέ-<lb n="20"/> καθεν οἱ Αἰγυνῆται ἀπὸ Ἐπιδαύρου κατὰ τὸν Ἡρόδοτον. Ἐκ ταύ<hi rend="sup">της</hi><lb
+                  n="&#8195;"/> τῆς νήσου καὶ ἡ ἀδόμενος Κριὸς, ἀνὴρ γενναῖος ἀθλητής· ὑφ᾽ οὗ<lb n="&#8195;"/>
+               ἀπελαυνόμενος τῆς νήσου ὁ τῶν Λακώνων βασιλεὺς Κλεομένης<lb n="&#8195;"/> καὶ θέλων ἐκφοβῆσαι αὐτὸν ἔφη
+               ἀστείως τὸ ὑμνούμενον, ἤδη<lb n="25"/> καταχάλκου, ὦ κριὲ, τὰ κέρατα, ὡς μεγάλῳ κακῷ <choice>
+                  <abbr>συνοισόμ<am>¤</am></abbr>
+                  <expan>συνοισόμ<ex>εν</ex></expan>
+               </choice><hi rend="sup">ος</hi>.<lb n="&#8195;"/>
+            </p>
+            <pb n="Cant. U.L. Kk.VI.29, f. 110v"
+               facs="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00228.jp2/full/full/0/default.jpg"
+               xml:id="Dik12218_f110v"/>
+            <p xml:lang="grc"><lb n="1"/> Λέγεται δὲ καὶ Σώστρατός τις Αἰγινήτης ἔμπορος μεγάλα<lb n="&#8195;"/> ἐκ
+               φορτίων κερδῆσαι. Καὶ ταῦτα μὲν περὶ Αἰγίνης. Ἡ δὲ Σαλα-<lb n="&#8195;"/> μὶς ἑβδομήκοντα σταδίων ἔχει
+               περίμετρον ἤ ὀδοήκοντα.<lb n="&#8195;"/> Ἐκαλεῖτο δέ ποτε Κυρχεία, ἀπό τινος Κυρχέως, οὗ καὶ <choice>
+                  <abbr>Λυκοφρ<am>¤</am></abbr>
+                  <expan>Λυκοφρ<ex>ών</ex></expan>
+               </choice><lb n="5"/> καὶ Ἀρριανὸς μέμνηται, ὃς ὄφις μὲν ἐπεκλήθη διὰ τραχύτητ<hi rend="sup">α</hi><lb
+                  n="&#8195;"/> τοῦ τόπου, ἀπηλάθη δὲ τῆς νήσου ὑπὸ Εὐρυλόχου. Ὠνομάσθη δὲ<lb n="&#8195;"/> ἡ νήσος αὕτη
+               καὶ Σκιρὰς ἀπό τινος ἥρωος· ἀφ᾽ οὗ καὶ Σκίρα Ἀθηνᾶ<lb n="&#8195;"/> παρ᾽ Ἀθηναίοις, καὶ ὁ μὴν ὁ
+               Σκιροφορίων, καὶ Σκίρα τόπος ἐν Ἀτ-<lb n="&#8195;"/> τικῇ. Εἶχε δὲ καὶ ποταμὸν Βώκαρον, ὡς καὶ Λικόφρων
+                  ἱστορεῖ,<lb n="10"/> ὡς ἂν εἴποι τις Βοκέφαλον· καθὰ καὶ πηγή τις παρὰ τῷ Θεοκρί<hi rend="sup"
+                  >τῳ</hi><lb n="&#8195;"/> Βούρινα Ἰταλική, βοὸς ῥινὶ παρονομαζονμένη. <hi rend="red_ink">Ὅ</hi>τι
+                  δὲ<lb n="&#8195;"/> περὶ Σαλαμῖνα κατεναυμαχήθη ὁ Ξέρξης, καὶ ὅτι ναυτικὸν<lb n="&#8195;"/> ἀξιόλογον
+               ἔσχεν ἡ νῆσος ποτε, οὐδεὶς τῶν περὶ λόγους ἠγνόηκε.<lb n="&#8195;"/> Τὸν δὲ περὶ τὴν Σαλαμῖνα πορθμὸν
+               σταδίον εἶναί φασιν, ὃν<lb n="15"/> ἐπειρᾶτο μὲν ὁ Ξέρξης διαχώσειν καὶ οὕτως ἀποχερσῶσαι, ἀπε-<lb
+                  n="&#8195;"/> ναντίας τι ποιῶν τοῖς τῶν Ἄθων νεανιεύμασι, οὗ τὸν αὐχένα διο-<lb n="&#8195;"/> ρύξας
+               ἀπεθαλάσσωσεν, ἐκωλύθη δὲ φυγῶν·(<seg>§ <num type="cardinal" value="510">510</num></seg>)<hi
+                  rend="red_ink">Ὅ</hi>τι περὶ Φοινί<hi rend="sup">κην</hi><lb n="&#8195;"/> νῆσος ἡ Ἄραδος. Λέγονται δὲ
+               γενέσθαι ποτὲ ἔνδοξοι οἱ Ἀράδιοι,<lb n="&#8195;"/> ὅτε στασιαζόντων τῶν ἀδελφῶν Σελεύκου τοῦ τε
+                  Καλλινίκου<lb n="20"/> καὶ Ἀντιόχου τοῦ Ἱέρακος, αὐτοὶ τῷ Καλλινίκῶ προσθέμενοι ἔλαβ<hi rend="sup"
+                  >ον</hi><lb n="&#8195;"/> ἐξουσίαν δέχεσθαι τοὺς καταφεύγοντας ἐκ τοῦ βασιλέως παρ᾽ αὐτ<hi rend="sup"
+                  >οὺς</hi>,<lb n="&#8195;"/> καὶ μὴ διδόναι ἄκοντας· μὴ μέντοι μηδὲ ἐκπλέειν ἐξ αὐτῶν τοὺς<lb
+                  n="&#8195;"/> πρόσφυγας ἄνευ τοῦ ἐπιτρέψαι τὸν βασιλέα. Ἔστι δὲ καὶ ἑτέρα<lb n="&#8195;"/> νῆσος
+               Ἄραδος, ὡς ῥηθήσεται κατωτέρω·(<seg>§ <num type="cardinal" value="513">513</num>-<num type="cardinal"
+                     value="516">516</num></seg>)<hi rend="red_ink"> Ὅ</hi>τι τὸ Αἰγαῖον πέλαγ<hi rend="sup">ος</hi><lb
+                  n="&#8195;"/>
+            </p>
+            <pb n="Cant. U.L. Kk.VI.29, f. 111r"
+               facs="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00229.jp2/full/full/0/default.jpg"
+               xml:id="Dik12218_f111r"/>
+            <p xml:lang="grc"><lb n="1"/> ἀπειρεσίας λέγειν ἔχει νήσους, καὶ ὅτι θυητὸν βαθὺν πόρον τὸν τοῦ<lb
+                  n="&#8195;"/> Αἰγαίου καλεῖ. Καὶ ὅτι τὸν Ἑλλήσποντον παραφράζων ἢ περιφρά-<lb n="&#8195;"/> ζων ἢ
+               ἐτυμολογῶν στενοπὸν ὕδωρ Ἀθαμαντίδος Ἕλλης λέγει <choice>
+                  <abbr>αὐτ<am>¤</am></abbr>
+                  <expan>αὐτ<ex>ον</ex></expan>
+               </choice>,<lb n="&#8195;"/> ὡς ἐκεῖ καταπεσούσης τῆς Ἕλλης τῆς θυγατρὸς τοῦ Ἀθάμαντος,<lb n="5"/> καὶ
+               λιπούσης τῷ τόπῳ τὸ ὄνομα, ἧς καὶ τάφον ὁ Ἡρόδοτος ἱστο-<lb n="&#8195;"/> ρεῖ περὶ τὴν θρᾳκικὴν
+               Χερρόνησον. Ὁ δὲ Διονύσιος λέγει καὶ ὅτι<lb n="&#8195;"/> Σηστὸς ἐκεῖ καὶ Ἄβυδος ἐναντίον ὅρμον ἔθεντο·
+               Σηστὸς μὲν, Λεσ-<lb n="&#8195;"/> βίων ἄποικος, καθὰ καὶ ἡ Μάδυτος, ὡς ὁ Γεογράφος φησὶ, Χερ-<lb
+                  n="&#8195;"/> ρονησία πόλις, Ἀβύδου διέχουσα σταδίους τριάκοντα ἐκ<lb n="10"/> λιμένος εἰς λιμένα.
+               Ἔνθα καὶ ἡ λεγομένη Ἀποβάθρα, ὅπου ἡ<lb n="&#8195;"/> Ξερξικὴ σχεδία ἐπήγνωτο. Περὶ Εὐρώπην δέ ἐστιν ἡ
+               ῥηθεῖσα πόλις,<lb n="&#8195;"/> λεγομένη Ἀττικῶς μὲν ἡ Σηστός, παρὰ δ᾽ Ἐφόρῳ δὲ ὁ Σηστός. Ἔσχε δέ<lb
+                  n="&#8195;"/> ποτε τεῖχος ἰσχυρὸν, ὡς Ἡρόδοτος ἱστορεῖ. Ἄβυδος δὲ πρὸς ἀνατολ<hi rend="sup"
+                  >άς</hi>,<lb n="&#8195;"/> ἀντριπαρήκουσα τῷ Σηστῷ, κτίσμα Μιλησίων, ἴσον διέχουσα<lb n="15"/>
+               Λαμψάκου καὶ Ἰλίου, ὡς ὁ Γεογράφος φησίν· ἔνθα τὸ ἑπτὰ στά-<lb n="&#8195;"/> διον τοῦ πορθμοῦ, ὅπερ ὁ
+               Ξέρξης ἔζευξεν. Ἐνεπρήσθη δὲ καὶ ἡ<lb n="&#8195;"/> Ἄβυδος αὕτη ὑπὸ Δαρείου τοῦ <choice>
+                  <abbr>πρς</abbr>
+                  <expan>πατρὸς</expan>
+               </choice> Ξέρξου. Εἶναι δὲ λέγεται πο<hi rend="sup">τε</hi><lb n="&#8195;"/> καὶ Λιβυκὴ Ἄβυδος Αἰγυπτία,
+               ἔχουσα Μεμνόνειον βασίλειον,<lb n="&#8195;"/> δευτερεύουσα μετὰ τὰς ἑκατομπύλους Θήβας. Καὶ Ἰταλικὴ δὲ<lb
+                  n="20"/> ἱστορεῖται Ἄβυδος. Ὅτι δὲ περὶ τοῦ Ἑλλησπόντου ἀμφεβλήθη<lb n="&#8195;"/> τοῖς παλαιοῖς ἄλλα
+               τὲ καὶ πόθεν ἄρχοιτο, ἤδη προγέγραπται.<lb n="&#8195;"/> Ἴστρον δέ τινά φασιν ἱστορεῖν, τέσσαρας γενέσθαι
+               μεγάλους κατα-<lb n="&#8195;"/> κλυσμοὺς, ὧν ἐφ᾽ ἑνὶ διαρραγέντα τὸν Ἑλλήσποντον ἀφορίσαι τ<hi rend="sup"
+                  >ῆς</hi><lb n="&#8195;"/> Ἀσίας τὴν Εὐρώπην. Ἰστέον δὲ ὅτι κατὰ τὸν γράψαντα τὰ Ἐθνικὰ,<lb n="&#8195;"
+               />
+            </p>
+            <pb n="Cant. U.L. Kk.VI.29, f. 111v"
+               facs="https://images.lib.cam.ac.uk/iiif/MS-KK-00006-00029-000-00230.jp2/full/full/0/default.jpg"
+               xml:id="Dik12218_f111v"/>
+            <p xml:lang="grc"><lb n="1"/> καὶ Ἰταλικὴ πόλις λέγεται οὐδετέρως τὸ Ἄβυδον, καὶ ὅτι ἐπὶ συκο-<lb
+                  n="&#8195;"/> φαντίᾳ καὶ μαλακίᾳ διεβάλλοντο οἱ Μιλήσιοι Ἀβυδηνοὶ οὗτοι.<lb n="&#8195;"/> Ὅθεν καὶ
+               παροιμία, μήδ᾽ εἰκῆ τὴν Ἄβυδον πατεῖν, <choice>
+                  <abbr>ἠ<am>¤</am></abbr>
+                  <expan>ἠ<ex>γοῦν</ex></expan>
+               </choice> μὴ θαρρούντως<lb n="&#8195;"/> αὐτῆς ἐπιβαίνειν. Ἐξ αὐτῆς δὲ καὶ ἑτέρα παροιμία ἐπὶ τῶν
+                  Ἀβυδην<hi rend="sup">ῶν</hi>,<lb n="5"/> τὸ Ἀβυδηνὸν ἐπιφόρημα. Τὸ δὲ ἐναντίον ὅρμον ἔθεντο, ἀντὶ
+                  τοῦ<lb n="&#8195;"/> κατεναντία κεῖνται ἀλλήλαις καὶ ἀντίπορθμοί εἰσιν·(<seg>§ <num type="cardinal"
+                     value="517">517</num>-<num type="cardinal" value="524">524</num></seg>)<hi rend="red_ink">Ὅ</hi>τι
+                  τῶν<lb n="&#8195;"/> ἐν τῷ Αἰγαίῳ νήσων ὅσαι ὑπὸ νεύματι χειρὸς λαιᾶς κεῖνται τοῖς εἰσι-<lb
+                  n="&#8195;"/> οῦσι τὸν Ἑλλήσποντον, τοῖς Εὐρωπαίοις εἰσίν· ὧν ἐστὶ καὶ ἡ Μάκρις<lb n="&#8195;"/> καὶ ἡ
+               Σκύρος καὶ ἡ Πεπάριθος καὶ ἡ Λῆμνος, ἥτις Ἥφαιστον ἐ-<lb n="10"/> τίμα, καὶ Ἴμβρος καὶ Σάμος θρᾳκία, ἥτις
+               Καβεὶρων εἶχεν ἱερ<hi rend="sup">ά</hi>,<lb n="&#8195;"/> οἳ καὶ Κορύβαντες ἐλέγοντο, καὶ Θάσος, ἥτις καὶ
+               χρυσία εἶχέ<lb n="&#8195;"/> ποτε, καὶ τὸ Δάτον συνῴκισε, πόλιν ἔνδοξον περὶ τὴν τοῦ Στρυμόν<hi
+                  rend="sup">ος</hi><lb n="&#8195;"/> παραλίαν. Ἀφ᾽ οὗ παροιμίαν οἱ παλαιοί φασι Δάτος ἀγαθῶν,<lb
+                  n="&#8195;"/> ὡς τὸ ἀγαθῶν ἀγαθῖδες. Καὶ σκόπει ἐνταῦθα τὴν παροιμίαν,<lb n="15"/> τὸ ἀγαθῶν ἀγαθῖδες.
+               Εἰ γὰρ καὶ ἄλλως αὐτὴν οἱ πολλοὶ ἐκλαμβά-<lb n="&#8195;"/> νονται, ἀλλ᾽ ἔοικε τοπικόν τι εἶναι ἡ ἀγαθὶς,
+               διὸ καὶ εἰς ὁμοιότητ<hi rend="sup">α</hi><lb n="&#8195;"/> παρετάθη τοῦ Δάτος ἀγαθῶν, ἵνα ὥσπερ λέγεται
+                  Δάτος<lb n="&#8195;"/> ἀγαθῶν οἷος τόπος καὶ πόλις, οὕτω λέγηται καὶ ἀγαθῖδες<lb n="&#8195;"/> ἀγαθῶν.
+               Εἰ γὰρ μὴ τοῦτο, ποία λοιπὸν ἄλλη ὁμοιότης τῶν δύο<lb n="20"/> τούτων παροιμιῶν: Ἰστέον δὲ ὅτι Παρίων
+               κτίσμα ἡ Θάσος·<lb n="&#8195;"/> τὸ Πάριον δὲ πόλις ἐν τῇ Προποντίδι. Ὁ δὲ Ἀρριανὸς ἄλλως φησί·<lb
+                  n="&#8195;"/> Πάριος υἱὸς Ἰασιόνος, ᾧ ἐπώνυμον τὸ <del rend="tachado" hand="copista_l">ἐπώνυ</del> ἐν
+               Ἑλλησπόντῳ Πά-<lb n="&#8195;"/> ριον ὡς οἰκιστῆ· καὶ οὐ διαφωνεῖ Ἀρριανὸς πρὸς τὸν πρῶτον λόγον,<lb
+                  n="&#8195;"/> ἀλλὰ τάχα ταυτότητά τινα παραδηλοῖ, ὡς ἐν πολυωνυμί<hi rend="sup">ᾳ</hi><lb n="&#8195;"
+               />
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

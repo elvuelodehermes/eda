@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="schema/tei_Eustacio_tfm_v1.0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Fuentes utilizadas por Eustacio de Tesalónica para su Comentario a la
+                    «Descripción del mundo conocido» de Dionisio Periegeta.</title>
+                <title type="sub">Parécbolas 504-516.</title>
+                <author xml:id="EdT">Eustacio de Tesalónica</author>
+                <editor role="editor" xml:id="KM">Karl Müller</editor>
+                <respStmt>
+                    <resp>Transcripción, anotación en TEI, modelado de datos y etiquetado de lugares
+                        y revisión de </resp>
+                    <name xml:id="CGB">Carmen García Bueno</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Transcripción, correcciones, traducción al castellano y modelado de datos
+                        para el etiquetado de lugares de </resp>
+                    <name xml:id="IPM">Inmaculada Pérez Martín</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Correcciones y aparato de fuentes de</resp>
+                    <name xml:id="PCS">Paula Caballero Sánchez</name>
+                </respStmt>
+                <sponsor>Proyecto «El vuelo de Hermes» (CSIC)</sponsor>
+                <principal>Inmaculada Pérez Martín</principal>
+                <funder>Programa Logos 2020, Fundación BBVA-Sociedad Española de Estudios
+                    Clásicos.</funder>
+            </titleStmt>
+            <editionStmt>
+                <edition n="1">
+                    <title>Versión electrónica enriquecida con marcado semántico con TEI.</title>
+                    <date when="2022">2022</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Proyecto «El vuelo de Hermes»</publisher>
+                <pubPlace>Madrid</pubPlace>
+                <address>
+                    <name type="institution">Centro de Ciencias Humanas y Sociales (CCHS)</name>
+                    <name type="institution">Consejo Superior de Investigaciones Científicas
+                        (CSIC)</name>
+                    <street>C/ Albasanz 26-28, despacho 1B5</street>
+                    <postCode>28037</postCode>
+                    <name type="city">Madrid</name>
+                    <name type="country">España</name>
+                </address>
+                <!-- <availability> Indicar tipo de licencia </availability> -->
+                <date when="2022-09-01">septiembre de 2022</date>
+            </publicationStmt>
+            <sourceDesc>
+                <!-- LISTA DE PERSONAS VARIAS -->
+                <listPerson>
+                    <person xml:id="Strabo">
+                        <persName> Estrabón </persName>
+                    </person>
+                    <person xml:id="PsHerodianus">
+                        <persName> Pseudo Herodiano </persName>
+                    </person>
+                    <person xml:id="Suda">
+                        <persName> Suda </persName>
+                    </person>
+                    <person xml:id="StephByz">
+                        <persName> Esteban de Bizancio </persName>
+                    </person>
+                    <person xml:id="Lyc">
+                        <persName> Licofrón </persName>
+                    </person>
+                </listPerson>
+                <!-- BIBLIOGRAFÍA -->
+                <listBibl>
+                    <biblStruct xml:id="Muller">
+                        <monogr>
+                            <title level="a">Eustathii Commentarii</title>
+                            <title level="m"> Geographi Graeci Minores. E codicibus recognovit,
+                                prolegomenis, annotatione, indicibus instruxit, tabulis aeri incisis
+                                illustravit. Volumen secundum </title>
+                            <editor role="text curator">Carolus Müller</editor>
+                            <imprint>
+                                <pubPlace>Paris</pubPlace>
+                                <publisher>Firmin Didot</publisher>
+                                <date when="1882">1882</date>
+                                <biblScope>pp. 311-315</biblScope>
+                            </imprint>
+                        </monogr>
+                    </biblStruct>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <!-- 
+                    se puede incluir:
+                    <correction method="markup"><p>: explica cómo se han solucionado los errores
+                    <normalization method="markup"><p>: explica si se ha hecho algo con la "pronunciación". Con source y una url se puede indicar qué se ha seguido como norma (OED, RAE...)
+                    <quotation marks="all"><p>: si es una transcripción diplomática y se mantienen las citas originales
+                    <hyphenation><p> si se mantienen los cortes de palabras, por ejemplo al final de línea    
+                -->
+                <interpretation>
+                    <p>Se han marcado los nombres de lugar (topónimos y gentilicios). Para ello,
+                        hemos recuperado el marcado que hicimos en Recogito. Con ello también hemos
+                        elaborado la lista de lugares.</p>
+                    <p>Se han marcado las referencias a otros autores.</p>
+                    <p>Cuando aparece un número en forma de cifra se ha optado por utilizar el
+                        marcado de abreviatura y expansión. En la primera etiqueta se incluye la
+                        cifra y en la segunda el número en texto. Además, la cifra está también
+                        etiquetada con &lt;num&gt; para indicar que es un numeral griego y dar su
+                        valor en cifras arábigas.</p>
+                </interpretation>
+            </editorialDecl>
+            <projectDesc>
+                <p>Texto codificado para la edición crítica del texto de Eustacio que va a realizar
+                    el grupo de investigación «El vuelo de Hermes».</p>
+            </projectDesc>
+            <refsDecl>
+                <p> El texto original está dividido en secciones llamadas <hi rend="italic"
+                        >parécbolas</hi> , cuya numeración se corresponde con el número de verso en
+                    el poema original. Cada una de ellas, a su vez, puede contener uno o más
+                    párrafos, que no están numerados en la edición original. </p>
+                <p>En la edición de Müller la página se divide en tres secciones: (1) la columna de
+                    la izquierda se reserva para el texto griego; (2) la columna de la derecha se
+                    reserva para la traducción latina; (3) en la parte inferior, dividido en dos
+                    columnas, se ubica el aparato crítico referido al texto griego.</p>
+                <p>Las líneas del texto griego están numeradas. Esta numeración se reinicia en cada
+                    página. La traducción latina no tiene numeración de líneas.</p>
+            </refsDecl>
+            <variantEncoding method="parallel-segmentation" location="internal"/>
+        </encodingDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="grc">Griego clásico</language>
+            </langUsage>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <head>Fuentes</head>
+            <cit xml:id="Alex447-449">
+                <bibl>
+                    <author ref="#Lyc">Ps. Herodianus</author>
+                    <title ref="#Alex">Alexandra</title>
+                    <citedRange corresp="#LycPerseus"
+                        target="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2008.01.0484"
+                        >447-449</citedRange>
+                </bibl>
+                <quote> Οἱ πέντε δὲ Σφήκειαν εἰς Κεραστίαν <lb/>
+                    καὶ Σάτραχον βλώξαντες Ὑλάτου τε γῆν <lb/> Μορφὼ παροικήσουσι τὴν Ζηρυνθίαν.
+                </quote>
+            </cit>
+            <cit xml:id="ProsCath31198_2-5">
+                <bibl>
+                    <author ref="#PsHerodianus">Ps. Herodianus</author>
+                    <title ref="#ProsCath">De Prosodia Catholica</title>
+                    <citedRange corresp="#PsHerodProsCath">3, 1.198, 2-5</citedRange>
+                </bibl>
+                <quote> &lt;Κάμειρος&gt;
+                    τὸ κύριον –ἔστι δὲ παῖς Κερκάφου τοῦ Ἡλιάδου καὶ Κυδίππης– διὰ διφθόγγου,
+                    &lt;Κάμιρος&gt;δὲ πόλις ἐν Ῥόδῳ διὰ τοῦ &lt;ι&gt;
+                    «Λίνδον Ἰήλυσόν τε καὶ ἠνεμόεντα Κάμιρον» </quote>
+            </cit>
+            <cit xml:id="ProsCath32860_20">
+                <bibl>
+                    <author ref="#PsHerodianus">Ps. Herodianus</author>
+                    <title ref="#ProsCath">De Prosodia Catholica</title>
+                    <citedRange corresp="#PsHerodProsCath">3, 2.860, 20</citedRange>
+                </bibl>
+                <quote>Χελιδονιαί ὡς πυρκαϊαί.</quote>
+            </cit>
+            <cit xml:id="Strab2524">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.2.6"
+                        >2.5.24</citedRange>
+                </bibl>
+                <quote>ἐν δὲ τῷ Ἰσσικῷ κόλπῳ καὶ τῷ Παμφυλίῳ κεῖσθαι συμβαίνει τὴν Κύπρον
+                    συνάπτουσαν τῷ Αἰγυπτίῳ πελάγει.</quote>
+            </cit>
+            <cit xml:id="Strab11122_4-7">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:11.12.2"
+                        >11.12.2, 4-7</citedRange>
+                </bibl>
+                <quote>ἐξαίρεται δὲ πολὺ πρῶτον κατὰ τὰς Χελιδονίας (αὗται δ'
+                    εἰσὶ νῆσοι κατὰ τὴν ἀρχὴν τῆς Παμφύλων παραλίας),
+                    ἐπὶ δὲ τὰς ἀνατολὰς ἐκτεινόμενον αὐλῶνας μακροὺς ἀπολαμβάνει τοὺς τῶν Κιλίκων</quote>
+            </cit>
+            <cit xml:id="Strab1425_12">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.2.5"
+                        >14.2.5, 12</citedRange>
+                </bibl>
+                <quote>ἡ δὲ νῆσος κύκλον ἔχει σταδίων ἐνακοσίων εἴκοσιν.</quote>
+            </cit>
+            <cit xml:id="Strab1426_12-15">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.2.6"
+                        >14.2.6, 12-15</citedRange>
+                </bibl>
+                <quote>εἶτά φησιν “εἰς Ῥόδον “ἷξεν ἀλώμενος",
+                    “τριχθὰ δὲ ᾤκηθεν καταφυλαδόν”, καὶ τὰς πόλεις ὀνομάζει τὰς τότε “Λίνδον Ἰηλυσόν τε “καὶ ἀργινόεντα Κάμειρον”,
+                    τῆς Ῥοδίων πόλεως οὔπωσυνῳκισμένης.</quote>
+            </cit>
+            <cit xml:id="Strab1427_1-5">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.2.7"
+                        >14.2.7, 1-5</citedRange>
+                </bibl>
+                <quote>Ἐκαλεῖτο δ' ἡ Ῥόδος πρότερον Ὀφιοῦσσα καὶ Σταδία
+                    εἶτα Τελχινὶς ἀπὸ τῶν οἰκησάντων Τελχίνων τὴν νῆσον,οὓς οἱ μὲν βασκάνους φασὶ καὶ γόητας *θείῳ καταρρέοντας τὸ τῆς Στυγὸς ὕδωρ ζώων τε καὶ φυτῶν ὀλέθρου χάριν…</quote>
+            </cit>
+            <cit xml:id="Strab14210_1-6">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.2.10"
+                        >14.2.10, 1-6</citedRange>
+                </bibl>
+                <quote>Ἱστοροῦσι δὲ καὶ ταῦτα περὶ τῶν Ῥοδίων, ὅτι οὐ μόνον ἀφ' οὗ χρόνου 
+                    συνῴκισαν τὴν νῦν πόλιν εὐτύχουν κατὰ θάλατταν,ἀλλὰ καὶ πρὸ τῆς Ὀλυμπικῆς θέσεως συχνοῖς ἔτεσιν ἔπλεον πόρρω τῆς οἰκείας ἐπὶ σωτηρίᾳ τῶν ἀνθρώπων· ἀφ'οὗ καὶ μέχρι Ἰβηρίας ἔπλευσαν,
+                    κἀκεῖ μὲν τὴν Ῥόδην ἔκτισαν…</quote>
+            </cit>
+            <cit xml:id="Strab14210_22-23">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.2.10"
+                        >14.2.10, 22-23</citedRange>
+                </bibl>
+                <quote>ἄριστα δὲ ὅ τε τοῦ Ἡλίου κολοσσός,
+                    ὅν φησιν ὁ ποιήσας τὸ ἰαμβεῖον ὅτι “ἑπτάκις δέκα Χάρης ἐποίει πηχέων ὁ Λίνδιος”.
+                    κεῖται δὲ νῦν ὑπὸ σεισμοῦ πεσὼν περικλασθεὶς ἀπὸ τῶν γονάτων. οὐκ ἀνέστησαν δ'
+                    αὐτὸν κατά τι λόγιον τοῦτό τε δὴ τῶν ἀναθημάτων
+                    κράτιστον (τῶν γοῦν ἑπτὰ θεαμάτων ὁμολογεῖται)
+                    καὶ αἱ τοῦ Πρωτογένους γραφαί,ὅ τε Ἰάλυσος καὶ ὁ Σάτυρος παρεστὼς στύλῳ,
+                    ἐπὶ δὲ τῷ στύλῳ πέρδιξ ἐφειστήκει πρὸς ὃν οὕτως ἐκεχήνεσαν ὡς ἔοικεν οἱ ἄνθρωποι
+                    νεωστὶ ἀνακειμένου τοῦ πίνακος…</quote>
+            </cit>
+            <cit xml:id="Strab1436_5-7">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.3.8"
+                        >14.3.6, 5-7</citedRange>
+                </bibl>
+                <quote>Λυκίᾳ. μετὰ δὲ τὴν Ξάνθον Πάταρα, καὶ αὕτη μεγάλη
+                    πόλις λιμένα ἔχουσα καὶ ἱερὰ Ἀπόλλωνος, κτίσμα Πατάρου.</quote>
+            </cit>
+            <cit xml:id="Strab1438_1-3">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.3.8"
+                        >14.3.8, 1-3</citedRange>
+                </bibl>
+                <quote>Εἶθ' Ἱερὰ ἄκρα καὶ αἱ Χελιδόνιαι τρεῖς νῆσοι τραχεῖαι,
+                    πάρισοι τὸ μέγεθος,ὅσον πέντε σταδίοις ἀλλήλων διέχουσαι·
+                    τῆς δὲ γῆς ἀφεστᾶσιν ἑξαστάδιον·</quote>
+            </cit>
+            <cit xml:id="Strab1462_1-2">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.6.2"
+                        >14.6.2, 1-2</citedRange>
+                </bibl>
+                <quote>Ἔστι δ'
+                    ὁ μὲν κύκλος τῆς Κύπρου σταδίων τρισχιλίων καὶ τετρακοσίων εἴκοσι κατακολπίζοντι· […]</quote>
+            </cit>
+            <cit xml:id="Strab1462_13-15">
+                <bibl>
+                    <author ref="#Strabo">Strabo</author>
+                    <title ref="#Geographica">Geographica</title>
+                    <citedRange corresp="#StraboGeoPerseus"
+                        target="http://data.perseus.org/citations/urn:cts:greekLit:tlg0099.tlg001.perseus-grc1:14.6.2"
+                        >14.6.2, 13-15</citedRange>
+                </bibl>
+                <quote>ἔστι δὲ ἑτερόμηκες τὸ ὅλον τῆς νήσου σχῆμα, καί που καὶ ἰσθμοὺς ποιεῖ 
+                    κατὰ τὰς τὸ πλάτος διοριζούσας πλευράς· </quote>
+            </cit>
+            <cit xml:id="Suda205_1">
+                <bibl>
+                    <author ref="#Suda">Suda</author>
+                    <citedRange corresp="#Suda_ref">205.1</citedRange>
+                </bibl>
+                <quote>&lt;Ῥόδος:&gt; ἡ νῆσος· ἥτις καὶ Λίνδος καλεῖται.
+                    καὶ Κολοσσαεῖς οἱ οἰκήτορες, διὰ τὸν Κολοσσόν.</quote>
+            </cit>
+            <cit xml:id="StephByz39515-3968">
+                <bibl>
+                    <author ref="#StephByz">Stephanus Byzantinus</author>
+                    <title ref="#Lexicon"/>
+                    <citedRange corresp="#StephByzLex">Lexicon</citedRange>
+                </bibl>
+                <quote>&lt;Κύπρος&gt; νῆσος μεγάλη [καὶ ἐπιφανεστάτη, κειμένη] ἐν τῷ Παμφυλίῳ 
+                    κόλπῳ,[καθώς φησιν ὁ περιηγητὴς Διονύσιος“Κύπρος δ'
+                    εἰς αὐγὰς Παμφυλίου ἔνδοθι κόλπου”. ἐκλήθη δὲ] ἀπὸ Κύπρου τῆς θυγατρὸς Κινύρου,
+                    [ἢ τῆς Βύβλου καὶ Ἀφροδίτης, ὡς Φιλοστέφανος ἐν τῷ περὶ νήσων καὶ Ἴστρος
+                    ἐν ἀποικίαις Αἰγυπτίων ἱστόρησαν,] ἢ ἀπὸ τοῦ φυομένου ἄνθους κύπρου.
+                    Ἀστύνομος δέ φησι &lt;Κρύπτον&gt;κεκλῆσθαι διὰ τὸ κρύπτεσθαι πολλάκις ὑπὸ τῆς θαλάσσης.
+                    εἶτα &lt;Κύπρος.&gt;
+                    ἐκαλεῖτο δὲ καὶ &lt;Κεραστίς&gt;ἀπὸ τοῦ πολλὰς ἄκρας ἔχειν καὶ &lt;Κεραστιάς&gt;
+                    καὶ &lt;Ἀμαθουσία&gt; καὶ &lt;Μηιονίς&gt; καὶ &lt;Σφήκεια&gt;
+                    καὶ &lt;Ἀκαμαντίς.&gt; τὸ ἐθνικὸν Κύπριος καὶ Κυπρία καὶ Κύπριον, καὶ Κυπριακός,
+                    καὶ Κυπριεύς καὶ Κυπρίτης. ἔστι καὶ Λιβυκὴ &lt;Κύπρος&gt;.
+                    τὸ ἐθνικὸν Κυπρίτης.</quote>
+            </cit>
+        </body>
+    </text>
+</TEI>

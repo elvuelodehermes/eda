@@ -1,0 +1,4250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../../../../../../home/carmen/htdocs/evt2-beta2.01/data/text/schema/tei_Eustacio_tfm_v1.0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transcripción del Vat. gr. 1910</title>
+            <author xml:id="EdT">Eustacio de Tesalónica</author>
+            <respStmt>
+               <resp>Transcripción y anotación en TEI de </resp>
+               <name xml:id="CGB">Carmen García Bueno</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition n="1">
+               <title>Versión electrónica enriquecida con marcado semántico con TEI.</title>
+               <date when="2022">2022</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Proyecto «El vuelo de Hermes»</publisher>
+            <pubPlace>Madrid</pubPlace>
+            <address>
+               <name type="institution">Centro de Ciencias Humanas y Sociales (CCHS)</name>
+               <name type="institution">Consejo Superior de Investigaciones Científicas
+                  (CSIC)</name>
+               <street>C/ Albasanz 26-28, despacho 1B5</street>
+               <postCode>28037</postCode>
+               <name type="city">Madrid</name>
+               <name type="country">España</name>
+            </address>
+            <!-- <availability> Indicar tipo de licencia </availability> -->
+            <date when="2022-09-01">septiembre de 2022</date>
+         </publicationStmt>
+         <notesStmt>
+            <note>Transcrito a partir de las fotografías disponibles en el repositorio digital de la
+               Biblioteca Apostolica Vaticana (DigiVat).</note>
+         </notesStmt>
+         <sourceDesc>
+            <!-- LISTA DE PERSONAS VARIAS -->
+            <listPerson>
+               <person xml:id="copista_z">
+                  <p>Copista del Vat. gr. 1910.</p>
+               </person>
+            </listPerson>
+            <!-- BIBLIOGRAFÍA -->
+            <listBibl>
+               <biblStruct xml:id="Muller">
+                  <monogr>
+                     <title level="a">Eustathii Commentarii</title>
+                     <title level="m"> Geographi Graeci Minores. E codicibus recognovit,
+                        prolegomenis, annotatione, indicibus instruxit, tabulis aeri incisis
+                        illustravit. Volumen secundum </title>
+                     <editor role="text curator">Carolus Müller</editor>
+                     <imprint>
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Firmin Didot</publisher>
+                        <date when="1882">1882</date>
+                        <biblScope>pp. 311-315</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <!-- 
+                    se puede incluir:
+                    <correction method="markup"><p>: explica cómo se han solucionado los errores
+                    <normalization method="markup"><p>: explica si se ha hecho algo con la "pronunciación". Con source y una url se puede indicar qué se ha seguido como norma (OED, RAE...)
+                    <quotation marks="all"><p>: si es una transcripción diplomática y se mantienen las citas originales   
+                -->
+            <interpretation>
+               <p>Cuando aparece un número en forma de cifra se ha optado por utilizar el marcado de
+                  abreviatura y expansión. En la primera etiqueta se incluye la cifra y en la
+                  segunda el número en texto. Además, la cifra está también etiquetada con
+                  &lt;num&gt; para indicar que es un numGro y dar su valor en cifras arábigas.</p>
+               <p> Hemos utilizado el atributo @rend de la etiqueta &lt;hi&gt; con el valor <hi
+                     rend="italic">sup</hi> para indicar el texto que está en posición supralineal.
+                  Esto no significa que el tamaño de la letra del texto que se ubica en el
+                  interlineado sea más pequeño (lo que entendemos actualmente como superíndice). </p>
+               <p>Hemos marcado las abreviaturas y su expansión con el juego de etiquetas que ofrece
+                  TEI para estos casos (&lt;choice&gt;, &lt;abbr&gt; y &lt;expan&gt;)</p>
+            </interpretation>
+            <hyphenation>
+               <p>Se mantienen los saltos de línea del original.</p>
+            </hyphenation>
+            <quotation>
+               <p>Las citas directas se han marcado con comillas angulares o españolas («...»). En
+                  el texto original no tienen ningún tipo de marca.</p>
+            </quotation>
+         </editorialDecl>
+         <projectDesc>
+            <p>Texto codificado para la edición crítica del texto de Eustacio que va a realizar el
+               grupo de investigación «El vuelo de Hermes».</p>
+         </projectDesc>
+         <refsDecl>
+            <p> El texto original está dividido en secciones llamadas <hi rend="italic"
+                  >parécbolas</hi> . En algunos manuscritos se incluye el o los versos a los que
+               hace referencia del poema original de Dionisio Periegeta. Este valor (el número de
+               verso(s)) es el que se ha tomado para identificar cada parécbola, de ahí que sean
+               números alternos. En los manuscritos las parécbolas no están numeradas. Se
+               identifican (no siempre) porque el copista deja delante del comienzo de cada una un
+               espacio en blanco o utiliza una tinta distintiva para la primera letra. </p>
+            <p>La numeración de líneas por página es nuestra.</p>
+         </refsDecl>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="grc">Griego clásico</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface n="Dik68539_f137v" xml:id="Dik68539_surf_f137v" corresp="#Dik68539_f137v">
+         <graphic
+            url="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0280_fa_0137v.jp2/full/full/0/default.jpg">
+            <desc>Imagen de media calidad</desc>
+         </graphic>
+      </surface>
+      <surface n="Dik68539_f138r" xml:id="Dik68539_surf_f138r" corresp="#Dik68539_f138r">
+         <graphic
+            url="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0281_fa_0138r.jp2/full/full/0/default.jpg">
+            <desc>Imagen de media calidad</desc>
+         </graphic>
+      </surface>
+      <surface n="Dik68539_f138v" xml:id="Dik68539_surf_f138v" corresp="#Dik68539_f138v">
+         <graphic
+            url="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0282_fa_0138v.jp2/full/full/0/default.jpg">
+            <desc>Imagen de media calidad</desc>
+         </graphic>
+      </surface>
+      <surface n="Dik68539_f139r" xml:id="Dik68539_surf_f139r" corresp="#Dik68539_f139r">
+         <graphic
+            url="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0283_fa_0139r.jp2/full/full/0/default.jpg">
+            <desc>Imagen de media calidad</desc>
+         </graphic>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div n="de R" type="Transcripción" xml:id="Dik68539_transcr">
+            <pb n="Vat. gr. 1910, f. 137v"
+               facs="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0280_fa_0137v.jp2/full/full/0/default.jpg"
+               xml:id="Dik68539_f137v"/>
+            <p xml:lang="grc">
+               <lb n="1"/> (<seg> § <num type="cardinal" value="503">503</num>
+               </seg>) Δῆλον, ὥσπερ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὴν</ex></expan>
+               </choice> Πυθ<hi rend="sup">ὼ</hi>
+               <choice>
+                  <abbr> ἀντιδ<am>¤</am></abbr>
+                  <expan>ἀντιδ<ex>οὺς</ex></expan>
+               </choice> ἔσχ<hi rend="sup">ε</hi>
+               <hi rend="sup">τ</hi>ὸ <choice>
+                  <abbr> Ταίναρ<am>¤</am></abbr>
+                  <expan>Ταίναρ<ex>ον</ex></expan>
+               </choice>. Ὅθεν <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>λόγ<am>¤</am></abbr>
+                  <expan>λόγ<ex>ος</ex></expan>
+               </choice>
+               <choice>
+                  <abbr>παροιμιώ<hi rend="sup">δ<am>¤</am></hi></abbr>
+                  <expan>παροιμιώ<ex>ης</ex></expan>
+               </choice> ἐπὶ <lb n="&#8195;"/><choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice> ἴσ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>ἀνθαιρου<hi rend="sup">μ<am>¤</am>ν<am>¤</am>
+                     </hi>
+                  </abbr>
+                  <expan>ἀνθαιρουμ<ex>έ</ex>ν<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἀντικαταλλασσόντων ὡς <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>οῖς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>βουλητ<am>¤</am>
+                  </abbr>
+                  <expan>βουλητ<ex>όν</ex>
+                  </expan>
+               </choice>, Ἶσόν <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Δῆλ<am>¤</am>
+                  </abbr>
+                  <expan>Δῆλ<ex>ον</ex>
+                  </expan>
+               </choice>τ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>Κα-<lb n="&#8195;"/> λαύρι<am>¤</am>
+                  </abbr>
+                  <expan>Κα-<lb n="&#8195;"/> λαύρι<ex>άν</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ε</hi> νέμεσθαι, Πυθ<hi rend="sup">ώ</hi> τ᾽ <choice>
+                  <abbr>ἠγαθέ<am>¤</am>
+                  </abbr>
+                  <expan>ἠγαθέ<ex>ην</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ταίναρον ἠνεμόεντ<hi rend="sup">α</hi> . Τ<hi rend="sup">ῇ</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> Καρπάθῳ <lb n="&#8195;"/> λυμήνασθ<hi rend="sup">αί</hi> ποτ<hi rend="sup"
+                  >έ</hi> φασι <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οὺς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>λαγω<am>¤</am>
+                  </abbr>
+                  <expan>λαγω<ex>οὺς</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>κακ<am>¤</am>
+                  </abbr>
+                  <expan>κακ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>γενομ<am>¤</am><am>¤</am>
+                  </abbr>
+                  <expan>γενομ<ex>έν</ex><ex>ους</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἐπακτ<am>¤</am>
+                  </abbr>
+                  <expan>ἐπακτ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἔξω<hi rend="sup">θ<am>¤</am>
+                     </hi>
+                  </abbr>
+                  <expan>ἔξωθ<ex>εν</ex>
+                  </expan>
+               </choice>, ὡς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ <choice>
+                  <abbr>παροι<hi rend="sup">μ<am>¤</am></hi></abbr>
+                  <expan>παροιμ<ex>ία</ex></expan>
+               </choice>
+               <lb n="5"/> δηλοῖ ἡ λέγουσ<hi rend="sup">α</hi>, ὁ <choice>
+                  <abbr>Καρπάθι<am>¤</am>
+                  </abbr>
+                  <expan>Καρπάθι<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice> λαγών. <choice>
+                  <abbr>Κρήτ<am>¤</am>
+                  </abbr>
+                  <expan>Κρήτ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>πόλ<am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>εις</ex>
+                  </expan>
+               </choice> μέγιστ<hi rend="sup">αι</hi>, <choice>
+                  <abbr>κα<am>¤</am>
+                  </abbr>
+                  <expan>κα<ex>θὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> προγέγραπτ<hi rend="sup">αι</hi>, <lb n="&#8195;"/> Γόρτυν<hi rend="sup"
+                  >α</hi>, Κυδωνί<hi rend="sup">α</hi> καὶ Κνωσσ<hi rend="sup">ὸς</hi>, <choice>
+                  <abbr>βασίλει<am>¤</am>
+                  </abbr>
+                  <expan>βασίλει<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Μίνω<am>¤</am>
+                  </abbr>
+                  <expan>Μίνω<ex>ος</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἥτ<am>¤</am>
+                  </abbr>
+                  <expan>ἥτ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Κέρατ<am>¤</am>
+                  </abbr>
+                  <expan>Κέρατ<ex>ος</ex>
+                  </expan>
+               </choice> ἐκαλεῖτο, ὁμωνυ-<lb n="&#8195;"/> μοῦσ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am>μ<am>¤</am></abbr>
+                  <expan>ποτ<ex>α</ex>μ<ex>ῷ</ex>
+                  </expan>
+               </choice> τινι <choice>
+                  <abbr>πε<am>¤</am>ρρέοντι</abbr>
+                  <expan>πε<ex>ρι</ex>ρρέοντι</expan>
+               </choice>. Μίνως <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>πρῶτ<am>¤</am>
+                  </abbr>
+                  <expan>πρῶτ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ον</ex>
+                  </expan>
+               </choice> ἐξημέρωσ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>νόμ<am>¤</am>
+                  </abbr>
+                  <expan>νόμ<ex>οις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>πολιτεί<am>¤</am>
+                  </abbr>
+                  <expan>πολιτεί<ex>αις</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> πόλεων <choice>
+                  <abbr>συνοικισ<hi rend="sup">μ<am>¤</am></hi></abbr>
+                  <expan>συνοικισμ<ex>οῖς</ex>
+                  </expan>
+               </choice>. Εἴρηκ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>π<am>¤</am>
+                  </abbr>
+                  <expan>π<ex>ερὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ὅμ<am>¤</am>
+                  </abbr>
+                  <expan>Ὅμ<ex>ηρος</ex>
+                  </expan>
+               </choice> ἐν <choice>
+                  <abbr>Ὀδ<hi rend="sup">υ</hi><am>¤</am><hi rend="sup">ᾳ</hi></abbr>
+                  <expan>Ὀδυ<ex>σσεί</ex>ᾳ</expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>γέγρα<hi rend="sup">π</hi><am>¤</am></abbr>
+                  <expan>γέγραπ<ex>ται</ex></expan>
+               </choice> ἐκεῖ ὅσ<hi rend="sup">α</hi> ἔδει. <lb n="&#8195;"/> Ἰστέον <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ὅτι <choice>
+                  <abbr>ἀν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ἀντ<ex>ὶ</ex></expan>
+               </choice> τοῦ <choice>
+                  <abbr>εἰπ<am>¤</am></abbr>
+                  <expan>εἰπ<ex>εῖν</ex></expan>
+               </choice> βορειότεραι νῆσοι <choice>
+                  <abbr>Κρήτ<am>¤</am></abbr>
+                  <expan>Κρήτ<ex>ης</ex></expan>
+               </choice>, βορειότ<hi rend="sup">ε</hi>ραι Ἀμνισ<hi rend="sup">οῦ</hi> εἶπεν <lb
+                  n="10"/> ὁ <choice>
+                  <abbr>Περιηγη<hi rend="sup">τ<am>¤</am></hi></abbr>
+                  <expan>Περιηγητ<ex>ὴς</ex></expan>
+               </choice>, ἀπὸ <choice>
+                  <abbr>μέ<hi rend="sup">ρ<am>¤</am></hi></abbr>
+                  <expan>μέρ<ex>ους</ex></expan>
+               </choice>
+               <choice>
+                  <abbr>δηλ<hi rend="sup">ώ</hi><am>¤</am></abbr>
+                  <expan>δηλώ<ex>σας</ex></expan>
+               </choice>
+               <hi rend="sup">τ</hi>ὸ <choice>
+                  <abbr>ὅλ<am>¤</am></abbr>
+                  <expan>ὅλ<ex>ον</ex></expan>
+               </choice>. <choice>
+                  <abbr>Μέρ<am>¤</am></abbr>
+                  <expan>Μέρ<ex>ος</ex></expan>
+               </choice>
+               <choice>
+                  <abbr>γ<am>¤</am></abbr>
+                  <expan>γ<ex>άρ</ex></expan>
+               </choice> τι <choice>
+                  <abbr>Κρήτ<am>¤</am></abbr>
+                  <expan>Κρήτ<ex>ης</ex>
+                  </expan>
+               </choice> ὁ <choice>
+                  <abbr>Ἀμνισ<am>¤</am>
+                  </abbr>
+                  <expan>Ἀμνισ<ex>ὸς</ex>
+                  </expan>
+               </choice>, ἔνθ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>σπήλαι<am>¤</am>
+                  </abbr>
+                  <expan>σπήλαι<ex>ον</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>Εἰληθυί<am>¤</am>
+                  </abbr>
+                  <expan>Εἰληθυί<ex>ας</ex>
+                  </expan>
+               </choice>, ὡς ἐν <choice>
+                  <abbr>Ὀδ<hi rend="sup">υ</hi><am>¤</am><hi rend="sup">ᾳ</hi>
+                  </abbr>
+                  <expan>Ὀδυ<ex>σσεί</ex>ᾳ</expan>
+               </choice> ὁ <choice>
+                  <abbr>Ποιη<hi rend="sup"><am>¤</am></hi></abbr>
+                  <expan>Ποιη<ex>τὴς</ex>
+                  </expan>
+               </choice> ἱστορεῖ. (<seg> § <num type="cardinal" value="504">504</num>-<num
+                     type="cardinal" value="507">507</num>
+               </seg>) <choice>
+                  <abbr>Ὅ<am>¤</am></abbr>
+                  <expan>Ὅ<ex>τι</ex>
+                  </expan>
+               </choice> ἀντικρὺ <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Αἰγυ<hi rend="sup">πτ<am>¤</am>
+                     </hi>
+                  </abbr>
+                  <expan>Αἰγυπτ<ex>ίας</ex>
+                  </expan>
+               </choice> πέζης, <choice>
+                  <abbr>ἤ<hi rend="sup">γ<am>¤</am></hi>
+                  </abbr>
+                  <expan>ἤγ<ex>ουν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>τ<hi rend="sup">οῦ</hi>
+               <choice>
+                  <abbr>Δέλ<hi rend="sup">τ<am>¤</am></hi>
+                  </abbr>
+                  <expan>Δέλτ<ex>α</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>βορεί<am>¤</am>
+                  </abbr>
+                  <expan>βορεί<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>κρηπῖδ<am>¤</am>
+                  </abbr>
+                  <expan>κρηπῖδ<ex>ος</ex>
+                  </expan>
+               </choice> ἢ <choice>
+                  <abbr>στ<hi rend="sup">ά</hi><am>¤</am>
+                  </abbr>
+                  <expan>στά<ex>σεως</ex>
+                  </expan>
+               </choice> ἢ <choice>
+                  <abbr>βάσε<am>¤</am>
+                  </abbr>
+                  <expan>βάσε<ex>ως</ex>
+                  </expan>
+               </choice>, ἡ <choice>
+                  <abbr>Ῥόδ<am>¤</am>
+                  </abbr>
+                  <expan>Ῥόδ<ex>ος</ex>
+                  </expan>
+               </choice> κεῖτ<hi rend="sup">αι</hi>, ἧς ὁ κύκλ<hi rend="sup">ος</hi> σταδίων ἐστὶν <choice>
+                  <abbr>
+                     <num type="numGro" value="920">ϡκ᾽</num>
+                  </abbr>
+                  <expan>ἐννεακοσίων εἴκοσι</expan>
+               </choice>. <lb n="&#8195;"/>
+               <choice>
+                  <abbr>Πε<am>¤</am></abbr>
+                  <expan>Πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> ἣν <choice>
+                  <abbr>πόλ<am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Λίνδ<am>¤</am>
+                  </abbr>
+                  <expan>Λίνδ<ex>ος</ex>
+                  </expan>
+               </choice>, ἡ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> μέχρι νῦν <choice>
+                  <abbr>πε<am>¤</am>ᾳδομ<am>¤</am><hi rend="sup">η</hi></abbr>
+                  <expan>πε<ex>ρι</ex>ᾳδομ<ex>έν</ex>η</expan>
+               </choice>, ἀφ᾽ ἧς πλοῖ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>Λιν<hi rend="sup">δ<am>¤</am></hi></abbr>
+                  <expan>Λινδ<ex>ικὰ</ex></expan>
+               </choice>, ἔτι <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἰηλυσσ<am>¤</am></abbr>
+                  <expan>Ἰηλυσσ<ex>ὸς</ex>
+                  </expan>
+               </choice>, <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Κάμιρ<am>¤</am></abbr>
+                  <expan>Κάμιρ<ex>ος</ex></expan>
+               </choice> δι<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>οῦ</ex>
+                  </expan>
+               </choice> ι᾽ <choice>
+                  <abbr>γραφο<hi rend="sup">μ<am>¤</am>νη</hi></abbr>
+                  <expan>γραφομ<ex>έν</ex>η</expan>
+               </choice>
+               <choice>
+                  <abbr>πρ<am>¤</am>
+                  </abbr>
+                  <expan>πρ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀντιδιαστο<hi rend="sup">λ<am>¤</am></hi></abbr>
+                  <expan>ἀντιδιαστολ<ex>ὴν</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">οῦ</hi> κυρί<hi rend="sup">ου</hi>· ὁ γ<hi rend="sup"
+                  >ὰρ</hi>
+               <choice>
+                  <abbr>Κάμειρ<am>¤</am></abbr>
+                  <expan>Κάμειρ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <hi rend="sup">τ</hi>ὸ <choice>
+                  <abbr>κ<hi rend="sup">ύ</hi><am>¤</am>
+                  </abbr>
+                  <expan>κύ<ex>ριον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>δι<hi rend="sup">φ</hi></abbr>
+                  <expan>διφθόγγου</expan>
+               </choice>
+               <choice>
+                  <abbr>γράφετ<am>¤</am>
+                  </abbr>
+                  <expan>γράφετ<ex>αι</ex>
+                  </expan>
+               </choice>. <lb n="15"/> Μεθ᾽ ἣν <choice>
+                  <abbr>πρ<am>¤</am></abbr>
+                  <expan>πρ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀν<hi rend="sup">α</hi>το<hi rend="sup">λ<am>¤</am></hi></abbr>
+                  <expan>ἀνατολ<ex>ὰς</ex></expan>
+               </choice> ἐν ἀρχ<hi rend="sup">ῇ</hi>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Παμφυλί<am>¤</am>
+                  </abbr>
+                  <expan>Παμφυλί<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>παραλί<am>¤</am>
+                  </abbr>
+                  <expan>παραλί<ex>ας</ex>
+                  </expan>
+               </choice>, ἔνδον <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice> Πατάρων <choice>
+                  <abbr>μεγάλ<am>¤</am></abbr>
+                  <expan>μεγάλ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ἄκρ<am>¤</am>
+                  </abbr>
+                  <expan>ἄκρ<ex>ας</ex>
+                  </expan>
+               </choice>, αἱ Χελιδονίαι <hi rend="sup">τ</hi>ρεῖς νῆσ<hi rend="sup">οι</hi>
+               <choice>
+                  <abbr>κεῖντ<am>¤</am>
+                  </abbr>
+                  <expan>κεῖντ<ex>αι</ex>
+                  </expan>
+               </choice>, πάρισ<hi rend="sup">οι</hi>
+               <hi rend="sup">τ</hi>ὸ μέγεθ<hi rend="sup">ος</hi>, διέχουσ<hi rend="sup">αι</hi>
+               <choice>
+                  <abbr>ἀλλήλ<am>¤</am></abbr>
+                  <expan>ἀλλήλ<ex>ων</ex>
+                  </expan>
+               </choice> ὅσον <lb n="&#8195;"/> πέντ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>σταδί<am>¤</am>
+                  </abbr>
+                  <expan>σταδί<ex>ους</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>γ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice> ἀφεστηκυῖαι ὡς <choice>
+                  <abbr>ἑξαστάδι<am>¤</am>
+                  </abbr>
+                  <expan>ἑξαστάδι<ex>ον</ex>
+                  </expan>
+               </choice>. Ἀφ᾽ ὧν οἴονταί <choice>
+                  <abbr>τιν<am>¤</am>
+                  </abbr>
+                  <expan>τιν<ex>ες</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἄρχεσθ<am>¤</am>
+                  </abbr>
+                  <expan>ἄρχεσθ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> τὸ <choice>
+                  <abbr>ᾀδόμε<am>¤</am>
+                  </abbr>
+                  <expan>ᾀδόμε<ex>νον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ὄρ<am>¤</am>
+                  </abbr>
+                  <expan>ὄρ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <hi rend="sup">τ</hi>ὸν <choice>
+                  <abbr>Ταῦρ<am>¤</am>
+                  </abbr>
+                  <expan>Ταῦρ<ex>ον</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἀρχόμεν<am>¤</am>
+                  </abbr>
+                  <expan>ἀρχόμεν<ex>ον</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ῇ</hi> ἀληθεί<hi rend="sup">ᾳ</hi> ἀπὸ <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ῥοδί<am>¤</am>
+                  </abbr>
+                  <expan>Ῥοδί<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>περαί<am>¤</am>
+                  </abbr>
+                  <expan>περαί<ex>ας</ex>
+                  </expan>
+               </choice>. Ἰστέον <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ὅτι <choice>
+                  <abbr>Ἡ-<lb n="&#8195;"/> ρωδιαν<am>¤</am>
+                  </abbr>
+                  <expan>Ἡ-<lb n="&#8195;"/> ρωδιαν<ex>ὸς</ex>
+                  </expan>
+               </choice> ἐν τ<hi rend="sup">ῇ</hi> Καθόλ<hi rend="sup">ου</hi>
+               <choice>
+                  <abbr>Προσῳ<hi rend="sup">δ<am>¤</am></hi>
+                  </abbr>
+                  <expan>Προσῳδ<ex>ίᾳ</ex>
+                  </expan>
+               </choice> Χελιδονιαί ἀν<hi rend="sup">α</hi>γινώσκει <choice>
+                  <abbr>ὀξυ<hi rend="sup">τ<am>¤</am>ν<am>¤</am></hi>
+                  </abbr>
+                  <expan>ὀξυτ<ex>ό</ex>ν<ex>ως</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὡς</expan>
+               </choice> πυρκαϊαί. <lb n="20"/> Πάταρ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> κτίσμα Πατάρου, πό<hi rend="sup">λις</hi> μεγάλη, <choice>
+                  <abbr>πε<am>¤</am>
+                  </abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> ἧς προεγράφ<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>πλατύ <hi rend="sup">τ<am>¤</am>ρ<am>¤</am></hi>
+                  </abbr>
+                  <expan>πλατύτ<ex>ε</ex>ρ<ex>ον</ex>
+                  </expan>
+               </choice>. Ἡ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> Ῥόδος <lb n="&#8195;"/> ἄλλ<hi rend="sup">α</hi> τ<hi rend="sup">ε</hi>
+               ἔσχ<hi rend="sup">ε</hi> θαυμαστ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <hi rend="sup">τ</hi>ὸν <hi rend="sup">τ</hi>οῦ Ἡλίου <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>κολοσσ<am>¤</am>
+                  </abbr>
+                  <expan>κολοσσ<ex>ὸν</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>Χάρητ<am>¤</am>
+                  </abbr>
+                  <expan>Χάρητ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἔργ<am>¤</am>
+                  </abbr>
+                  <expan>ἔργ<ex>ον</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἀνδρ<am>¤</am></abbr>
+                  <expan>ἀνδρ<ex>ὸς</ex>
+                  </expan>
+               </choice> Λινδίου, <choice>
+                  <abbr>πή-<lb n="&#8195;"/> χε<am>¤</am>
+                  </abbr>
+                  <expan>πήχε-<lb n="&#8195;"/> <ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἑβδομή<am>¤</am>
+                  </abbr>
+                  <expan>ἑβδομή<ex>κοντα</ex>
+                  </expan>
+               </choice>· <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἦν <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>αὐ<hi rend="sup">τ<am>¤</am></hi>
+                  </abbr>
+                  <expan>αὐτ<ex>ὸς</ex>
+                  </expan>
+               </choice> ἓν <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <hi rend="sup">ἑ</hi>πτ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>θε<hi rend="sup">α</hi>μάτ<am>¤</am></abbr>
+                  <expan>θεαμάτ<ex>ων</ex>
+                  </expan>
+               </choice>, ὃς ἔπεσ<hi rend="sup">ε</hi> σεισμ<hi rend="sup">ῷ</hi>
+               <choice>
+                  <abbr>κλασθ<am>¤</am>
+                  </abbr>
+                  <expan>κλασθ<ex>εὶς</ex>
+                  </expan>
+               </choice> ἀπὸ τῶν <lb n="&#8195;"/>
+               <choice>
+                  <abbr>γονά<hi rend="sup">τ<am>¤</am></hi>
+                  </abbr>
+                  <expan>γονάτ<ex>ων</ex>
+                  </expan>
+               </choice>. Πολλ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἄλλ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>εἶχ<am>¤</am>
+                  </abbr>
+                  <expan>εἶχ<ex>εν</ex>
+                  </expan>
+               </choice> ἡ <choice>
+                  <abbr>Ῥόδ<am>¤</am>
+                  </abbr>
+                  <expan>Ῥόδ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγάλ<hi rend="sup">μ<am>¤</am>τ<am>¤</am></hi>
+                  </abbr>
+                  <expan>ἀγάλμ<ex>α</ex>τ<ex>α</ex>
+                  </expan>
+               </choice>, ὧν <hi rend="sup">τ</hi>ὸ <choice>
+                  <abbr>τεχνικ<am>¤</am>
+                  </abbr>
+                  <expan>τεχνικ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> μικροῦ <choice>
+                  <abbr>δ<am>¤</am>
+                  </abbr>
+                  <expan>δ<ex>εῖν</ex>
+                  </expan>
+               </choice> ἔμψυχον <lb n="&#8195;"/>
+               <choice>
+                  <abbr>αἰνιττόμ<am>¤</am><hi rend="sup">οι</hi></abbr>
+                  <expan>αἰνιττόμ<ex>εν</ex>οι</expan>
+               </choice> οἱ τεχνῖται ἁλύσεσιν ἐδέσμουν αὐτὰ, μὴ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>λάθοι<am>¤</am>
+                  </abbr>
+                  <expan>λάθοι<ex>εν</ex>
+                  </expan>
+               </choice> τάχ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>κινη<hi rend="sup">θ<am>¤</am>τ<am>¤</am></hi>
+                  </abbr>
+                  <expan>κινηθ<ex>έν</ex>τ<ex>α</ex></expan>
+               </choice>
+               <lb n="25"/> μεταστῆναί π<hi rend="sup">ου</hi> ἀλλαχ<hi rend="sup">οῦ</hi>. Εἰ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> χρ<hi rend="sup">ὴ</hi>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ταύτ<am>¤</am>
+                  </abbr>
+                  <expan>ταύτ<ex>ην</ex>
+                  </expan>
+               </choice> οὐ <choice>
+                  <abbr>μέσ<am>¤</am>
+                  </abbr>
+                  <expan>μέσ<ex>ον</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ῷ</hi> μεγίστ<hi rend="sup">ῳ</hi> κολοσσ<hi rend="sup">ῷ</hi>
+               <choice>
+                  <abbr>σεμνῦ<hi rend="sup">ν<am>¤</am></hi>
+                  </abbr>
+                  <expan>σεμνῦν<ex>αι</ex>
+                  </expan>
+               </choice>, <lb n="&#8195;"/> ἀλλ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> σμικροτάτ<hi rend="sup">ῳ</hi> τινὶ <hi rend="sup">ἐ</hi>πᾶραι ἀν<hi
+                  rend="sup">α</hi>θήμα<hi rend="sup">τι</hi>· ἐκεῖ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ <choice>
+                  <abbr>καλ<am>¤</am>
+                  </abbr>
+                  <expan>καλ<ex>ὸς</ex>
+                  </expan>
+               </choice> πέρδιξ ἦν, <hi rend="sup">τ</hi>ὸ τ<hi rend="sup">οῦ</hi>
+               <choice>
+                  <abbr>Πρωτο-<lb n="&#8195;"/> γέν<am>¤</am></abbr>
+                  <expan>Πρωτο-<lb n="&#8195;"/> γέν<ex>ους</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ὑμνού<hi rend="sup">μ<am>¤</am>ν<am>¤</am></hi>
+                  </abbr>
+                  <expan>ὑμνούμ<ex>ε</ex>ν<ex>ο</ex>ν</expan>
+               </choice>
+               <choice>
+                  <abbr>πάρεργ<am>¤</am>
+                  </abbr>
+                  <expan>πάρεργ<ex>ον</ex>
+                  </expan>
+               </choice>. Δι<hi rend="sup">ὰ</hi>
+               <add hand="#copista_R" place="infralinea">δὲ</add>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀνω<hi rend="sup">τ<am>¤</am>ρ<am>¤</am></hi>
+                  </abbr>
+                  <expan>ἀνωτ<ex>έ</ex>ρ<ex>ω</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ῥηθέν<hi rend="sup">τ<am>¤</am></hi></abbr>
+                  <expan>ῥηθέντ<ex>α</ex>
+                  </expan>
+               </choice>                     
+               <choice>
+                  <abbr>μέγ<am>¤</am>
+                  </abbr>
+                  <expan>μέγ<ex>αν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>κολοσσ<am>¤</am>
+                  </abbr>
+                  <expan>κολοσσ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Κολοσσαεῖς <choice>
+                  <abbr><am>¤</am></abbr>
+                  <expan><ex>ὡς</ex>
+                  </expan>
+               </choice> ἐκ μεγάλ<hi rend="sup">ου</hi>
+               <lb n="&#8195;"/>
+            </p>
+            <pb n="Vat. gr. 1910, f. 138r"
+               facs="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0281_fa_0138r.jp2/full/full/0/default.jpg"
+               xml:id="Dik68539_f138r"/>
+            <p xml:lang="grc"><lb n="1"/> παρασήμ <hi rend="sup">ου</hi> ἐκαλοῦντο οἱ Ῥόδι<hi
+                  rend="sup">οι</hi>. Λέγεται <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ναύσταθμ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>ἔχ<am>¤</am>
+                  </abbr>
+                  <expan>ἔχ<ex>ειν</ex>
+                  </expan>
+               </choice> ἡ <choice>
+                  <abbr>Ῥόδ<am>¤</am>
+                  </abbr>
+                  <expan>Ῥόδ<ex>ος</ex>
+                  </expan>
+               </choice> κρυπτ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἀπόρ-<lb n="&#8195;"/> ρητ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οῖς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πολλ<am>¤</am>
+                  </abbr>
+                  <expan>πολλ<ex>οῖς</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τ<hi rend="sup">ῷ</hi> κατοπτεύσαντι αὐτ<hi rend="sup">ὰ</hi> θάνατον
+               εἶναι <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ζημί<am>¤</am>
+                  </abbr>
+                  <expan>ζημί<ex>αν</ex>
+                  </expan>
+               </choice>. Ἐκλή<hi rend="sup">θη</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δέ</expan>
+               </choice>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ<am>¤</am></hi></abbr>
+                  <expan>ποτ<ex>ε</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>φ<hi rend="sup">α</hi><am>¤</am></abbr>
+                  <expan>φα<ex>σὶν</ex>
+                  </expan>
+               </choice>, <lb n="&#8195;"/> Ὀφίουσ<hi rend="sup">α</hi>· εἶτ<hi rend="sup"
+                  >α</hi>
+               <choice>
+                  <abbr>Τελχιν<am>¤</am>
+                  </abbr>
+                  <expan>Τελχιν<ex>ὶς</ex>
+                  </expan>
+               </choice>, δι<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οὺς</ex>
+                  </expan>
+               </choice> ἐκ <choice>
+                  <abbr>Κρήτ<am>¤</am>
+                  </abbr>
+                  <expan>Κρήτ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Τελχῖν<am>¤</am>
+                  </abbr>
+                  <expan>Τελχῖν<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>οἰκήσαντ<am>¤</am>
+                  </abbr>
+                  <expan>οἰκήσαντ<ex>ας</ex>
+                  </expan>
+               </choice> ἐκεῖ, ἄν<unclear reason="borrón">δρας</unclear>
+               <choice>
+                  <abbr>γόητ<am>¤</am>
+                  </abbr>
+                  <expan>γόητ<ex>ας</ex>
+                  </expan>
+               </choice> καὶ <choice>
+                  <abbr>βα-<lb n="&#8195;"/> σκάν<am>¤</am>
+                  </abbr>
+                  <expan>βα-<lb n="&#8195;"/> σκάν<ex>ους</ex>
+                  </expan>
+               </choice>. Καίτ<hi rend="sup">οι</hi>
+               <choice>
+                  <abbr>τιν<am>¤</am>
+                  </abbr>
+                  <expan>τιν<ex>ὲς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μάτ<am>¤</am>
+                  </abbr>
+                  <expan>μάτ<ex>ην</ex>
+                  </expan>
+               </choice> δυσφημηθῆναι <choice>
+                  <abbr>τούτ<am>¤</am></abbr>
+                  <expan>τούτ<ex>ους</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>φ<hi rend="sup">α</hi><am>¤</am></abbr>
+                  <expan>φα<ex>σί</ex>
+                  </expan>
+               </choice>· <choice>
+                  <abbr>βασκαν<hi rend="sup">θῆ</hi><am>¤</am></abbr>
+                  <expan>βασκανθῆ<ex>ναι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>γ<am>¤</am>
+                  </abbr>
+                  <expan>γ<ex>ὰρ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μᾶλλ<am>¤</am></abbr>
+                  <expan>μᾶλλ<ex>ον</ex>
+                  </expan>
+               </choice> ὑπὸ τ<hi rend="sup">ῶν</hi>
+               <choice>                  
+                  <abbr>ἀν-<lb n="5"/> τιτέχν<am>¤</am></abbr>
+                  <expan>ἀν-<lb n="5"/> τιτέχν<ex>ων</ex>
+                  </expan>
+               </choice> αὐτοὺς, <choice>
+                  <abbr>ἀρίστ<am>¤</am></abbr>
+                  <expan>ἀρίστ<ex>ους</ex>
+                  </expan>
+               </choice>                  
+               <choice>
+                  <abbr>ὑπάρξαντ<am>¤</am>
+                  </abbr>
+                  <expan>ὑπάρξαντ<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἐργά<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ἐργάτ<ex>ας</ex>
+                  </expan>
+               </choice> χαλκ<hi rend="sup">οῦ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> σιδήρου, οἳ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἅρπ<am>¤</am>
+                  </abbr>
+                  <expan>ἅρπ<ex>ην</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ῷ</hi> Κρόνῳ <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ἐδημιούργ<hi rend="sup">η</hi><am>¤</am></abbr>
+                  <expan>ἐδημιούργη<ex>σαν</ex>
+                  </expan>
+               </choice>. Ὁ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>Γεωγ<hi rend="sup">ρ</hi><am>¤</am></abbr>
+                  <expan>Γεωργ<ex>άφος</ex>
+                  </expan>
+               </choice> φησὶ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι <choice>
+                  <abbr>πλεύσαν<am>¤</am></abbr>
+                  <expan>πλεύσαν<ex>τες</ex>
+                  </expan>
+               </choice> οἱ Ῥόδι<hi rend="sup">οι</hi> μέχρι <choice>
+                  <abbr>Ἰβηρί<am>¤</am></abbr>
+                  <expan>Ἰβηρί<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἔκτισ<am>¤</am>
+                  </abbr>
+                  <expan>ἔκτισ<ex>αν</ex>
+                  </expan>
+               </choice> ἐκεῖ <choice>
+                  <abbr>πόλ<am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>ιν</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> Ῥόδον. (<seg> § <num type="cardinal" value="508">508</num>-<num
+                     type="cardinal" value="509">509</num>
+               </seg>) <choice>
+                  <abbr>¤</abbr>
+                  <expan>Ὅτι</expan>
+               </choice> ἡ Κύπρ<hi rend="sup">ος</hi>
+               <choice>
+                  <abbr>οὐδεμι<am>¤</am></abbr>
+                  <expan>οὐδεμι<ex>ᾶς</ex>
+                  </expan>
+               </choice> νήσου <choice>
+                  <abbr>λειπομ<am>¤</am><hi rend="sup">η</hi></abbr>
+                  <expan>λειπομ<ex>έν</ex>η</expan>
+               </choice> τ<hi rend="sup">ῇ</hi> ἀρετῇ τ<hi rend="sup">ῷ</hi> Παμφυλί<hi
+                  rend="sup">ῳ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰσσικ<hi rend="sup">ῷ</hi>
+               <lb n="&#8195;"/> κλύζεται κόλπ<hi rend="sup">ῳ</hi>, ἧς οὐδεμί<hi rend="sup"
+                  >α</hi> ἔτι <choice>
+                  <abbr>ἀν<hi rend="sup">α</hi>τολικω<hi rend="sup">τ</hi><am>¤</am><hi rend="sup">ρ</hi><am>¤</am></abbr>
+                  <expan>ἀναλικωτ<ex>έ</ex>ρ<ex>α</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ός</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>¤</abbr>
+                  <expan>ἐστι</expan>
+               </choice>. Λέγ<hi rend="sup">ει</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀφροδύτ<am>¤</am>
+                  </abbr>
+                  <expan>Ἀφροδύτ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> ἄστυ ἐπήρατον, <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὡς</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Σαμοθρᾴκ<am>¤</am>
+                  </abbr>
+                  <expan>Σαμοθρᾴκ<ex>ην</ex>
+                  </expan>
+               </choice> Κορυβάντιον ἄστυ, <choice>
+                  <abbr>μικροπρ<am>¤</am>π<am>¤</am>
+                  </abbr>
+                  <expan>μικοπρ<ex>ε</ex>π<ex>ῶς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice>, οὐ <choice>
+                  <abbr>γ<am>¤</am>
+                  </abbr>
+                  <expan>γ<ex>ὰρ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μεγαλό-<lb n="10"/> φων<am>¤</am>
+                  </abbr>
+                  <expan>μεγαλό-<lb n="10"/> φων<ex>ον</ex>
+                  </expan>
+               </choice>
+               <hi rend="sup">τ</hi>ὸ <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τοσαύ<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>τοσαύτ<ex>ην</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>εἰπ<am>¤</am></abbr>
+                  <expan>εἰπ<ex>εῖν</ex>
+                  </expan>
+               </choice> ἄστυ, <choice>
+                  <abbr> ἀκολού<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>ἀκολούθ<ex>ως</ex>
+                  </expan>
+               </choice> δ᾽ οὖν τ<hi rend="sup">ῷ</hi> μύθ<hi rend="sup">ῳ</hi>, δι<hi
+                  rend="sup">ὰ</hi> τὴν ἐκεῖ <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀφρο<hi rend="sup">δ</hi><am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Ἀφροδ<ex>ί</ex>τ<ex>ης</ex>
+                  </expan>
+               </choice> μά-<lb n="&#8195;"/> λιστ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr> δια<hi rend="sup">τ</hi>ριβ<am>¤</am>
+                  </abbr>
+                  <expan>διατριβ<ex>ήν</ex>
+                  </expan>
+               </choice>. Ἄθυρμ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>γ<am>¤</am>
+                  </abbr>
+                  <expan>γ<ex>ὰρ</ex>
+                  </expan>
+               </choice> ἦν ἡ <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ος</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ῇ</hi> δαίμονι, ἀφ᾽ ἧς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Κύπρ<am>¤</am>
+                  </abbr>
+                  <expan>Κύπρ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>παρωνόμαστ<am>¤</am>
+                  </abbr>
+                  <expan>παρωνόμαστ<ex>αι</ex>
+                  </expan>                
+               </choice>· <lb n="&#8195;"/> τοῦτο <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> δι<hi rend="sup">ὰ</hi> τὴν <hi rend="sup">τ</hi>ῶν ἐκεῖ <choice>
+                  <abbr>μαχλοσύν<am>¤</am>
+                  </abbr>
+                  <expan>μαχλοσύν<ex>ην</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ <choice>
+                  <abbr>ἐπαφρόδιτ<am>¤</am>
+                  </abbr>
+                  <expan>ἐπαφρόδιτ<ex>ον</ex>
+                  </expan>
+               </choice>. <choice>
+                  <abbr>Τιν<am>¤</am>
+                  </abbr>
+                  <expan>Τιν<ex>ὲς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δέ</expan>
+               </choice>
+               <choice>
+                  <abbr>φ<hi rend="sup">α</hi><am>¤</am></abbr>
+                  <expan>φη<ex>σι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Κύπρ<am>¤</am>
+                  </abbr>
+                  <expan>Κύπρ<ex>ον</ex>
+                  </expan>
+               </choice> κληθῆν<hi rend="sup">αι</hi>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ὴν</ex>
+                  </expan>
+               </choice> ἀπὸ Κύπρ<hi rend="sup">ου</hi> υἱοῦ Κινύρου, ἢ ἀπὸ <choice>
+                  <abbr>ἄνθ<am>¤</am></abbr>
+                  <expan>ἄνθ<ex>ους</ex>
+                  </expan>
+               </choice> ἐκεῖ πολλ<hi rend="sup">οῦ</hi>
+               <choice>
+                  <abbr>φυομ<am>¤</am><hi rend="sup">ου</hi></abbr>
+                  <expan>φυομ<ex>έν</ex>ου</expan>
+               </choice>, κύπρ<hi rend="sup">ου</hi>
+               <choice>
+                  <abbr>καλουμ<am>¤</am><hi rend="sup">ου</hi></abbr>
+                  <expan>καλουμ<ex>έν</ex>ου</expan>
+               </choice>. <lb n="&#8195;"/> Οἱ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>Κρύπτ<am>¤</am>
+                  </abbr>
+                  <expan>Κρύπτ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ποτ<ex>ὲ</ex>
+                  </expan>
+               </choice> κληθῆναι <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ὴν</ex>
+                  </expan>
+               </choice> λέγουσι, δι<hi rend="sup">ὰ</hi> τὸ κεκρύφθ<hi rend="sup">αι</hi> ὑπὸ <choice>
+                  <abbr>θαλ<hi rend="sup">ά</hi><am>¤</am></abbr>
+                  <expan>θαλλά<ex>σσης</ex>
+                  </expan>
+               </choice>· ὅπερ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> Δήλ<hi rend="sup">ου</hi>
+               <lb n="15"/> μυθεύετ<hi rend="sup">αι</hi>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> Ῥόδου <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>κ<am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κ<ex>α</ex>τ<ex>ὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Πίνδαρ<am>¤</am>
+                  </abbr>
+                  <expan>Πίνδαρ<ex>ον</ex>
+                  </expan>
+               </choice>. Ὅτι <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Σφήκει<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>ἐκλή<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>ἐκλήθ<ex>η</ex>
+                  </expan>
+               </choice> ποτ<hi rend="sup">ὲ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Κεραστί<hi rend="sup">α</hi>, ὁ <choice>
+                  <abbr>Λυκό-<lb n="&#8195;"/> φρ<am>¤</am></abbr>
+                  <expan>Λυκό-<lb n="&#8195;"/> φρ<ex>ων</ex>
+                  </expan>
+               </choice> δηλ<hi rend="sup">οῖ</hi>. Ὀλβιώτα<hi rend="sup">τοι</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>νησιω<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>νησιωτ<ex>ῶν</ex>
+                  </expan>
+               </choice> οἱ Κύπρι<hi rend="sup">οι</hi>. <choice>
+                  <abbr>Λέγον<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>Λέγοντ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δέ</expan>
+               </choice> πο<hi rend="sup">τε</hi>
+               <choice>
+                  <abbr>θαλαττοκρατ<hi rend="sup">ῆ</hi><am>¤</am></abbr>
+                  <expan>θαλαττοκρατῆ<ex>σαι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>καιρ<am>¤</am>
+                  </abbr>
+                  <expan>καιρ<ex>όν</ex>
+                  </expan>
+               </choice> τιν<hi rend="sup">α</hi>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> αὐτοί. <choice>
+                  <abbr>Κύκλ<am>¤</am>
+                  </abbr>
+                  <expan>Κύκλ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice> νήσου <choice>
+                  <abbr>στά<hi rend="sup">δ</hi><am>¤</am>
+                  </abbr>
+                  <expan>στάδ<ex>ια</ex>
+                  </expan>
+               </choice> <choice>
+                  <abbr><num type="numGro" value="3420">,γυκ᾽</num></abbr>
+                  <expan>τρισχίλια τετρακόσια εἴκοσιν</expan>
+               </choice> τοῖς κατακολπίζουσι. Πολλαχ <hi
+                  rend="sup">οῦ</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἰσθμ<am>¤</am>
+                  </abbr>
+                  <expan>ἰσθμ<ex>οὺς</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> ποιεῖ, δι<hi rend="sup">ὰ</hi> τὸ<hi rend="sup">τ</hi>οῦ <choice>
+                  <abbr>σχήμα<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>σχήματ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἑτερόμηκ<am>¤</am>
+                  </abbr>
+                  <expan>ἑτερόμηκ<ex>ες</ex>
+                  </expan>
+               </choice> . (<seg> § <num type="cardinal" value="511">511</num>-<num
+                     type="cardinal" value="512">512</num>
+               </seg>) <choice>
+                  <abbr>¤</abbr>
+                  <expan>Ὅτι</expan>
+               </choice>
+               <choice>
+                  <abbr>πρόσθ<am>¤</am>
+                  </abbr>
+                  <expan>πρόσθ<ex>εν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Σουνιάδ<am>¤</am>
+                  </abbr>
+                  <expan>Σουνίαδ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>κορυφ<am>¤</am>
+                  </abbr>
+                  <expan>κορυφ<ex>ῆς</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἐφύπερθ<am>¤</am>
+                  </abbr>
+                  <expan>ἐφύπερθ<ex>εν</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> ἢ <choice>
+                  <abbr>ὑπέν<hi rend="sup">ε</hi>ρθ<am>¤</am>
+                  </abbr>
+                  <expan>ὑπένερθ<ex>εν</ex>
+                  </expan>
+               </choice> τῶν Ἀβάντων, φαίνεται <choice>
+                  <abbr>Σαλαμ<am>¤</am>
+                  </abbr>
+                  <expan>Σαλαμ<ex>ίς</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Αἴγιν<hi rend="sup">α</hi>. Δεῖ δὲ εἰδέναι <lb n="20"/> ὅτι ταὐτὸν ἐνταῦθ<hi rend="sup">α</hi> δηλ<hi rend="sup">οῖ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ <choice>
+                  <abbr>ἐφύπ<hi rend="sup">ε</hi>ρθ<am>¤</am></abbr>
+                  <expan>ἐφύπερθ<ex>εν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀβάντ<am>¤</am>
+                  </abbr>
+                  <expan>Ἀβάντ<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ <choice>
+                  <abbr>ὑπέν<hi rend="sup">ε</hi>ρθ<am>¤</am>
+                  </abbr>
+                  <expan>ὑπένερθ<ex>εν</ex>
+                  </expan>
+               </choice> , <choice>
+                  <abbr>ἵ<am>¤</am>α</abbr>
+                  <expan>ἵ<ex>ν</ex>α</expan>
+               </choice> λέγ<hi rend="sup">ῃ</hi> δι᾽ ἀμφ<hi rend="sup">οῖν</hi>
+               <lb n="&#8195;"/> τὸ νοτιώτερον· ὅπ<hi rend="sup">ε</hi>ρ εἰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>ὑπένερθ<am>¤</am>
+                  </abbr>
+                  <expan>ὑπένερθ<ex>έν</ex>
+                  </expan>
+               </choice> ἐστιν, δι<hi rend="sup">ὰ</hi> τὸ καθ᾽ <choice>
+                  <abbr>ἡμ<am>¤</am>
+                  </abbr>
+                  <expan>ἡμ<ex>ᾶς</ex>
+                  </expan>
+               </choice> βόρειον <choice>
+                  <abbr>ὕψ<am>¤</am>
+                  </abbr>
+                  <expan>ὕψ<ex>ος</ex>
+                  </expan>
+               </choice>, ἀλλ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>κ<am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κ<ex>α</ex>τ<ex>ὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> τ<hi rend="sup">οῦ</hi>
+               <choice>
+                  <abbr>Π<hi rend="sup">ε</hi>ριηγη<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Περιηγητ<ex>οῦ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>συνήθει<am>¤</am></abbr>
+                  <expan>συνήθει<ex>αν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ὕπερθ<am>¤</am></abbr>
+                  <expan>ὕπερθ<ex>έν</ex>
+                  </expan>
+               </choice> ἐστιν, ὡς <choice>
+                  <abbr>τιθέντ<am>¤</am>
+                  </abbr>
+                  <expan>τιθέντ<ex>ος</ex>
+                  </expan>
+               </choice> ἐπὶ <hi rend="sup">τ</hi>ῶν νοτίων <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice> ὑπέρ <choice>
+                  <abbr>πρόθ<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πρόθε<ex>σιν</ex>
+                  </expan>
+               </choice>. Ἀ-<lb n="&#8195;"/> κρωτήριον <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ᾀδόμ<am>¤</am><am>¤</am></abbr>
+                  <expan>ᾀδόμ<ex>εν</ex><ex>ον</ex>
+                  </expan>
+               </choice> Ἀττικῆς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Εὐβοί<am>¤</am></abbr>
+                  <expan>Εὐβοί<ex>ας</ex>
+                  </expan>
+               </choice> τὸ Σούνιον. <choice>
+                  <abbr>Π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>Πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> ἣν <choice>
+                  <abbr>Εὔβοι<am>¤</am></abbr>
+                  <expan>Εὔβοι<ex>άν</ex>
+                  </expan>
+               </choice> εἰσιν οἱ Ἄβαν<hi rend="sup">τες</hi>, <lb n="&#8195;"/>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> ὧν <choice>
+                  <abbr>ἐροῦμ<am>¤</am></abbr>
+                  <expan>ἐροῦμ<ex>εν</ex>
+                  </expan>
+               </choice> μετὰ ὀλίγ<hi rend="sup">α</hi>. Ἡ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>Σαλαμ<am>¤</am>
+                  </abbr>
+                  <expan>Σαλαμ<ex>ὶς</ex>
+                  </expan>
+               </choice> πρώτ<hi rend="sup">η</hi> ἐν τ<hi rend="sup">ῷ</hi>
+               <choice>
+                  <abbr>Σαρω<hi rend="sup">ν</hi><am>¤</am></abbr>
+                  <expan>Σαρων<ex>ικῷ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πελάγ<am>¤</am></abbr>
+                  <expan>πελάγ<ex>ει</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>πρ<am>¤</am></abbr>
+                  <expan>πρ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀν<hi rend="sup">α</hi>το<hi rend="sup">λ</hi><am>¤</am></abbr>
+                  <expan>ἀνατολ<ex>ὰς</ex>
+                  </expan>
+               </choice>
+               <lb n="25"/>
+               <choice>
+                  <abbr>Κορίν<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>Κορίνθ<ex>ου</ex>
+                  </expan>
+               </choice>. Καὶ μ<hi rend="sup">ε</hi>τ᾽ <choice>
+                  <abbr>αὐτ<am>¤</am></abbr>
+                  <expan>αὐτ<ex>ὴν</ex>
+                  </expan>
+               </choice> ἡ Αἴγιν<hi rend="sup">α</hi>, ἣν ἐν <choice>
+                  <abbr>πολλ<am>¤</am></abbr>
+                  <expan>πολλ<ex>οῖς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ <choice>
+                  <abbr>Πίν<hi rend="sup">δ</hi><am>¤</am><hi rend="sup">ρ</hi></abbr>
+                  <expan>Πίνδ<ex>α</ex>ρ<ex>ος</ex></expan>
+               </choice> ἐξυμνεῖ. <choice>
+                  <abbr>Π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>Πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> ἧς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>τοιαῦ<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>τοιαῦτ<ex>α</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>γρ<hi rend="sup">ά</hi><am>¤</am><am>¤</am></abbr>
+                  <expan>γρά<ex>φε</ex><ex>ται</ex></expan>
+               </choice>· <lb n="&#8195;"/>
+               <choice>
+                  <abbr>Νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>Νῆσ<ex>ος</ex>
+                  </expan>
+               </choice> πρὸ <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἐπιδαυρί<am>¤</am>
+                  </abbr>
+                  <expan>Ἐπιδαυρί<ex>ας</ex>
+                  </expan>
+               </choice> ἡ Αἴγιν<hi rend="sup">α</hi> ἐνδοξοτάτ<hi rend="sup">η</hi>, κύκλον <choice>
+                  <abbr>σταδί<am>¤</am>
+                  </abbr>
+                  <expan>σταδί<ex>ων</ex>
+                  </expan>
+               </choice> <choice>
+                  <abbr><num type="numGro" value="180">ρπ᾽</num></abbr>
+                  <expan>ἑκατὸν ὀγδοήκοντα</expan>
+               </choice>, <choice>
+                  <abbr>κλυζομ<am>¤</am><hi rend="sup">η</hi></abbr>
+                  <expan>κλυζομ<ex>έν</ex>η</expan>
+               </choice>
+               <lb n="&#8195;"/> τ<hi rend="sup">ῷ</hi> τ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>Κρη<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>Κρητ<ex>ικῷ</ex>
+                  </expan>
+               </choice> πελάγ<hi rend="sup">ει</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τ<hi rend="sup">ῷ</hi> Μυρτῴῳ, τ<hi rend="sup">ῷ</hi> μεταξὺ <choice>
+                  <abbr>Κρήτ<am>¤</am>
+                  </abbr>
+                  <expan>Κρήτ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀργεί<am>¤</am>
+                  </abbr>
+                  <expan>Ἀργεί<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀττικ<am>¤</am>
+                  </abbr>
+                  <expan>Ἀττικ<ex>ῆς</ex>
+                  </expan>
+               </choice>, ἐν βάθη <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <fw type="numFol" place="inferior-interior">
+                  <num type="numGro" value="54">νδ᾽</num>
+               </fw>
+            </p>
+            <pb n="Vat. gr. 1910, f. 138v"
+               facs="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0282_fa_0138v.jp2/full/full/0/default.jpg"
+               xml:id="Dik68539_f138v"/>
+            <p xml:lang="grc"><lb n="1"/>
+               <choice>
+                  <abbr>γ<hi rend="sup">ε</hi>ώδ<am>¤</am></abbr>
+                  <expan>γεώδ<ex>ης</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἐπιπολ<am>¤</am>
+                  </abbr>
+                  <expan>ἐπιπολ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>πετρώ<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>πετρώδ<ex>ης</ex>
+                  </expan>
+               </choice>, διὸ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ψιλ<hi rend="sup">ή</hi> ἐστι, <choice>
+                  <abbr>κριθοφόρ<am>¤</am>
+                  </abbr>
+                  <expan>κριθοφόρ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἱκαν<am>¤</am></abbr>
+                  <expan>ἱκαν<ex>ῶς</ex>
+                  </expan>
+               </choice>, Οἰνών<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ποτ<ex>ὲ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ὀνομαζο<hi rend="sup">μ</hi><am>¤</am><hi rend="sup">νη</hi></abbr>
+                  <expan>ὀνομαζομ<ex>έ</ex>νη</expan>
+               </choice>. <lb n="&#8195;"/> Ἐξ <choice>
+                  <abbr>αὐτ<am>¤</am></abbr>
+                  <expan>αὐτ<ex>ῆς</ex>
+                  </expan>
+               </choice> ὁ <choice>
+                  <abbr>Αἰακ<am>¤</am>
+                  </abbr>
+                  <expan>Αἰακ<ex>ός</ex>
+                  </expan>
+               </choice>. Οἱ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ἐν αὐτ<hi rend="sup">ῇ</hi> πρῶτ<hi rend="sup">οι</hi>
+               <choice>
+                  <abbr>Μυρμιδόν<am>¤</am>
+                  </abbr>
+                  <expan>Μυρμιδόν<ex>ες</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἐκλήθησ<am>¤</am>
+                  </abbr>
+                  <expan>ἐκλήθησ<ex>αν</ex>
+                  </expan>
+               </choice>, οὐχ ὅτι <choice>
+                  <abbr>κ<am>¤</am><hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>κ<ex>α</ex>τ<ex>ὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μῦθ<am>¤</am>
+                  </abbr>
+                  <expan>μῦθ<ex>ον</ex>
+                  </expan>
+               </choice>λοιμ<hi rend="sup">οῦ</hi>
+               <lb n="&#8195;"/> τ<hi rend="sup">ῇ</hi> νήσ<hi rend="sup">ῳ</hi>
+               <choice>
+                  <abbr>συμπεσόν<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>συμπεσόντ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice> ἐκεῖ <choice>
+                  <abbr>ἐκ<hi rend="sup">τ</hi>ριβέντ<am>¤</am>
+                  </abbr>
+                  <expan>ἐκτριβέντ<ex>ων</ex>
+                  </expan>
+               </choice> τῇ νόσ<hi rend="sup">ῳ</hi>, οἱ <choice>
+                  <abbr>μύρμηκ<am>¤</am>
+                  </abbr>
+                  <expan>μύρμηκ<ex>ες</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἄνοι</abbr>
+                  <expan>ἄνθρωποι</expan>
+               </choice> ἐγένον<hi rend="sup">το</hi>, Αἰακ<hi rend="sup">οῦ</hi>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>εὐξαμ<am>¤</am><hi rend="sup">ου</hi></abbr>
+                  <expan>εὐξαμ<ex>έν</ex>ου</expan>
+               </choice>, ἀλλ᾽ ὅτι <choice>
+                  <abbr>μυρμήκ<am>¤</am>
+                  </abbr>
+                  <expan>μυρμήκ<ex>ων</ex>
+                  </expan>
+               </choice> δίκην <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγαθ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθ<ex>ὴν</ex>
+                  </expan>
+               </choice> γῆν κάτω <choice>
+                  <abbr>οὖσ<am>¤</am>
+                  </abbr>
+                  <expan>οὖσ<ex>αν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ὑπορύττοντ<am>¤</am>
+                  </abbr>
+                  <expan>ὑπορύττοντ<ex>ες</ex>
+                  </expan>
+               </choice> ἐπέφερον <lb n="5"/>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>αῖς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πέτρ<am>¤</am>
+                  </abbr>
+                  <expan>πέτρ<ex>αις</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἵ<am>¤</am>α</abbr>
+                  <expan>ἵ<ex>ν</ex>α</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice> ἔχωσι <choice>
+                  <abbr>γ<hi rend="sup">ε</hi>ωργ<am>¤</am></abbr>
+                  <expan>γεωργ<ex>εῖν</ex>
+                  </expan>
+               </choice>, ἐν <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οῖς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ὀρύγ<hi rend="sup">μ<am>¤</am>σι</hi></abbr>
+                  <expan>ὀρύγμ<ex>α</ex>σι</expan>
+               </choice>
+               <choice>
+                  <abbr>κατοικ<am>¤</am>
+                  </abbr>
+                  <expan>κατοικ<ex>εῖν</ex>
+                  </expan>
+               </choice> , <choice>
+                  <abbr>φειδόμ<am>¤</am><hi rend="sup">οι</hi></abbr>
+                  <expan>φειδόμ<ex>εν</ex>οι</expan>
+               </choice>
+               <hi rend="sup">τ</hi>οῦ <choice>
+                  <abbr>πλινθοποι<am>¤</am></abbr>
+                  <expan>πλινθοποι<ex>εῖν</ex>
+                  </expan>
+               </choice> , ἵν<hi rend="sup">α</hi>
+               <lb n="&#8195;"/> ἔχωσι γῆν. Δωριεῖς <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἀνέκαθ<am>¤</am></abbr>
+                  <expan>ἀνέκαθ<ex>εν</ex>
+                  </expan>
+               </choice> οἱ Αἰγινῆτ<hi rend="sup">αι</hi>
+               <choice>
+                  <abbr>ἀπ<am>¤</am></abbr>
+                  <expan>ἀπ<ex>ὸ</ex>
+                  </expan>
+               </choice> Ἐπιδαύρ<hi rend="sup">ου</hi>
+               <choice>
+                  <abbr>κ<am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κ<ex>α</ex>τ<ex>ὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἡρόδο<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Ἡρόδοτ<ex>ον</ex>
+                  </expan>
+               </choice> . Ἐκ <choice>
+                  <abbr>ταύ<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ταύτ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice> νήσ<hi rend="sup">ου</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ <choice>
+                  <abbr>ᾀδόμ<am>¤</am><am>¤</am></abbr>
+                  <expan>ᾀδόμ<ex>εν</ex><ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Κρι<am>¤</am>
+                  </abbr>
+                  <expan>Κρι<ex>ὸς</ex>
+                  </expan>
+               </choice>, ἀνὴρ <choice>
+                  <abbr>γ<hi rend="sup">ε</hi>νναῖ<am>¤</am>
+                  </abbr>
+                  <expan>γενναῖ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀθλητ<am>¤</am></abbr>
+                  <expan>ἀθλητ<ex>ής</ex>
+                  </expan>
+               </choice> · ὑφ᾽ οὗ <choice>
+                  <abbr>ἀπελαυνό<hi rend="sup">μ<am>¤</am>ν<am>¤</am></hi></abbr>
+                  <expan> ἀπελαυνόμ<ex>ε</ex>ν<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice> νήσ<hi rend="sup">ου</hi> ὁ <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Λακώ-<lb n="&#8195;"/> ν<am>¤</am></abbr>
+                  <expan>Λακώ-<lb n="&#8195;"/> ν<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>βασι<hi rend="sup">λ</hi><am>¤</am>
+                  </abbr>
+                  <expan>βασιλ<ex>εὺς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr> Κλ<hi rend="sup">ε</hi>ομέν<am>¤</am></abbr>
+                  <expan>Κλεομέν<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>θέλ<am>¤</am>
+                  </abbr>
+                  <expan>θέλ<ex>ων</ex>
+                  </expan>
+               </choice> ἐκφοβῆσαι <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ὸν</ex>
+                  </expan>
+               </choice> ἔφ<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>ἀστεί<am>¤</am>
+                  </abbr>
+                  <expan>ἀστεί<ex>ως</ex>
+                  </expan>
+               </choice> τὸ <choice>
+                  <abbr>ὑμνούμ<am>¤</am><am>¤</am></abbr>
+                  <expan>ὑμνούμ<ex>εν</ex><ex>ον</ex>
+                  </expan>
+               </choice>, ἤδ<hi rend="sup">η</hi> ν<hi rend="sup">ῦν</hi> καταχαλ<hi rend="sup"
+                  >κοῦ</hi>, <lb n="&#8195;"/> ὦ Κρι<hi rend="sup">ὲ</hi>, τ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>κέρα<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κέρατ<ex>α</ex>
+                  </expan>
+               </choice>, ὡς μεγάλ<hi rend="sup">ῳ</hi> κακ<hi rend="sup">ῷ</hi>
+               <choice>
+                  <abbr>συνοισόμ<am>¤</am><am>¤</am></abbr>
+                  <expan>συνοισόμ<ex>εν</ex><ex>ος</ex></expan>
+               </choice>. Λέγεται <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Σώστρατ<am>¤</am>
+                  </abbr>
+                  <expan>Σώστρατ<ex>ός</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Αἰγινήτ<am>¤</am>
+                  </abbr>
+                  <expan>Αἰγινήτ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <lb n="10"/>
+               <choice>
+                  <abbr>ἔμπορ<am>¤</am>
+                  </abbr>
+                  <expan>ἔμπορ<ex>ος</ex>
+                  </expan>
+               </choice> μεγ<hi rend="sup">άλα</hi> ἐκ φορτίων κ<hi rend="sup">ε</hi>ρδῆσαι. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>ταῦ<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ταῦτ<ex>α</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Αἰγίν<am>¤</am>
+                  </abbr>
+                  <expan>Αἰγίν<ex>ης</ex>
+                  </expan>
+               </choice>. Ἡ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>Σαλαμ<am>¤</am>
+                  </abbr>
+                  <expan>Σαλαμ<ex>ὶς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἑβδομή<am>¤</am>
+                  </abbr>
+                  <expan>ἑβδομή<ex>κοντα</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>σταδί<am>¤</am></abbr>
+                  <expan>σταδί<ex>ων</ex>
+                  </expan>
+               </choice> ἔχει <choice>
+                  <abbr>περίμετρ<am>¤</am>
+                  </abbr>
+                  <expan>περίμετρ<ex>ον</ex>
+                  </expan>
+               </choice> ἢ <choice>
+                  <abbr>ὀγδοή<am>¤</am>
+                  </abbr>
+                  <expan>ὀγδοή<ex>κοντα</ex></expan>
+               </choice>. Ἐκαλεῖτο <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δέ</expan>
+               </choice>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ποτ<ex>ε</ex>
+                  </expan>
+               </choice> Κυχρεί<hi rend="sup">α</hi>, ἀπό <choice>
+                  <abbr>τιν<am>¤</am>
+                  </abbr>
+                  <expan>τιν<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Κυχρέ<am>¤</am>
+                  </abbr>
+                  <expan>Κυχρέ<ex>ως</ex>
+                  </expan>
+               </choice>, οὗ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Λυκόφρ<am>¤</am>
+                  </abbr>
+                  <expan>Λυκόφρ<ex>ων</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀρριαν<am>¤</am>
+                  </abbr>
+                  <expan>Ἀρριαν<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μέμνηντ<am>¤</am>
+                  </abbr>
+                  <expan>μέμνητ<ex>αι</ex>
+                  </expan>
+               </choice>, ὃς <choice>
+                  <abbr>ὄφ<am>¤</am>
+                  </abbr>
+                  <expan>ὄφ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἐπεκλή<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>ἐπεκήθ<ex>η</ex>
+                  </expan>
+               </choice> δι<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>τραχύ<hi rend="sup">τ</hi><am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>τραχρύτ<ex>η</ex>τ<ex>α</ex>
+                  </expan>
+               </choice> τρ<hi rend="sup">ό</hi>π<hi rend="sup">ου</hi>, ἀπηλάθ<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice> νήσ<hi rend="sup">ου</hi> ὑπὸ <lb n="&#8195;"/> Εὐρυλόχ<hi rend="sup"
+                  >ου</hi>. Ὠνομάσθη <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ἡ <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ος</ex>
+                  </expan>
+               </choice> αὕτ<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Σκιρ<am>¤</am>
+                  </abbr>
+                  <expan>Σκιρ<ex>ὰς</ex>
+                  </expan>
+               </choice> ἀπό <choice>
+                  <abbr>τιν<am>¤</am>
+                  </abbr>
+                  <expan>τιν<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἥρω<am>¤</am>
+                  </abbr>
+                  <expan>ἥρω<ex>ος</ex>
+                  </expan>
+               </choice>· ἀφ᾽οὗ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Σκιρ<am>¤</am>
+                  </abbr>
+                  <expan>Σκιρ<ex>ὰς</ex>
+                  </expan>
+               </choice> Ἀθην<hi rend="sup">ᾶ</hi> παρ᾽ <choice>
+                  <abbr>Ἀ-<lb n="&#8195;"/> θηναί<am>¤</am></abbr>
+                  <expan>Ἀ-<lb n="&#8195;"/> θηναί<ex>οις</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ μὴν ὁ <choice>
+                  <abbr>Σκιροφορι<am>¤</am>
+                  </abbr>
+                  <expan>Σκιροφορι<ex>ὼν</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Σκίρ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>τό<hi rend="sup">π<am>¤</am></hi></abbr>
+                  <expan>τόπ<ex>ος</ex>
+                  </expan>
+               </choice> ἐν Ἀττικ<hi rend="sup">ῇ</hi>. Εἶχ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am><hi rend="sup">μ</hi><am>¤</am>
+                  </abbr>
+                  <expan>ποτ<ex>α</ex>μ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Βώκαρ<am>¤</am></abbr>
+                  <expan>Βώκαρ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>λεγόμ<am>¤</am><am>¤</am>
+                  </abbr>
+                  <expan>λεγόμ<ex>εν</ex><ex>ον</ex>
+                  </expan>
+               </choice>, <lb n="15"/> ὡς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Λυκόφρ<am>¤</am>
+                  </abbr>
+                  <expan>Λυκόφρ<ex>ων</ex>
+                  </expan>
+               </choice> ἱστορεῖ, ὡς ἂν εἴποι <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ις</ex>
+                  </expan>
+               </choice> Βουκέφαλον· καθ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> πηγ<hi rend="sup">ή</hi>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ις</ex>
+                  </expan>
+               </choice> παρ<hi rend="sup">ὰ</hi> Θ<hi rend="sup">ε</hi>οκρίτ<hi rend="sup">ῳ</hi>
+               <lb n="&#8195;"/> Βούριν<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>Ἰτα<hi rend="sup">λ</hi><am>¤</am><hi rend="sup">ὴ</hi>
+                  </abbr>
+                  <expan>Ἰταλ<ex>ικ</ex>ὴ</expan>
+               </choice>, βοὸς ῥινὶ <choice>
+                  <abbr>παρονομαζομ<am>¤</am><hi rend="sup">η</hi>
+                  </abbr>
+                  <expan>παρονομαζομ<ex>έν</ex>η</expan>
+               </choice>. <choice>
+                  <abbr>¤</abbr>
+                  <expan>Ὅτι</expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am>
+                  </abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> Σαλαμῖν<hi rend="sup">α</hi> κατεναυμαχήθη ὁ Ξ<hi rend="sup">έ</hi>ρ-<lb
+                  n="&#8195;"/> ξης, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὅτι</expan>
+               </choice> ναυτικὸν <choice>
+                  <abbr>ἀξιόλο<hi rend="sup">γ</hi><am>¤</am></abbr>
+                  <expan>ἀξιόλογ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἔσχ<am>¤</am>
+                  </abbr>
+                  <expan>ἔσχ<ex>εν</ex>
+                  </expan>
+               </choice> ἡ <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ός</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>ποτ<ex>ε</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>οὐδ<am>¤</am>
+                  </abbr>
+                  <expan>οὐδ<ex>εὶς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>λό<hi rend="sup">γ</hi><am>¤</am></abbr>
+                  <expan>λόγ<ex>ους</ex>
+                  </expan>
+               </choice> ἠγνόηκ<hi rend="sup">ε</hi>. <choice>
+                  <abbr>Τ<am>¤</am>
+                  </abbr>
+                  <expan>Τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice> Σαλα-<lb n="&#8195;"/> μῖν<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>πορ<hi rend="sup">θμ<am>¤</am></hi></abbr>
+                  <expan>πορθμ<ex>ὸν</ex>
+                  </expan>
+               </choice> διστάδιον <choice>
+                  <abbr>εἶν<am>¤</am></abbr>
+                  <expan>εἶν<ex>αί</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>φ<hi rend="sup">α</hi><am>¤</am></abbr>
+                  <expan>φη<ex>σιν</ex>
+                  </expan>
+               </choice>, ὃν ἐπειρᾶτο <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice> ὁ <choice>
+                  <abbr>Ξέρξ<am>¤</am>
+                  </abbr>
+                  <expan>Ξέρξ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>διαχῶσ<am>¤</am>
+                  </abbr>
+                  <expan>διαχῶσ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>οὕτ<am>¤</am>
+                  </abbr>
+                  <expan>οὕτ<ex>ως</ex>
+                  </expan>
+               </choice> ἀποχερσῶσ<hi rend="sup">αι</hi>, <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ἀπεναν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ἀπεναντ<ex>ίας</ex>
+                  </expan>
+               </choice> τι <choice>
+                  <abbr>ποι<am>¤</am></abbr>
+                  <expan>ποι<ex>ῶν</ex>
+                  </expan>
+               </choice> τοῖς <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice> Ἄθων νεανιεύμασιν, οὗ <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice> αὐχ<hi rend="sup">έ</hi>ν<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>διορύξ<am>¤</am></abbr>
+                  <expan>διορύξ<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀπεθαλάσ-<lb n="20"/> σωσ<am>¤</am></abbr>
+                  <expan>ἀπεθαλάσ-<lb n="20"/> σωσ<ex>εν</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἐκωλύ<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>ἐκωλύθ<ex>η</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>φυγ<am>¤</am>
+                  </abbr>
+                  <expan>φυγ<ex>ών</ex>
+                  </expan>
+               </choice>. (<seg> § <num type="cardinal" value="510">510</num>
+               </seg>) <choice>
+                  <abbr>¤</abbr>
+                  <expan>Ὅτι</expan>
+               </choice> π<hi rend="sup">ε</hi>ρὶ<choice>
+                  <abbr>Φοινίκ<am>¤</am>
+                  </abbr>
+                  <expan>Φοινίκ<ex>ην</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ος</ex>
+                  </expan>
+               </choice> ἡ <choice>
+                  <abbr>Ἄραδ<am>¤</am>
+                  </abbr>
+                  <expan>Ἄραδ<ex>ος</ex>
+                  </expan>
+               </choice>. <choice>
+                  <abbr>Λέγον<am>¤</am>
+                  </abbr>
+                  <expan>Λέγον<ex>ται</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>γενέσθ<am>¤</am>
+                  </abbr>
+                  <expan>γενέσθ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>ποτ<ex>ὲ</ex>
+                  </expan>
+               </choice> ἔνδοξοι οἱ Ἀράδιοι, ὅτ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>στασιαζόντ<am>¤</am>
+                  </abbr>
+                  <expan>στασιαζόντ<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀδελ<hi rend="sup">φ</hi><am>¤</am></abbr>
+                  <expan>ἀδελφ<ex>ῶν</ex>
+                  </expan>
+               </choice> Σελεύκου τοῦ τε Καλλινίκου <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἀντιόχ<hi rend="sup">ου</hi>
+               <hi rend="sup">τ</hi>οῦ <choice>
+                  <abbr>Ἱέρακ<am>¤</am>
+                  </abbr>
+                  <expan>Ἱέρακ<ex>ος</ex>
+                  </expan>
+               </choice>, αὐτοὶ τ<hi rend="sup">ῷ</hi> Καλλινίκ<hi rend="sup">ῳ</hi>
+               <choice>
+                  <abbr>πρ<hi rend="sup">ο</hi>σθέμ<am>¤</am><hi rend="sup">οι</hi>
+                  </abbr>
+                  <expan>προσθέμ<ex>εν</ex>οι</expan>
+               </choice>
+               <choice>
+                  <abbr>ἔλ<hi rend="sup">α</hi><am>¤</am>
+                  </abbr>
+                  <expan>ἔλα<ex>βον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἐξουσί<am>¤</am></abbr>
+                  <expan>ἐξουσί<ex>αν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>δέχεσθ<am>¤</am>
+                  </abbr>
+                  <expan>δέχεσθ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οὺς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>κατα-<lb n="&#8195;"/> φεύγον<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κατα-<lb n="&#8195;"/> φεύγοντ<ex>ας</ex>
+                  </expan>
+               </choice> ἐκ <hi rend="sup">τ</hi>οῦ <choice>
+                  <abbr>βασι<hi rend="sup">λ</hi><am>¤</am></abbr>
+                  <expan>βασιλ<ex>έως</ex>
+                  </expan>
+               </choice> παρ᾽ <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>οὺς</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> μὴ ἐκδιδόναι <choice>
+                  <abbr>ἄκοντ<am>¤</am>
+                  </abbr>
+                  <expan>ἄκοντ<ex>ας</ex>
+                  </expan>
+               </choice>· μὴ μέντ<hi rend="sup">οι</hi> μὴ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἐκπλέ<am>¤</am>
+                  </abbr>
+                  <expan>ἐκπλέ<ex>ειν</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> ἐξ αὐτῶν <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οὺς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πρ<am>¤</am>φυγ<am>¤</am>
+                  </abbr>
+                  <expan>πρ<ex>όσ</ex>φυγ<ex>ας</ex>
+                  </expan>
+               </choice> ἄνευ <hi rend="sup">τ</hi>οῦ <choice>
+                  <abbr>ἐπιτρ<hi rend="sup">έ</hi><am>¤</am>
+                  </abbr>
+                  <expan>ἐπιτρέ<ex>ψαι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>βασι<hi rend="sup">λ</hi><am>¤</am><hi rend="sup">α</hi></abbr>
+                  <expan>βασιλ<ex>έ</ex>α</expan>
+               </choice>. Ἔστι <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἑτέρ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>νῆσ<am>¤</am>
+                  </abbr>
+                  <expan>νῆσ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἄραδ<am>¤</am>
+                  </abbr>
+                  <expan>Ἄραδ<ex>ος</ex>
+                  </expan>
+               </choice> , ὡς <choice>
+                  <abbr>ῥη-<lb n="25"/> θή<hi rend="sup">σ</hi><am>¤</am>τ<am>¤</am></abbr>
+                  <expan>ῥη-<lb n="25"/> θήσ<ex>ε</ex>τ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>κατω<hi rend="sup">τ</hi><am>¤</am><hi rend="sup">ρω</hi></abbr>
+                  <expan>κατωτ<ex>έ</ex>ρω</expan>
+               </choice>. <choice>
+                  <abbr>¤</abbr>
+                  <expan>Ὅτι</expan>
+               </choice> τὸ <choice>
+                  <abbr>Αἰγαῖ<am>¤</am>
+                  </abbr>
+                  <expan>Αἰγαῖ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πέλαγ<am>¤</am>
+                  </abbr>
+                  <expan>πέλαγ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀπειρεσί<am>¤</am>
+                  </abbr>
+                  <expan>ἀπειρεσί<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἔχ<am>¤</am>
+                  </abbr>
+                  <expan>ἔχ<ex>ειν</ex>
+                  </expan>
+               </choice> λέγ<hi rend="sup">ει</hi>
+               <choice>
+                  <abbr>νήσ<am>¤</am>
+                  </abbr>
+                  <expan>νήσ<ex>ους</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὅτι</expan>
+               </choice> θηητὸν βαθὺν <lb n="&#8195;"/>
+               <choice>
+                  <abbr>πόρ<am>¤</am>
+                  </abbr>
+                  <expan>πόρ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <hi rend="sup">τ</hi>οῦ Αἰγαί<hi rend="sup">ου</hi> καλ<hi rend="sup">εῖ</hi>. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἑλλήσπον<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>Ἑλλήσποντ<ex>ον</ex>
+                  </expan>
+               </choice> παρ<hi rend="sup">α</hi>φράζων ἢ π<hi rend="sup">ε</hi>ριφράζ<hi rend="sup"
+                  >ων</hi> ἢ <choice>
+                  <abbr>ἐτυμολογ<am>¤</am>
+                  </abbr>
+                  <expan>ἐτυμολογ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>στενω<hi rend="sup">π</hi><am>¤</am>
+                  </abbr>
+                  <expan>στενωπ<ex>ὸν</ex>
+                  </expan>
+               </choice> ὕδωρ <choice>
+                  <abbr>Ἀθαμαντίδ<am>¤</am>
+                  </abbr>
+                  <expan>Ἀθαμαντίδ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἕλλ<am>¤</am>
+                  </abbr>
+                  <expan>Ἕλλ<ex>ης</ex>
+                  </expan>
+               </choice> λέγ<hi rend="sup">ει</hi>
+               <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ὸν</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὡς</expan>
+               </choice> ἐκεῖ <choice>
+                  <abbr>κ<am>¤</am><hi rend="sup">τ</hi><am>¤</am> πεσούσ <am>¤</am></abbr>
+                  <expan>κ<ex>α</ex>τ<ex>α</ex>πεσούσ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἕλλ<am>¤</am>
+                  </abbr>
+                  <expan>Ἓλλ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>θυ<hi rend="sup">γ<am>¤</am>τρ</hi>
+                  </abbr>
+                  <expan>θυγ<ex>α</ex>τρ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <fw type="numFol" place="inferior-interno">
+                  <num type="numGro" value="54">νδ᾽</num>
+               </fw>
+            </p>
+            <pb n="Vat. gr. 1910, f. 139r"
+               facs="https://digi.vatlib.it/iiifimage/MSS_Vat.gr.1910/Vat.gr.1910_0283_fa_0139r.jp2/full/full/0/default.jpg"
+               xml:id="Dik68539_f139r"/>
+            <p xml:lang="grc"><lb n="1"/>
+               <damage agent="roto" quantity="1" unit="char">
+                  <supplied source="#Muller">τοῦ</supplied>
+               </damage>
+               <choice>
+                  <abbr>Ἀθάμαν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Ἀθάμαντ<ex>ος</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>λιπούσ<am>¤</am></abbr>
+                  <expan>λιπούσ<ex>ης</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ῷ</hi> τό<hi rend="sup">πῳ</hi> τὸ ὄνομ<hi rend="sup"
+                  >α</hi>, ἧς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>τά<hi rend="sup">φ</hi><am>¤</am></abbr>
+                  <expan>τάφ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἡρό<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>Ἡρόδ<ex>οτος</ex>
+                  </expan>
+               </choice> ἱστορ<hi rend="sup">εῖ</hi>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Θρᾳκικ<am>¤</am>
+                  </abbr>
+                  <expan>θρᾳκικ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Χ<hi rend="sup">ε</hi>ρρόνησ<am>¤</am></abbr>
+                  <expan>Χερρόνησ<ex>ον</ex>
+                  </expan>
+               </choice>. <lb n="&#8195;"/> Ὁ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>Διον<hi rend="sup">ύ</hi>σ<hi rend="sup">ι</hi><am>¤</am></abbr>
+                  <expan>Διονύσι<ex>ος</ex>
+                  </expan>
+               </choice> λέγ<hi rend="sup">ει</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι <choice>
+                  <abbr>Σηστ<am>¤</am>
+                  </abbr>
+                  <expan>Σηστ<ex>ὸς</ex>
+                  </expan>
+               </choice> ἐκεῖ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἄβυδ<am>¤</am>
+                  </abbr>
+                  <expan>Ἄβυδ<ex>ος</ex>
+                  </expan>
+               </choice> ἐναντίον <choice>
+                  <abbr>ὅρμ<am>¤</am>
+                  </abbr>
+                  <expan>ὅρμ<ex>ον</ex>
+                  </expan>
+               </choice> ἔθεντο· <choice>
+                  <abbr>Σηστ<am>¤</am>
+                  </abbr>
+                  <expan>Σηστ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice>, Λεσβίων <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ἄποικ<am>¤</am></abbr>
+                  <expan>ἄποικ<ex>ος</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>κα<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>καθ<ex>ὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ <choice>
+                  <abbr>Μάδυτ<am>¤</am>
+                  </abbr>
+                  <expan>Μάδυτ<ex>ος</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὡς</expan>
+               </choice> ὁ <choice>
+                  <abbr>Γ<hi rend="sup">ε</hi>ωγ<hi rend="sup">ρ</hi><am>¤</am></abbr>
+                  <expan>Γεωγρ<ex>άφος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>φ<am>¤</am></abbr>
+                  <expan>φ<ex>ησὶ</ex>
+                  </expan>
+               </choice>, Χ<hi rend="sup">ε</hi>ρρονησί<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>πόλ<am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>ις</ex>
+                  </expan>
+               </choice>, Ἀβύδ<hi rend="sup">ου</hi>
+               <choice>
+                  <abbr>διέχ<hi rend="sup">ου</hi><am>¤</am><hi rend="sup">α</hi></abbr>
+                  <expan>διέχου<ex>σ</ex>α</expan>
+               </choice>
+               <choice>
+                  <abbr>σταδί<am>¤</am>
+                  </abbr>
+                  <expan>σταδί<ex>ους</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>
+                     <num type="numGro" value="30">λ᾽</num>
+                  </abbr>
+                  <expan>τριάκοντα</expan>
+               </choice> ἐκ <choice>
+                  <abbr>λι-<lb n="&#8195;"/> μ<am>¤</am><am>¤</am></abbr>
+                  <expan>λι-<lb n="&#8195;"/> μ<ex>έν</ex><ex>ος</ex></expan>
+               </choice> εἰς λιμέν<hi rend="sup">α</hi>. Ἔνθ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ <choice>
+                  <abbr>λεγο<hi rend="sup">μ</hi><am>¤</am><hi rend="sup">ν</hi><hi rend="sup"
+                        >η</hi></abbr>
+                  <expan>λεγομ<ex>έ</ex>νη</expan>
+               </choice> Ἀποβάθρ<hi rend="sup">α</hi> , ὅπ<hi rend="sup">ου</hi> ἡ Ξερξικ<hi
+                  rend="sup">ὴ</hi> σχεδί<hi rend="sup">α</hi> ἐπήγνυ <hi rend="sup">τ</hi>ο. <choice>
+                  <abbr>Π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Εὐρώ<hi rend="sup">π</hi><am>¤</am></abbr>
+                  <expan>Εὐρώπ<ex>ην</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δέ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἐστ<am>¤</am>
+                  </abbr>
+                  <expan>ἐστ<ex>ιν</ex>
+                  </expan>
+               </choice>
+               <lb n="5"/> ἡ ῥηθ<hi rend="sup">εῖ</hi>σ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>πόλ<am>¤</am></abbr>
+                  <expan>πόλ<ex>ις</ex>
+                  </expan>
+               </choice> , <choice>
+                  <abbr>λεγο<hi rend="sup">μ</hi><am>¤</am><hi rend="sup">ν</hi><hi rend="sup"
+                        >η</hi></abbr>
+                  <expan>λεγομ<ex>έ</ex>νη</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀττικ<am>¤</am>
+                  </abbr>
+                  <expan>Ἀττικ<ex>ῶς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>μ<am>¤</am>
+                  </abbr>
+                  <expan>μ<ex>ὲν</ex>
+                  </expan>
+               </choice> ἡ <choice>
+                  <abbr>Σηστ<am>¤</am>
+                  </abbr>
+                  <expan>Σηστ<ex>ὸς</ex>
+                  </expan>
+               </choice>, παρ<hi rend="sup">ὰ</hi> δ᾽ Ἐφόρῳ ὁ <choice>
+                  <abbr>Σηστ<am>¤</am>
+                  </abbr>
+                  <expan>Σηστ<ex>ός</ex>
+                  </expan>
+               </choice> . Ἔσχ<hi rend="sup">ε</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δέ</expan>
+               </choice>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>ποτ<ex>ε</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τεῖχ<am>¤</am>
+                  </abbr>
+                  <expan>τεῖχ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἰσχυρ<am>¤</am>
+                  </abbr>
+                  <expan>ἰσχυρ<ex>ὸν</ex>
+                  </expan>
+               </choice>, <lb n="&#8195;"/> ὡς <choice>
+                  <abbr>Ἡρό<hi rend="sup">δ</hi><am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Ἡρόδ<ex>ο</ex>τ<ex>ος</ex>
+                  </expan>
+               </choice> ἱστορεῖ. <choice>
+                  <abbr>Ἄβυδ<am>¤</am>
+                  </abbr>
+                  <expan>Ἄβυδ<ex>ος</ex>
+                  </expan>
+               </choice> δ<hi rend="sup">ὲ</hi>
+               <choice>
+                  <abbr>πρ<am>¤</am>
+                  </abbr>
+                  <expan>πρ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀν<hi rend="sup">α</hi>το<hi rend="sup">λ</hi><am>¤</am></abbr>
+                  <expan>ἀνατολ<ex>ὰς</ex>
+                  </expan>
+               </choice> ἀντιπαρήκουσ<hi rend="sup">α</hi> τ<hi rend="sup">ῇ</hi> Σηστ<hi rend="sup"
+                  >ῷ</hi>, κτίσμ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>Μιλη-<lb n="&#8195;"/> σί<am>¤</am></abbr>
+                  <expan>Μιλη-<lb n="&#8195;"/> σί<ex>ων</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἴσ<am>¤</am>
+                  </abbr>
+                  <expan>ἴσ<ex>ον</ex>
+                  </expan>
+               </choice> διέχουσ<hi rend="sup">α</hi> Λαμψάκου <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰλί<hi rend="sup">ου</hi>, ὡς ὁ <choice>
+                  <abbr>Γ<hi rend="sup">ε</hi>ωγ<hi rend="sup">ρ</hi><am>¤</am></abbr>
+                  <expan>Γεωγρ<ex>άφος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>φ<hi rend="sup">η</hi><am>¤</am></abbr>
+                  <expan>φη<ex>σίν</ex>
+                  </expan>
+               </choice>· ἔνθ<hi rend="sup">α</hi> τὸ ἑπταστάδιον <hi rend="sup">τ</hi>οῦ <choice>
+                  <abbr>πορ<hi rend="sup">θμ</hi><am>¤</am></abbr>
+                  <expan>προθμ<ex>οῦ</ex>
+                  </expan>
+               </choice>, ὅπερ <lb n="&#8195;"/> ὁ <choice>
+                  <abbr>Ξέρξ<am>¤</am>
+                  </abbr>
+                  <expan>Ξέρξ<ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἔζευξ<am>¤</am>
+                  </abbr>
+                  <expan>ἔζευξ<ex>εν</ex>
+                  </expan>
+               </choice>. Ἐν<hi rend="sup">ε</hi>πρήσθ<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ἡ <choice>
+                  <abbr>Ἄβυ<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>Ἄβυδ<ex>ος</ex>
+                  </expan>
+               </choice> αὕτ<hi rend="sup">η</hi> ὑπὸ Δαρεί<hi rend="sup">ου</hi> τ<hi rend="sup"
+                  >οῦ</hi>
+               <choice>
+                  <abbr>πρς</abbr>
+                  <expan>πατρὸς</expan>
+               </choice> Ξέρξ<hi rend="sup">ου</hi> . Εἶναι <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>λ<hi rend="sup">έγ</hi><am>¤</am></abbr>
+                  <expan>λέγ<ex>εται</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ποτ<ex>ε</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Λιβυκ<hi rend="sup">ὴ</hi>
+               <choice>
+                  <abbr>Ἄβυ<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>Ἄβυδ<ex>ος</ex>
+                  </expan>
+               </choice> Αἰγυ<hi rend="sup">πτία</hi>, ἔχουσ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>Μεμνόνει<am>¤</am></abbr>
+                  <expan>Μεμνόνει<ex>ον</ex>
+                  </expan>
+               </choice> βασίλειον, δευτερεύουσ<hi rend="sup">α</hi> μετ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὰς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἑκατομ-<lb n="10"/> πύ<hi rend="sup">λ</hi><am>¤</am></abbr>
+                  <expan>ἑκατομ-<lb n="10"/> πύλ<ex>ους</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Θήβ<am>¤</am></abbr>
+                  <expan>Θήβ<ex>ας</ex>
+                  </expan>
+               </choice>. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰταλικ<hi rend="sup">ὴ</hi>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἱστόρητ<am>¤</am></abbr>
+                  <expan>ἱστόρητ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἄβυ<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>Ἄβυδ<ex>ος</ex>
+                  </expan>
+               </choice>. <choice>
+                  <abbr>¤</abbr>
+                  <expan>Ὅτι</expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἑλλησπόν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Ἑλλησπόντ<ex>ου</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀμφεβλή<hi rend="sup">θ</hi>
+                     <am>¤</am>
+                  </abbr>
+                  <expan>ἀμφεβλήθ<ex>η</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οῖς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>παλαι<am>¤</am>
+                  </abbr>
+                  <expan>παλαι<ex>οῖς</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/> ἄλλ<hi rend="sup">α</hi> τ<hi rend="sup">ὲ</hi>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>πό<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>πόθ<ex>εν</ex>
+                  </expan>
+               </choice> ἂν ἄρχοιτο, ἤδ<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>προγέγρα<hi rend="sup">πτ</hi><am>¤</am></abbr>
+                  <expan>προγέγραπτ<ex>αι</ex>
+                  </expan>
+               </choice>. <choice>
+                  <abbr>Ἴστρ <am>¤</am>
+                  </abbr>
+                  <expan>Ἴστρ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δέ</expan>
+               </choice> τιν<hi rend="sup">ά</hi>
+               <choice>
+                  <abbr>φ<hi rend="sup">α</hi><am>¤</am></abbr>
+                  <expan>φα<ex>σιν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἱστορ<am>¤</am>
+                  </abbr>
+                  <expan>ἱστορ<ex>εῖν</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>τέσσαρ<am>¤</am>
+                  </abbr>
+                  <expan>τέσσαρ<ex>ας</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>γενέσθ<am>¤</am>
+                  </abbr>
+                  <expan>γενέσθ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>μεγάλ<am>¤</am></abbr>
+                  <expan>μεγάλ<ex>ους</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>κατακλυσμ<am>¤</am></abbr>
+                  <expan>κατακλυσμ<ex>οὺς</ex>
+                  </expan>
+               </choice>, ὧν ἐφ᾽ ἑνὶ διαρραγέντ<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἑλλήσπον<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Ἑλλήσποντ<ex>ον</ex>
+                  </expan>
+               </choice> ἀφορίσ<hi rend="sup">αι</hi>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀσί<am>¤</am>
+                  </abbr>
+                  <expan>Ἀσί<ex>ας</ex>
+                  </expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Εὐρώ<hi rend="sup">π</hi><am>¤</am></abbr>
+                  <expan>Εὐρώπ<ex>ην</ex></expan>
+               </choice>. <choice>
+                  <abbr>Ἰστέ<am>¤</am>
+                  </abbr>
+                  <expan>Ἰστέ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ὅτι <choice>
+                  <abbr>κ<am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κ<ex>α</ex>τ<ex>ὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>γράψαν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>γράψαντ<ex>α</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">ὰ</hi>
+               <choice>
+                  <abbr>Ἐθνι<hi rend="sup">κ</hi><am>¤</am></abbr>
+                  <expan>Ἐθνικ<ex>ὰ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἰταλ<am>¤</am></abbr>
+                  <expan>Ἰταλ<ex>ικὴ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πόλ<am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὶς</ex>
+                  </expan>
+               </choice> λέγεται <choice>
+                  <abbr>οὐδε<hi rend="sup">τ</hi><am>¤</am><hi rend="sup">ρ</hi><am>¤</am></abbr>
+                  <expan>οὐδετ<ex>έ</ex>ρ<ex>ως</ex>
+                  </expan>
+               </choice> τὸ <choice>
+                  <abbr>Ἄ-<lb n="&#8195;"/> βυ<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>Ἄ-<lb n="&#8195;"/> βυδ<ex>ον</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι ἐπὶ συκοφαντίᾳ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> μαλακί<hi rend="sup">ᾳ</hi> διεβάλλοντο οἱ Μιλήσι<hi rend="sup">οι</hi>
+               <choice>
+                  <abbr>Ἀβυ<hi rend="sup">δ</hi><am>¤</am><hi rend="sup">νοὶ</hi></abbr>
+                  <expan>Ἀβυδ<ex>η</ex>νοὶ</expan>
+               </choice> οὗτ<hi rend="sup">οι</hi> . <choice>
+                  <abbr>Ὅθ<am>¤</am>
+                  </abbr>
+                  <expan>Ὅθ<ex>εν</ex>
+                  </expan>
+               </choice>
+               <lb n="15"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">αρ</hi><am>¤</am><hi rend="sup">μ</hi><am>¤</am></abbr>
+                  <expan>παρ<ex>οι</ex>μ<ex>ία</ex>
+                  </expan>
+               </choice>, μηδ᾽ εἰκ<hi rend="sup">ῆ</hi>
+               <choice>
+                  <abbr>τ<am>¤</am></abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἄβυ<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>Ἄβυδ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>πατ<am>¤</am></abbr>
+                  <expan>πατ<ex>εῖν</ex>
+                  </expan>
+               </choice>, ἤγουν <choice>
+                  <abbr>μ<am>¤</am></abbr>
+                  <expan>μ<ex>ὴ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>θαρρούν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>θαρρούντ<ex>ως</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἐπιβαίν<am>¤</am>
+                  </abbr>
+                  <expan>ἐπιβαίν<ex>ειν</ex>
+                  </expan>
+               </choice>. Ἐξ <choice>
+                  <abbr>αὐτ<am>¤</am>
+                  </abbr>
+                  <expan>αὐτ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἑτ<hi rend="sup">έρα</hi>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>παροι<hi rend="sup">μ</hi><am>¤</am>
+                  </abbr>
+                  <expan>παροιμ<ex>ία</ex>
+                  </expan>
+               </choice> ἐπὶ <hi rend="sup">τ</hi>ῶν Ἀβύδων, <hi rend="sup">τ</hi>ὸ <choice>
+                  <abbr>Ἀβυδην<am>¤</am>
+                  </abbr>
+                  <expan>Ἀβυδην<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἐπιφόρη<hi rend="sup">μ</hi><am>¤</am></abbr>
+                  <expan>ἐπιφόρημ<ex>α</ex>
+                  </expan>
+               </choice>. <hi rend="sup">Τ</hi>ὸ δ<hi rend="sup">ὲ</hi>
+               <choice>
+                  <abbr>ἐναν<hi rend="sup">τί</hi><am>¤</am></abbr>
+                  <expan>ἐναντί<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ὅρμ<am>¤</am>
+                  </abbr>
+                  <expan>ὅρμ<ex>ον</ex>
+                  </expan>
+               </choice> ἔθεν<hi rend="sup">το</hi>
+               <choice>
+                  <abbr>ἀν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ἀντ<ex>ὶ</ex>
+                  </expan>
+               </choice> τ<hi rend="sup">οῦ</hi>
+               <lb n="&#8195;"/> κατεναντί<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>κεῖν<am>¤</am>
+                  </abbr>
+                  <expan>κεῖντ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀλλήλ<am>¤</am>
+                  </abbr>
+                  <expan>ἀλλήλ<ex>αις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἀντίπορθμ<hi rend="sup">οί</hi> εἰσιν. (<seg> § <num type="cardinal"
+                     value="517">517</num>-<num type="cardinal" value="524">524</num>
+               </seg>) <choice>
+                  <abbr>¤</abbr>
+                  <expan>Ὅτι</expan>
+               </choice> τῶν ἐν τ<hi rend="sup">ῷ</hi> Αἰγαί<hi rend="sup">ῳ</hi> νήσων <lb
+                  n="&#8195;"/> ὅσαι ὑπὸ <choice>
+                  <abbr>νεύ<hi rend="sup">μ</hi><am>¤</am><hi rend="sup">τι</hi>
+                  </abbr>
+                  <expan>νεύμ<ex>α</ex>τι</expan>
+               </choice>
+               <choice>
+                  <abbr>χειρ<am>¤</am>
+                  </abbr>
+                  <expan>χειρ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>λαι<am>¤</am>
+                  </abbr>
+                  <expan>λαι<ex>ᾶς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>κεῖντ<am>¤</am>
+                  </abbr>
+                  <expan>κεῖντ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>οῖς</ex>
+                  </expan>
+               </choice> εἰσιοῦσι <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὸν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἑλλήσπον<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Ἑλλήσποντ<ex>ον</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῆς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Εὐρώ<hi rend="sup">π</hi><am>¤</am></abbr>
+                  <expan>Εὐρώπ<ex>ης</ex>
+                  </expan>
+               </choice> εἰσίν· ὧν ἐστι <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <lb n="&#8195;"/> ἡ <choice>
+                  <abbr>Μάκρ<am>¤</am>
+                  </abbr>
+                  <expan>Μάκρ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ <choice>
+                  <abbr>Σκῦρ<am>¤</am>
+                  </abbr>
+                  <expan>Σκῦρ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ <choice>
+                  <abbr>Πεπάρηθ<am>¤</am>
+                  </abbr>
+                  <expan>Πεπάρηθ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ <choice>
+                  <abbr>Λῆμν<am>¤</am>
+                  </abbr>
+                  <expan>Λῆμν<ex>ος</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἥτ<am>¤</am>
+                  </abbr>
+                  <expan>ἥτ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>῞Ηφαιστ<am>¤</am>
+                  </abbr>
+                  <expan>Ἥφαιστ<ex>ον</ex>
+                  </expan>
+               </choice> ἐτίμ<hi rend="sup">α</hi>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἴμβρ<am>¤</am>
+                  </abbr>
+                  <expan>Ἴμβρ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Σάμ<am>¤</am>
+                  </abbr>
+                  <expan>Σάμ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <lb n="20"/> Θρ<hi rend="sup">ᾳ</hi>κία, <choice>
+                  <abbr>ἥτ<am>¤</am>
+                  </abbr>
+                  <expan>ἥτ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Καβείρ<am>¤</am>
+                  </abbr>
+                  <expan>Καβείρ<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>εἶχ<am>¤</am></abbr>
+                  <expan>εἶχ<ex>εν</ex>
+                  </expan>
+               </choice> ἱερ<hi rend="sup">ὰ</hi>, οἳ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Κορύβαν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Κορύβαντ<ex>ες</ex>
+                  </expan>
+               </choice> ἐλέγον<hi rend="sup">το</hi>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>Θάσ<am>¤</am>
+                  </abbr>
+                  <expan>Θάσ<ex>ος</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἥτ<am>¤</am>
+                  </abbr>
+                  <expan>ἥτ<ex>ις</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> χρυσί<hi rend="sup">α</hi> εἶχ<hi rend="sup">έ</hi>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>πο<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ποτ<ex>ε</ex>
+                  </expan>
+               </choice> , <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ Δάτον συνῴκισ<hi rend="sup">ε</hi>, <choice>
+                  <abbr>πόλ<am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>ιν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἔνδοξ<am>¤</am></abbr>
+                  <expan>ἔνδοξ <ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>π<hi rend="sup">ε</hi><am>¤</am></abbr>
+                  <expan>πε<ex>ρὶ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>τ<hi rend="sup">ο</hi>ῦ <choice>
+                  <abbr>Στρυ<hi rend="sup">μ<am>¤</am>ν</hi><am>¤</am></abbr>
+                  <expan>Στρυμ<ex>ό</ex>ν<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>παραλί<am>¤</am>
+                  </abbr>
+                  <expan>παραλί<ex>αν</ex>
+                  </expan>
+               </choice>. Ἀφ᾽ οὗ <choice>
+                  <abbr>παροι<hi rend="sup">μ</hi><am>¤</am></abbr>
+                  <expan>παροιμ<ex>ίαν</ex>
+                  </expan>
+               </choice> οἱ <lb n="&#8195;"/> παλαι<hi rend="sup">οί</hi>
+               <choice>
+                  <abbr>φ<hi rend="sup">α</hi><am>¤</am>ι</abbr>
+                  <expan>φη<ex>σ</ex>ι</expan>
+               </choice>
+               <choice>
+                  <abbr>Δάτ<am>¤</am>
+                  </abbr>
+                  <expan>Δάτ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγαθ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθ<ex>ῶν</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὡς</expan>
+               </choice>
+               <hi rend="sup">τ</hi>ὸ <choice>
+                  <abbr>ἀγαθ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγαθῖδ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθῖδ<ex>ες</ex>
+                  </expan>
+               </choice>. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>σκό<hi rend="sup">πει</hi>
+               <choice>
+                  <abbr>ἐνταῦθ<am>¤</am>
+                  </abbr>
+                  <expan>ἐνταῦθ<ex>α</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ὴν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>παροι<hi rend="sup">μ</hi><am>¤</am></abbr>
+                  <expan>παροιμ<ex>ίαν</ex>
+                  </expan>
+               </choice>, τὸ ἀγαθῶν <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ἀγαθῖδ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθῖδ<ex>ες</ex>
+                  </expan>
+               </choice>. Εἰ <choice>
+                  <abbr>γ<am>¤</am>
+                  </abbr>
+                  <expan>γ<ex>ὰρ</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἄλλ<am>¤</am>
+                  </abbr>
+                  <expan>ἄλλ<ex>ως</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>αὐτ<am>¤</am></abbr>
+                  <expan>αὐτ<ex>ὴν</ex></expan>
+               </choice> οἱ παλαι<hi rend="sup">οὶ</hi>
+               <choice>
+                  <abbr>ἐκλαμβάνοντ<am>¤</am></abbr>
+                  <expan>ἐκλαμβάνοντ<ex>αι</ex></expan>
+               </choice>, ἀλλ᾽ <choice>
+                  <abbr>ἔοι<hi rend="sup">κ</hi><am>¤</am></abbr>
+                  <expan>ἔοικ<ex>ε</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>το<hi rend="sup">π</hi><am>¤</am></abbr>
+                  <expan>τοπ<ex>ικόν</ex>
+                  </expan>
+               </choice> τι εἶν<hi rend="sup">αι</hi> ἡ <choice>
+                  <abbr>ἀγαθ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθ<ex>ὶς</ex>
+                  </expan>
+               </choice>, διὸ <lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> εἰς <choice>
+                  <abbr>ὁμοιό<hi rend="sup">τ</hi><am>¤</am><hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ὁμοιότητ<ex>α</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>παρετέ<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>παρετέθ<ex>η</ex>
+                  </expan>
+               </choice> τοῦ <choice>
+                  <abbr>Δάτ<am>¤</am>
+                  </abbr>
+                  <expan>Δάτ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγαθ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθ<ex>ῶν</ex>
+                  </expan>
+               </choice>, <choice>
+                  <abbr>ἵ<am>¤</am>α</abbr>
+                  <expan>ἵ<ex>ν</ex>α</expan>
+               </choice>
+               <choice>
+                  <abbr><am>¤</am>περ</abbr>
+                  <expan><ex>ὥσ</ex>περ</expan>
+               </choice> λέγεται <choice>
+                  <abbr>Δάτ<am>¤</am></abbr>
+                  <expan>Δάτ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγα<hi rend="sup">θ</hi><am>¤</am></abbr>
+                  <expan>ἀγαθ<ex>ῶν</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>οἷ<am>¤</am></abbr>
+                  <expan>οἷ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τό<hi rend="sup">π</hi><am>¤</am></abbr>
+                  <expan>τόπ<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>πόλ<am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>ις</ex>
+                  </expan>
+               </choice>, οὕτ<hi rend="sup">ω</hi>
+               <choice>
+                  <abbr>λέ-<lb n="25"/> γητ<am>¤</am></abbr>
+                  <expan>λέ-<lb n="25"/> γητ<ex>αι</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγαθῖδ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθῖδ<ex>ες</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἀγαθ<am>¤</am>
+                  </abbr>
+                  <expan>ἀγαθ<ex>ῶν</ex>
+                  </expan>
+               </choice>. Εἰ <choice>
+                  <abbr>γ<am>¤</am>
+                  </abbr>
+                  <expan>γ<ex>ὰρ</ex>
+                  </expan>
+               </choice> μ<hi rend="sup">ὴ</hi> τοῦτο, ποί<hi rend="sup">α</hi>
+               <choice>
+                  <abbr>λοι<hi rend="sup">π</hi><am>¤</am>
+                  </abbr>
+                  <expan>λοιπ<ex>ὸν</ex>
+                  </expan>
+               </choice> ἄλλ<hi rend="sup">η</hi>
+               <choice>
+                  <abbr>ὁμοιό<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan> ὁμοιότ <ex>ης</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>τ<am>¤</am>
+                  </abbr>
+                  <expan>τ<ex>ῶν</ex>
+                  </expan>
+               </choice> δύο <choice>
+                  <abbr>τού<hi rend="sup">τ</hi><am>¤</am>
+                  </abbr>
+                  <expan>τούτ<ex>ων</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>παροιμι<am>¤</am>
+                  </abbr>
+                  <expan>παροιμι<ex>ῶν</ex>
+                  </expan>
+               </choice>; <choice>
+                  <abbr>Ἰστέ<am>¤</am>
+                  </abbr>
+                  <expan>Ἰστέ<ex>ον</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <lb n="&#8195;"/>
+               <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὅτι</expan>
+               </choice> Παρίων κτίσμ<hi rend="sup">α</hi> ἡ <choice>
+                  <abbr>Θάσ<am>¤</am>
+                  </abbr>
+                  <expan>Θάσ<ex>ος</ex>
+                  </expan>
+               </choice> · <hi rend="sup">τ</hi>ὸ Πάριον <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>πό<hi rend="sup">λ</hi><am>¤</am>
+                  </abbr>
+                  <expan>πόλ<ex>ις</ex>
+                  </expan>
+               </choice> ἐν τ<hi rend="sup">ῇ</hi> Προποντίδι. Ὁ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>Ἀρρια<hi rend="sup">ν</hi><am>¤</am>
+                  </abbr>
+                  <expan>Ἀρριαν<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>ἄλλ<am>¤</am>
+                  </abbr>
+                  <expan>ἄλλ<ex>ως</ex>
+                  </expan>
+               </choice> φησί· <lb n="&#8195;"/>
+               <choice>
+                  <abbr>Πάρι<am>¤</am>
+                  </abbr>
+                  <expan>Πάρι<ex>ος</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>υἱ<am>¤</am>
+                  </abbr>
+                  <expan>υἱ<ex>ὸς</ex>
+                  </expan>
+               </choice>
+               <choice>
+                  <abbr>Ἰασίων<am>¤</am>
+                  </abbr>
+                  <expan>Ἰασίων<ex>ος</ex>
+                  </expan>
+               </choice>, ᾧ<del status="tachado" hand="#copista_z">ν</del>
+               <choice>
+                  <abbr>ἐπώνυ<hi rend="sup">μ</hi><am>¤</am>
+                  </abbr>
+                  <expan>ἐπώνυμ<ex>ον</ex>
+                  </expan>
+               </choice> τὸ ἐν Ἑλλησπόν<hi rend="sup">τῳ</hi> Πάριον <choice>
+                  <abbr>¤</abbr>
+                  <expan>ὡς</expan>
+               </choice> οἰκιστ<hi rend="sup">ῇ</hi>
+               <del status="tachado_y_bordeado_con_línea_de_puntos" hand="#copista_z">
+                  <choice>
+                     <abbr>τιν<am>¤</am>
+                     </abbr>
+                     <expan>τιν<ex>ὲς</ex>
+                     </expan>
+                  </choice>
+                  <choice>
+                     <abbr>𝄢</abbr>
+                     <expan>δὲ</expan>
+                  </choice> ἀναπαλιν.</del>
+               <lb n="&#8195;"/>
+               <fw type="numFol" place="inferior-interior">
+                  <num type="numGro" value="55">νε᾽</num>
+               </fw>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

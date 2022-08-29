@@ -1,0 +1,156 @@
+{
+    "indexTitle": "Eustacio de Tesalónica, «Comentario a la 'Descripción del mundo conocido' de Dionisio Periegeta»",
+    "webSite": "https://elvuelodehermes.github.io/",
+    "logoUrl": "",
+    "dataUrl": "data/text/eustacio.xml",
+    "sourcesUrl": "data/text/fuentes_Eustacio.xml",
+    "analoguesUrl": "",
+    "witnessesUrl": "",
+    "sourcesTextsUrl": "data/text/sources/",
+    "witnessesTextsUrl": "data/text/testimonia/",
+    "singleImagesUrl": "data/images/single/",
+    "defaultViewMode": "readingTxt",
+    "availableViewModes": [
+        {
+            "label": "READING_TEXT",
+            "icon": "reading-txt",
+            "viewMode": "readingTxt",
+            "visible": true
+        },
+        {
+            "label": "MULTIPLE_RECENSIONS",
+            "icon": "mode-versions",
+            "viewMode": "versions",
+            "visible": false
+        },
+        {
+            "label": "IMAGE_TEXT",
+            "icon": "mode-imgTxt",
+            "viewMode": "imgTxt",
+            "visible": true
+        },
+        {
+            "label": "COLLATION",
+            "icon": "mode-collation",
+            "viewMode": "collation",
+            "visible": true
+        },
+        {
+            "label": "SOURCE_TEXT",
+            "icon": "mode-srcTxt",
+            "viewMode": "srcTxt",
+            "visible": true
+        },
+        {
+            "label": "BOOKREADER",
+            "icon": "bookreader",
+            "viewMode": "bookreader",
+            "visible": false
+        }
+    ],
+    "defaultEdition": "interpretative",
+    "showEditionLevelSelector": true,
+    "availableEditionLevel": [
+        {
+            "value": "critical",
+            "label": "Crítica",
+            "title": "Texto de la edición crítica",
+            "visible": true
+        },
+        {
+            "value": "diplomatic",
+            "label": "Diplomática",
+            "title": "Texto de la transcripción diplomática",
+            "visible": true
+        },
+        {
+            "value": "interpretative",
+            "label": "Normalizada",
+            "title": "Texto de la transcripción normalizada",
+            "visible": true
+        }
+    ],
+    "enableXMLdownload": false,
+    "showDocumentSelector": false,
+    "enableNavBar": false,
+    "initNavBarOpened": false,
+    "thumbnailsButton": false,
+    "viscollButton": false,
+    "toolPinAppEntries": false,
+    "toolImageTextLinking": true,
+    "namedEntitiesSelector": true,
+    "namedEntitiesToHandle": [
+        {
+            "tagName": "persName",
+            "label": "Persons",
+            "available": false
+        },
+        {
+            "tagName": "placeName",
+            "label": "Places",
+            "available": true
+        },
+        {
+            "tagName": "orgName",
+            "label": "Organizations",
+            "available": false
+        }
+    ],
+    "otherEntitiesToHandle": [],
+    "toolHeatMap": false,
+    "preferredWitness": "",
+    "skipWitnesses": "",
+    "listDef": "<listWit>, <listChange>",
+    "versionDef": "<witness>, <change>",
+    "fragmentMilestone": "<witStart>, <witEnd>",
+    "lacunaMilestone": "<lacunaStart>, <lacunaEnd>",
+    "possibleVariantFilters": "type, cause, hand",
+    "possibleLemmaFilters": "resp, cert",
+    "notSignificantVariant": "<orig>, <sic>, [type=orthographic]",
+    "quoteDef": "<quote>",
+    "analogueDef": "<ref[type=parallelPassage]>",
+    "maxWitsLoadTogether": 3,
+    "versions": [],
+    "witnessesGroups": [],
+    "showReadingExponent": false,
+    "showInlineCriticalApparatus": false,
+    "showInlineSources": false,
+    "showInlineAnalogues": false,
+    "variantColors": {},
+    "variantColorLight": "rgb(208,220,255)",
+    "variantColorDark": "rgb(101, 138, 255)",
+    "heatmapColor": "rgb(255, 108, 63)",
+    "defaultBibliographicStyle": "",
+    "allowedBibliographicStyles": {
+        "Chicago": {
+            "label": "Chicago",
+            "enabled": true
+        },
+        "APA": {
+            "label": "APA",
+            "enabled": true
+        },
+        "MLA": {
+            "label": "MLA",
+            "enabled": true
+        }
+    },
+    "virtualKeyboardKeys": [],
+    "imageViewerOptions": {
+        "prefixUrl": "images/osd-images/",
+        "showRotationControl": true,
+        "showNavigator": true,
+        "visibilityRatio": 1,
+        "defaultZoomLevel": 0.7,
+        "panHorizontal": true,
+        "constrainDuringPan": true,
+        "minZoomLevel": 0.7,
+        "maxZoomLevel": 3.0,
+        "wrapVertical": false
+    },
+    "imageNormalizationCoefficient": 2400,
+    "languages": [
+        "en",
+        "es"
+    ]
+}

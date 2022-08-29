@@ -1,0 +1,1141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="schema/tei_Eustacio_tfm_v1.0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Comentario a la «Descripción del mundo conocido» de Dionisio Periegeta.</title>
+            <title type="sub">Parécbolas 504-516.</title>
+            <author xml:id="EdT">Eustacio de Tesalónica</author>
+            <editor role="editor" xml:id="KM">Karl Müller</editor>
+            <respStmt>
+               <resp>Transcripción, anotación en TEI, modelado de datos y etiquetado de lugares y
+                  revisión de </resp>
+               <name xml:id="CGB">Carmen García Bueno</name>
+            </respStmt>
+            <respStmt>
+               <resp>Transcripción, correcciones, traducción al castellano y modelado de datos para
+                  el etiquetado de lugares de </resp>
+               <name xml:id="IPM">Inmaculada Pérez Martín</name>
+            </respStmt>
+            <respStmt>
+               <resp>Correcciones y aparato de fuentes de</resp>
+               <name xml:id="PCS">Paula Caballero Sánchez</name>
+            </respStmt>
+            <sponsor>Proyecto «El vuelo de Hermes» (CSIC)</sponsor>
+            <principal>Inmaculada Pérez Martín</principal>
+            <funder>Programa Logos 2020, Fundación BBVA-Sociedad Española de Estudios
+               Clásicos.</funder>
+         </titleStmt>
+         <editionStmt>
+            <edition n="1">
+               <title>Versión electrónica enriquecida con marcado semántico con TEI.</title>
+               <date when="2022">2022</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Proyecto «El vuelo de Hermes»</publisher>
+            <pubPlace>Madrid</pubPlace>
+            <address>
+               <name type="institution">Centro de Ciencias Humanas y Sociales (CCHS)</name>
+               <name type="institution">Consejo Superior de Investigaciones Científicas
+                  (CSIC)</name>
+               <street>C/ Albasanz 26-28, despacho 1B5</street>
+               <postCode>28037</postCode>
+               <name type="city">Madrid</name>
+               <name type="country">España</name>
+            </address>
+            <!-- <availability> Indicar tipo de licencia </availability> -->
+            <date when="2022-09-01">septiembre de 2022</date>
+         </publicationStmt>
+         <notesStmt>
+            <note>Transcrito a partir del archivo OCR disponible en Internet Archive.</note>
+         </notesStmt>
+         <sourceDesc>
+            <!-- LISTA DE PERSONAS VARIAS -->
+            <listPerson>
+               <person xml:id="copista_l">
+                  <persName>Copista del Cant. U.L. Kk.VI.29.</persName>
+               </person>
+               <person xml:id="Strabo">
+                  <persName> Estrabón </persName>
+               </person>
+               <person xml:id="PsHerodianus">
+                  <persName> Pseudo Herodiano </persName>
+               </person>
+               <person xml:id="Suda">
+                  <persName> Suda </persName>
+               </person>
+               <person xml:id="StephByz">
+                  <persName> Esteban de Bizancio </persName>
+               </person>
+               <person xml:id="Lyc">
+                  <persName> Licofrón </persName>
+               </person>
+            </listPerson>
+            <!-- LISTA DE MANUSCRITOS -->
+            <listWit>
+               <listWit xml:id="Dseta">
+                  <head>Familia ζ</head>
+                  <witness xml:id="z">
+                     <msDesc>
+                        <msIdentifier>
+                           <institution>Biblioteca Apostolica Vaticana</institution>
+                           <idno type="signatura">Vat. Pal. gr. 154</idno>
+                           <altIdentifier type="externo">
+                              <idno type="Diktyon">Diktyon 65886</idno>
+                           </altIdentifier>
+                        </msIdentifier>
+                     </msDesc>
+                  </witness>
+                  <witness xml:id="l">
+                     <msDesc>
+                        <msIdentifier>
+                           <institution>University of Cambridge (UK)</institution>
+                           <repository>Cambridge University Library</repository>
+                           <idno type="signatura">MS Kk. VI. 29</idno>
+                           <altIdentifier type="signatura">
+                              <idno type="Diktyon">Diktyon 12218</idno>
+                           </altIdentifier>
+                        </msIdentifier>
+                     </msDesc>
+                  </witness>
+               </listWit>
+               <witness xml:id="R">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Biblioteca Apostolica Vaticana</institution>
+                        <idno type="signatura">Vat gr. 1910</idno>
+                        <altIdentifier type="externo">
+                           <idno type="Diktyon">Diktyon 68539</idno>
+                        </altIdentifier>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+               <witness xml:id="E">
+                  <msDesc>
+                     <msIdentifier>
+                        <institution>Bibliothèque nationale de France</institution>
+                        <idno type="signatura">Grec 2852</idno>
+                        <altIdentifier type="externo">
+                           <idno type="Diktyon">Diktyon 52490</idno>
+                        </altIdentifier>
+                     </msIdentifier>
+                  </msDesc>
+               </witness>
+            </listWit>
+            <!-- LISTAS DE LUGARES
+               Las listPlace siguen la taxonomía que establecimos para Recogito:
+                  - accidentes costeros (cabo, golfo, estrecho, bahía);
+                  - accidentes del relieve (montaña, llanura, península, desierto, promontorio, cordillera, valle);                
+                  - accidentes fluviales (río, fuente, afluente, cascada, delta, desembocadura);
+                  - archipiélago;
+                  - ciudad (independientemente de su tamaño, algo difícil de precisar para el periodo tratado);
+                  - isla;
+                  - lago;
+                  - mar;
+                  - océano;
+                  - otros (templo, bosque, tumba);
+                  - pueblo (etnónimo, gentilicio);
+                  - región (región, país, continente);
+                 
+                 Las entradas se organizan alfabéticamente (por etiqueta xml:id) y no por orden de aparición, para localizarlas más rápidamente.
+            -->
+            <listPlace type="accidentesCosteros">
+               <place xml:id="Isico" xml:base="http://pleiades.stoa.org/places/658489">
+                  <settlement type="golfo">
+                     <seg xml:lang="grc">Ἰσσικὸς κόλπος</seg> , golfo Ísico o de Iso </settlement>
+                  <note> También llamado Panfilio ( <seg xml:lang="grc">Παμφύλιος κόλπος</seg> )
+                  </note>
+               </place>
+               <place xml:id="PataraCa" xml:base="http://pleiades.stoa.org/places/639041">
+                  <settlement type="cabo">
+                     <seg xml:lang="grc">Παταρηῒς ἄκρα</seg> , cabo de Patara </settlement>
+                  <note>Frontera entre las regiones de Licia y Caria, dentro de la costa
+                     panfilia.</note>
+               </place>
+               <place xml:id="Sunio" xml:base="http://pleiades.stoa.org/places/580107">
+                  <settlement type="cabo">
+                     <seg xml:lang="grc">Σουνιὰς κορυφή</seg> , cabo Sunio </settlement>
+                  <note>promontorio del Ática y Eubea.</note>
+               </place>
+            </listPlace>
+            <listPlace type="accidentesRelieve">
+               <place xml:id="Atos" xml:base="https://pleiades.stoa.org/places/501365">
+                  <settlement type="peninsula">
+                     <seg xml:lang="grc">Ἄθως</seg> , monte o península del Atos. </settlement>
+               </place>
+               <place xml:id="Tauro" xml:base="http://pleiades.stoa.org/places/648792">
+                  <settlement>
+                     <seg xml:lang="grc">Ταῦρος</seg> , cordillera del Tauro (Anatolia).
+                  </settlement>
+               </place>
+            </listPlace>
+            <listPlace type="accidentesFluviales">
+               <place xml:id="Bocaro" xml:base="http://pleiades.stoa.org/places/585896">
+                  <settlement type="rio">
+                     <seg xml:lang="grc">Βώκαρος</seg> , Bocaro </settlement>
+                  <note> Río también llamado Bucéfalo ( <seg xml:lang="grc">Βουκέφαλον</seg> )
+                  </note>
+               </place>
+               <place xml:id="Burina" xml:base="http://pleiades.stoa.org/places/599558">
+                  <settlement type="fuente">
+                     <seg xml:lang="grc">Βούρινα</seg> , Burina </settlement>
+                  <note>Eustacio la llama «itálica», pero Teócrito (los escolios) la ubican en
+                     Cos.</note>
+               </place>
+               <place xml:id="DeltaNilo" xml:base="https://www.geonames.org/351037/nile-delta.html">
+                  <settlement type="rio">
+                     <seg xml:lang="grc">Δέλτα</seg> , Delta del Nilo </settlement>
+               </place>
+            </listPlace>
+            <listPlace type="archipielago">
+               <place xml:id="Quelidonias" xml:base="http://pleiades.stoa.org/places/638799">
+                  <settlement>
+                     <seg xml:lang="grc">Χελιδόνιαι νῆσοι</seg> , islas Quelidonias </settlement>
+               </place>
+            </listPlace>
+            <listPlace type="ciudad">
+               <place xml:id="AbidoItalia">
+                  <settlement>
+                     <seg xml:lang="grc">Ἄβυδος</seg> , Abido (Yapigia) </settlement>
+                  <note>Ciudad itálica, en la zona de Tarento (Yapigia), no localizable. Sus
+                     habitantes se llaman abidenos.</note>
+               </place>
+               <place xml:id="AbidoLibia" xml:base="http://pleiades.stoa.org/places/756512">
+                  <settlement>
+                     <seg xml:lang="grc">Ἄβυδος</seg> , Abido (Egipto) </settlement>
+                  <note>Ciudad egipcia o libia, donde se encontraba el palacio de Memnón.</note>
+               </place>
+               <place xml:id="AbidoMisia" xml:base="http://pleiades.stoa.org/places/501325">
+                  <settlement>
+                     <seg xml:lang="grc">Ἄβυδος</seg> , Abido (Misia) </settlement>
+                  <note> Ciudad portuaria en el punto más estrecho del <placeName ref="Helesponto"
+                        >Helesponto</placeName> , en la costa asiática, enfrente de <placeName
+                        ref="#Sesto">Sesto</placeName> (a 30 estadios). Era de origen milesio.
+                  </note>
+               </place>
+               <place xml:id="Apobatra" xml:base="http://pleiades.stoa.org/places/501609">
+                  <settlement>
+                     <seg xml:lang="grc">Ἀποβάθρα</seg> , Apobatra </settlement>
+                  <note> Apobatra es una localidad cercana a <placeName ref="#Sesto"
+                        >Sesto</placeName> , no ubicable, en el Quersoneso. </note>
+               </place>
+               <place xml:id="Atenas" xml:base="http://pleiades.stoa.org/places/579885">
+                  <settlement>
+                     <seg xml:lang="grc">Ἀθῆναι</seg> , Atenas </settlement>
+                  <note> Atenas también era llamada por sus ciudadanos Esquírade, por referencia a
+                     una zona del <placeName ref="#Atica">Ática</placeName> llamada Esquiroforión y
+                     Esquira. Su acrópolis se llama «Cecropia» (§423-425) por el fundador de la
+                     ciudad, Cécrops. </note>
+               </place>
+               <place xml:id="Corinto" xml:base="http://pleiades.stoa.org/places/570182">
+                  <settlement>
+                     <seg xml:lang="grc">Κόρινθος</seg> , Corinto </settlement>
+               </place>
+               <place xml:id="Epidauro" xml:base="https://pleiades.stoa.org/places/570228">
+                  <settlement>
+                     <seg xml:lang="grc">Ἐπίδαυρος</seg> , Epidauro </settlement>
+               </place>
+               <place xml:id="Ilion" xml:base="http://pleiades.stoa.org/places/550595">
+                  <settlement>
+                     <seg xml:lang="grc">Ἴλιον</seg> , Ilión o Troya </settlement>
+               </place>
+               <place xml:id="Lampsaco" xml:base="http://pleiades.stoa.org/places/501570">
+                  <settlement>
+                     <seg xml:lang="grc">Λάμψακος</seg> , Lámpsaco </settlement>
+               </place>
+               <place xml:id="Lindos" xml:base="http://pleiades.stoa.org/places/589913">
+                  <settlement type="ciudad">
+                     <seg xml:lang="grc">Λίνδος</seg> , Lindos </settlement>
+                  <note>ciudad principal de Rodas.</note>
+               </place>
+               <place xml:id="Madito" xml:base="http://pleiades.stoa.org/places/501503">
+                  <settlement>
+                     <seg xml:lang="grc">Μάδυτος</seg> , Mádito </settlement>
+               </place>
+               <place xml:id="PataraCi" xml:base="http://pleiades.stoa.org/places/639042">
+                  <settlement>
+                     <seg xml:lang="grc">Πάταρα</seg> , Patara </settlement>
+                  <note>Ciudad licia o caria, según el autor.</note>
+               </place>
+               <place xml:id="Roda" xml:base="http://pleiades.stoa.org/places/246588">
+                  <settlement>
+                     <seg xml:lang="grc">Ῥόδη</seg> , Roda </settlement>
+                  <note>Según Estrabón, los rodios navegaron hasta Iberia y allí fundaron una ciudad
+                     llamada Rodas.</note>
+               </place>
+               <place xml:id="Sesto" xml:base="http://pleiades.stoa.org/places/501609">
+                  <settlement>
+                     <seg xml:lang="grc">Σηστός</seg> , Sesto </settlement>
+                  <note> Ciudad del Quersoneso tracio, se encuentra enfrente de <placeName
+                        ref="Abido">Abido</placeName> , es decir, en la costa occidental del
+                        <placeName ref="Helesponto">Helesponto</placeName> . Algunos autores, como
+                     Eforo, le dan el género masculino. </note>
+               </place>
+               <place xml:id="TebasEgipto"
+                  xml:base="http://pleiades.stoa.org/places/786017http://pleiades.stoa.org/places/786017">
+                  <settlement>
+                     <seg xml:lang="grc">Θῆβαι</seg> , Tebas (Egipto) </settlement>
+                  <note> También llamada «la de las cien puertas» ( <seg xml:lang="grc"
+                        >εκατομπύλες</seg> ). También se llamó «Diópolis» </note>
+               </place>
+            </listPlace>
+            <listPlace type="isla">
+               <place xml:id="AradoFenicia" xml:base="http://pleiades.stoa.org/places/668197">
+                  <settlement>
+                     <seg xml:lang="grc">Ἄραδος</seg> , Árado </settlement>
+                  <note>Isla junto a Fenicia. Es una de las fundadores de Trípoli, junto con Tiro y
+                     Sidón.</note>
+               </place>
+               <place xml:id="AradoPersico" xml:base="http://pleiades.stoa.org/places/932432">
+                  <settlement>
+                     <seg xml:lang="grc">Ἄραδος</seg> , Árado (golfo Pérsico) </settlement>
+               </place>
+               <place xml:id="Chipre" xml:base="http://pleiades.stoa.org/places/707498">
+                  <settlement>
+                     <seg xml:lang="grc">Κύπρος</seg> , Chipre </settlement>
+                  <note> Isla del mar Interior (el Mediterráneo), bañada por las aguas del golfo
+                     Panfilio e Ísico. También se llamó «Cipria» ( <seg xml:lang="grc">Κύπρις</seg>
+                     ), «Cripto»  ( <seg xml:lang="grc">Κρύπτος</seg> , por estar oculta en el mar),
+                     «Escefia» ( <seg xml:lang="grc">Σφήκεια</seg> ) y «Cerasia» ( <seg
+                        xml:lang="grc">Κεραστία</seg> ) (§508-509). </note>
+               </place>
+               <place xml:id="Creta" xml:base="http://pleiades.stoa.org/places/589748">
+                  <settlement>
+                     <seg xml:lang="grc">Κρήτης</seg> , Creta </settlement>
+               </place>
+               <place xml:id="Delos" xml:base="http://pleiades.stoa.org/places/599588">
+                  <settlement>
+                     <seg xml:lang="grc">Δῆλος</seg> , Delos </settlement>
+               </place>
+               <place xml:id="Eubea" xml:base="http://pleiades.stoa.org/places/540775">
+                  <settlement>
+                     <seg xml:lang="grc">Εὔβοια</seg> , Eubea </settlement>
+               </place>
+               <place xml:id="Egina" xml:base="http://pleiades.stoa.org/places/579853">
+                  <settlement>
+                     <seg xml:lang="grc">Αἰγίνη</seg> , Egina </settlement>
+               </place>
+               <place xml:id="Rodas" xml:base="http://pleiades.stoa.org/places/590031">
+                  <settlement>
+                     <seg xml:lang="grc">Ῥόδος</seg> , Rodas </settlement>
+                  <note> También se llamó «Ofiusa» ( <seg xml:lang="grc">Ὀφίουσα</seg> ) y
+                     «Telquinida» ( <seg xml:lang="grc">Τελχινίς</seg> ). </note>
+               </place>
+               <place xml:id="Salamina" xml:base="http://pleiades.stoa.org/places/580101">
+                  <settlement>
+                     <seg xml:lang="grc">Σαλαμίς</seg> , Salamina </settlement>
+                  <note> La isla también se llamó Esquírade ( <seg xml:lang="grc">Σκιράς</seg> ),
+                     por otra parte también uno de los nombres de Atenas, así como Cicrea ( <seg
+                        xml:lang="grc">Κυχρεία</seg> ) </note>
+               </place>
+               <place xml:id="Samotracia" xml:base="http://pleiades.stoa.org/places/501597">
+                  <settlement>
+                     <seg xml:lang="grc">Σάμος</seg> , Samos, Samotracia </settlement>
+               </place>
+            </listPlace>
+            <listPlace type="mar">
+               <place xml:id="Helesponto" xml:base="http://pleiades.stoa.org/places/501434">
+                  <settlement>
+                     <seg xml:lang="grc">Ἑλλήσπονγος</seg> , Helesponto </settlement>
+               </place>
+               <place xml:id="marDeCreta" xml:base="http://pleiades.stoa.org/places/589749">
+                  <settlement>
+                     <seg xml:lang="grc">Κρητικὸν πέλαγος</seg> , mar de Creta </settlement>
+                  <note>Mar que comienza en el cabo Salmonis de Creta y llega hasta el oriente de
+                     Sicilia. Los límites con el mar de Sicilia no están definidos, y a veces son
+                     intercambiables.</note>
+               </place>
+               <place xml:id="marEgeo" xml:base="http://pleiades.stoa.org/places/560221">
+                  <settlement>
+                     <seg xml:lang="grc">Αἰγαῖος πόντος</seg> , mar Egeo </settlement>
+               </place>
+               <place xml:id="marMirtoo" xml:base="https://pleiades.stoa.org/places/570495">
+                  <settlement>
+                     <seg xml:lang="grc">Mυρτῷον πέλαγος</seg> , Mirtoo </settlement>
+               </place>
+               <place xml:id="marSaronico" xml:base="http://pleiades.stoa.org/places/570654">
+                  <settlement>
+                     <seg xml:lang="grc">Σαρωνὶς θάλασσα</seg> , mar Sarónico </settlement>
+                  <note> También referido como golfo ( <seg xml:lang="grc">Σαρωνικὸς κόλπος</seg> )
+                  </note>
+               </place>
+            </listPlace>
+            <listPlace type="otros">
+               <place xml:id="coloso" xml:base="http://pleiades.stoa.org/places/590030">
+                  <settlement type="estatua">
+                     <seg xml:lang="grc">Ἡλίου κολοσσός</seg>
+                  </settlement>
+                  <note>Gran escultura de 70 codos de altura elaborada por el lindio Cares para
+                     honrar a Helio.</note>
+               </place>
+               <place xml:id="temploAtenea" xml:base="http://pleiades.stoa.org/places/579886">
+                  <settlement type="templo">
+                     <seg xml:lang="grc">ἱερὸν Ἀθηναίης Σκιράδος</seg> , templo de Atenea Escírade
+                  </settlement>
+               </place>
+               <place xml:id="temploCoribantes" xml:base="http://pleiades.stoa.org/places/501510">
+                  <settlement type="templo">
+                     <seg xml:lang="grc">Κορυβαντιῶν ναός</seg> , templo de los grandes dioses </settlement>
+                  <note>En la ciudad de Samotracia se encontraba el santuario de los grandes dioses,
+                     entre los que estaban los cabiros.</note>
+               </place>
+            </listPlace>
+            <listPlace type="pueblo">
+               <place xml:id="abantes" xml:base="http://pleiades.stoa.org/places/540583">
+                  <settlement>
+                     <seg xml:lang="grc">Ἄβαντες</seg> , abantes </settlement>
+                  <note>Pueblo tracio que habita en Eubea.</note>
+               </place>
+               <place xml:id="abidenos">
+                  <settlement>
+                     <seg xml:lang="grc">Ἀβυδηνοί</seg> , abidenos </settlement>
+                  <note> Habitantes de la <placeName ref="#AbidoItalia">Abido</placeName> itálica.
+                     En Mileto tenían fama de sicofantes. </note>
+               </place>
+               <place xml:id="aradios" xml:base="http://pleiades.stoa.org/places/668197">
+                  <settlement>
+                     <seg xml:lang="grc">Ἀράδιοι</seg> , aradios </settlement>
+                  <note> Habitantes de <placeName ref="#AradoFenicia">Árado</placeName> , en
+                     Fenicia. </note>
+               </place>
+               <place xml:id="atenienses" xml:base="http://pleiades.stoa.org/places/579885">
+                  <settlement>
+                     <seg xml:lang="grc">Ἀθηναίοι</seg> , atenienses </settlement>
+               </place>
+               <place xml:id="camiros" xml:base="http://pleiades.stoa.org/places/589836">
+                  <settlement>
+                     <seg xml:lang="grc">Κάμιρος, Κάμειρος</seg> , cámiros </settlement>
+                  <note> Pueblo del Dodecaneso y de la zona de <placeName ref="#Rodas"
+                        >Rodas</placeName> , vecino de los <placeName ref="#Yalisos"
+                        >yálisos</placeName>
+                  </note>
+               </place>
+               <place xml:id="chipriotas" xml:base="http://pleiades.stoa.org/places/707498">
+                  <settlement>
+                     <seg xml:lang="grc">Κύπριοι</seg> , chipriotas </settlement>
+               </place>
+               <place xml:id="eginetas" xml:base="http://pleiades.stoa.org/places/579853">
+                  <settlement>
+                     <seg xml:lang="grc">Αἰγινῆται</seg> , eginetas </settlement>
+                  <note> También se les llama «mirmidones» ( <seg xml:lang="grc">Μυρμιδόνες</seg> ).
+                  </note>
+               </place>
+               <place xml:id="milesios">
+                  <settlement>
+                     <seg xml:lang="grc"/> , milesios </settlement>
+                  <note> Habitantes de Mileto, entre otras ciudades son los fundadores de <placeName
+                        ref="#Sesto">Sesto</placeName> . </note>
+               </place>
+               <place xml:id="rodios" xml:base="http://pleiades.stoa.org/places/590031">
+                  <settlement>
+                     <seg xml:lang="grc">Ῥόδιοι</seg> , rodios </settlement>
+                  <note> Los rodios también eran llamados «coloseos» ( <seg xml:lang="grc"
+                        >Κολοσσαεῖς</seg> ). </note>
+               </place>
+               <place xml:id="telquines">
+                  <settlement>
+                     <seg xml:lang="grc"/> , telquines </settlement>
+                  <note>Los pobladores originales de Rodas provenían de Creta.</note>
+               </place>
+               <place xml:id="yalisos" xml:base="http://sws.geonames.org/252685">
+                  <settlement>
+                     <seg xml:lang="grc">Ἰηλυσσός</seg> , yélisos, yálisos </settlement>
+                  <note> Pueblo del Dodecaneso y de la zona de <placeName ref="#Rodas"
+                        >Rodas</placeName> , vecino de los <placeName ref="#Camiros"
+                        >cámiros</placeName>
+                  </note>
+               </place>
+            </listPlace>
+            <listPlace type="region">
+               <place xml:id="Argea" xml:base="https://pleiades.stoa.org/places/570106">
+                  <settlement type="region">
+                     <seg xml:lang="grc">Ἀργεία</seg> , Argea </settlement>
+                  <note>Región en torno a Argos.</note>
+               </place>
+               <place xml:id="Atica" xml:base="http://pleiades.stoa.org/places/579888">
+                  <settlement type="region">
+                     <seg xml:lang="grc">Ἀττική</seg> , Ática </settlement>
+               </place>
+               <place xml:id="Egipto" xml:base="http://pleiades.stoa.org/places/981503">
+                  <settlement type="pais">
+                     <seg xml:lang="grc">Αἴγυπτος</seg> , Egipto </settlement>
+                  <note>Esta tierra también se llamó «Aería» o «Aetía», «Potamía» y
+                     «Etiopía».</note>
+               </place>
+               <!-- Si se amplía habrá que cambiar esta -->
+               <place xml:id="Iberia" xml:base="http://pleiades.stoa.org/places/1027">
+                  <settlement type="region">
+                     <seg xml:lang="grc">Ἰβηρία</seg> , Iberia. </settlement>
+                  <note>Nombre dado a la península que cierra el occidente del Mediterráneo. También
+                     hay una región en el Cáucaso llamada así. Para evitar confusiones, cuando se
+                     refiere a la península Ibérica utiliza Hispania (Ἱσπανία)</note>
+               </place>
+               <place xml:id="QuersonesoTracio" xml:base="http://pleiades.stoa.org/places/226564">
+                  <settlement type="region">
+                     <seg xml:lang="grc">Χερσών</seg> , Quersoneso (tracio) </settlement>
+               </place>
+            </listPlace>
+            <!-- BIBLIOGRAFÍA -->
+            <listBibl>
+               <head>Ediciones</head>
+               <biblStruct xml:id="Muller">
+                  <monogr>
+                     <title level="a">Eustathii Commentarii</title>
+                     <title level="m"> Geographi Graeci Minores. E codicibus recognovit,
+                        prolegomenis, annotatione, indicibus instruxit, tabulis aeri incisis
+                        illustravit. Volumen secundum </title>
+                     <editor role="text curator">Carolus Müller</editor>
+                     <imprint>
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Firmin Didot</publisher>
+                        <date when="1882">1882</date>
+                        <biblScope>pp. 311-315</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               <bibl xml:id="StraboGeoPerseus"> Strabo, Geographica (ed. Meineke, Leipzig: Teubner,
+                  1877), en <title>Perseus Digital Library</title> , ed. <editor>Gregory R.
+                     Crane</editor> , Tufts University, <ref target="http://www.perseus.tufts.edu"
+                     >http://www.perseus.tufts.edu</ref>
+               </bibl>
+               <bibl xml:id="LycPerseus"> Lycophron ,Alexandra. (ed. A. W. Mair. London: William
+                  Heinemann; New York: G.P. Putnam's Sons. 1921), en <title>Perseus Digital
+                     Library</title> , ed. <editor>Gregory R. Crane</editor> , Tufts University,
+                     <ref target="http://www.perseus.tufts.edu">http://www.perseus.tufts.edu</ref>
+               </bibl>
+               <bibl xml:id="PsHerodProsCath"> Ps. Herodianus, <title>De Prosodia Catholica</title>
+               </bibl>
+               <bibl xml:id="Suda_ed"> Suda, <title>Suda</title>
+               </bibl>
+               <bibl xml:id="StephByzLex"> Stephanus Byzantinus, <title>Lexicon</title>
+               </bibl>
+            </listBibl>
+            <listBibl>
+               <head>Fuentes</head>
+               <bibl type="work" xml:id="Alex">
+                  <title xml:lang="la">Alexandra</title>
+                  <title type="short">Alex.</title>
+                  <author ref="#Lyc">Lycophron</author>
+                  <ref type="manifestation" target="#LycPerseus"/>
+               </bibl>
+               <bibl type="work" xml:id="Geographica">
+                  <title xml:lang="la">Geographica</title>
+                  <title type="short">Geo.</title>
+                  <author ref="#Strabo">Strabo</author>
+                  <ref type="manifestation" target="#StraboGeoPerseus"/>
+               </bibl>
+               <bibl type="work" xml:id="ProsCath">
+                  <title xml:lang="la">De Prosodia Catholica</title>
+                  <title type="short">Pros. Cath.</title>
+                  <author ref="#PsHerodianus">Ps. Herodianus</author>
+               </bibl>
+               <bibl type="work" xml:id="Suda_ref">
+                  <title xml:lang="la">Suda</title>
+                  <author ref="#Suda">Suda</author>
+               </bibl>
+               <bibl type="work" xml:id="Lexicon">
+                  <title xml:lang="la">Lexicon</title>
+                  <author ref="#StephByz">Stephanus Byzantinus</author>
+               </bibl>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <!-- 
+                    se puede incluir:
+                    <correction method="markup"><p>: explica cómo se han solucionado los errores
+                    <normalization method="markup"><p>: explica si se ha hecho algo con la "pronunciación". Con source y una url se puede indicar qué se ha seguido como norma (OED, RAE...)
+                    <quotation marks="all"><p>: si es una transcripción diplomática y se mantienen las citas originales
+                    <hyphenation><p> si se mantienen los cortes de palabras, por ejemplo al final de línea    
+                -->
+            <interpretation>
+               <p>Se han marcado los nombres de lugar (topónimos y gentilicios). Para ello, hemos
+                  recuperado el marcado que hicimos en Recogito. Con ello también hemos elaborado la
+                  lista de lugares.</p>
+               <p>Se han marcado las referencias a otros autores.</p>
+               <p>Cuando aparece un número en forma de cifra se ha optado por utilizar el marcado de
+                  abreviatura y expansión. En la primera etiqueta se incluye la cifra y en la
+                  segunda el número en texto. Además, la cifra está también etiquetada con
+                  &lt;num&gt; para indicar que es un numeral griego y dar su valor en cifras
+                  arábigas.</p>
+            </interpretation>
+         </editorialDecl>
+         <projectDesc>
+            <p>Texto codificado para la edición crítica del texto de Eustacio que va a realizar el
+               grupo de investigación «El vuelo de Hermes».</p>
+         </projectDesc>
+         <refsDecl>
+            <p> El texto original está dividido en secciones llamadas <hi rend="italic"
+                  >parécbolas</hi> , cuya numeración se corresponde con el número de verso en el
+               poema original. Cada una de ellas, a su vez, puede contener uno o más párrafos, que
+               no están numerados en la edición original. </p>
+            <p>En la edición de Müller la página se divide en tres secciones: (1) la columna de la
+               izquierda se reserva para el texto griego; (2) la columna de la derecha se reserva
+               para la traducción latina; (3) en la parte inferior, dividido en dos columnas, se
+               ubica el aparato crítico referido al texto griego.</p>
+            <p>Las líneas del texto griego están numeradas. Esta numeración se reinicia en cada
+               página. La traducción latina no tiene numeración de líneas.</p>
+         </refsDecl>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="grc">Griego clásico</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <group>
+         <text xml:id="texto_critico">
+            <body>
+               <pb n="Müller, p. 311" xml:id="Muller_p311" facs="data/images/single/Muller_p311.png"/>
+               <div xml:id="par504-507" xml:lang="grc" type="Par." n="504-507">
+                  <p n="1">
+                     <seg> § <num type="cardinal" value="504">504</num> - <num type="cardinal"
+                           value="507">507</num>
+                     </seg> Ὅτι ἀντικρὺ τῆς <placeName ref="#Egipto" resp="#CGB">
+                        <app resp="#CGB">
+                           <lem wit="#R #l #z #Muller">Αἰγυπτίας</lem>
+                           <rdg wit="#E">Αἰγύπτου</rdg>
+                        </app>
+                     </placeName> πέζης, ἤγουν τῆς τοῦ <placeName ref="#DeltaNilo" resp="#CGB"
+                        >Δέλτα</placeName> βορείας κρηπῖδος <app>
+                        <lem wit="#R #E #Muller">ἢ</lem>
+                        <rdg wit="#l">ἤγουν</rdg>
+                        <rdg wit="z" cause="om"/>
+                     </app>
+                     <app>
+                        <lem wit="#R #E #l #z">στάσεως ἢ</lem>
+                        <rdg cause="repeticion" wit="#Muller"/>
+                     </app> βάσεως, ἡ <placeName ref="#Rodas" resp="#CGB">Ῥόδος</placeName> κεῖται,
+                        <quote source="#Strab1425_12" resp="#PCS">
+                        <listBibl>
+                           <bibl>
+                              <author ref="#Strabo">Strabo</author>
+                              <title ref="#Geographica">Geographica</title>
+                              <citedRange corresp="#StraboGeoPerseus">14.2.5, 12</citedRange>
+                           </bibl>
+                        </listBibl>
+                        <ref> ἡ δὲ νῆσος κύκλον ἔχει σταδίων ἐνακοσίων εἴκοσιν. </ref>
+                     </quote> . Περὶ ἣν πόλις <placeName ref="#Lindos" resp="#CGB"
+                        >Λίνδος</placeName> , ἡ καὶ μέχρι νῦν περιᾳδομένη, ἀφ᾽ ἧς πλοῖα Λινδικὰ, ἔτι <app>
+                        <lem wit="#R #E #l #Muller">δὲ</lem>
+                        <rdg cause="om" wit="#z"/>
+                     </app> καὶ <placeName ref="#yalisos" resp="#CGB">Ἰηλυσσὸς</placeName> , <quote
+                        source="#ProsCath31198_2-5" resp="#PCS">
+                        <listBibl>
+                           <bibl>
+                              <author ref="#PsHerodianus">Ps. Herodianus</author>
+                              <title ref="#ProsCath">De Prosodia Catholica</title>
+                              <citedRange corresp="#PsHerodProsCath">3, 1.198, 2-5</citedRange>
+                           </bibl>
+                        </listBibl> καὶ <placeName ref="camiros" resp="#CGB">Κάμιρος</placeName> διὰ
+                        τοῦ ι γραφομένη πρὸς ἀντιδιαστολὴν τοῦ κυρίου· ὁ γὰρ Κάμειρος τὸ κύριον διὰ
+                        διφθόγγου γράφεται. </quote> Μεθ᾽ ἣν πρὸς ἀνατολὰς ἐν ἀρχῇ τῆς <placeName
+                        ref="#Isico" resp="#CGB">τῶν Παμφυλίων παραλίας</placeName> , ἔνδον τῆς
+                        <placeName ref="#PataraCa" resp="#CGB">τῶν Πατάρων μεγάλης ἄκρας</placeName>
+                     , <placeName ref="Quelidonias">αἱ Χελιδονίαι</placeName> τρεῖς νῆσοι κεῖνται,
+                     πάρισοι τὸ μέγεθος, διέχουσαι ἀλλήλων ὅσον πέντε σταδίους, τῆς δὲ γῆς <app>
+                        <lem wit="#R #E #z #Muller">ἀφεστηκυῖαι</lem>
+                        <rdg wit="#l">ἀφεστηκυῖαις,</rdg>
+                     </app>
+                     <app>
+                        <lem wit="#R #E #z #Muller">ὡς</lem>
+                        <rdg cause="om" wit="#l"/>
+                     </app>
+                     <pb n="Müller, p. 312" xml:id="Muller_p312"
+                        facs="data/images/single/Muller_p312.png"/> ἑξαστάδιον. Ἀφ᾽ ὧν οἴονταί τινες
+                     ἄρχεσθαι τὸ ᾀδόμενον <placeName ref="#Tauro" resp="#CGB">ὄρος τὸν
+                        Ταῦρον</placeName> , ἀρχόμενον τῇ ἀληθείᾳ ἀπὸ τῆς τῶν Ῥοδίων περαίας. <quote
+                        source="#ProsCath32860_20" resp="#PCS">
+                        <listBibl>
+                           <bibl>
+                              <author ref="#PsHerodianus">Ps. Herodianus</author>
+                              <title ref="#ProsCath">De Prosodia Catholica</title>
+                              <citedRange>3, 2.860, 20</citedRange>
+                           </bibl>
+                        </listBibl> Ἰστέον δὲ ὅτι Ἡρωδιανὸς ἐν τῇ καθόλου προσῳδίᾳ <placeName
+                           ref="Quelidonias">Χελιδονιαί</placeName> ἀναγινώσκει ὀξυτόνως, ὡς
+                        πυρκαϊαί. </quote>
+                     <placeName ref="#PataraCi" resp="#CGB">Πάταρα</placeName> δὲ κτίσμα Πατάρου,
+                     πόλις μεγάλη, περὶ ἧς προεγράφη πλατύτερον. <placeName ref="#Rodas" resp="#CGB"
+                        >Ἡ δὲ Ῥόδος</placeName> ἄλλα τὲ ἔσχε θαυμαστὰ καὶ <placeName ref="#coloso"
+                        resp="#CGB">τὸν τοῦ Ἡλίου δὲ κολοσσὸν</placeName> , <app>
+                        <lem wit="#R #dseta #Muller">Χάρητος</lem>
+                        <rdg wit="E" type="orthographic">Χάριτος</rdg>
+                     </app> ἔργον, ἀνδρὸς Λινδίου, πήχεων ἑβδομήκοντα· καὶ ἦν καὶ αὐτὸς ἓν τῶν ἑπτὰ
+                     θεαμάτων, ὃς ἔπεσε σεισμῷ κλασθεὶς ἀπὸ τῶν γονάτων. Πολλὰ δὲ καὶ ἄλλα εἶχεν
+                        <placeName ref="#Rodas" resp="#CGB">ἡ Ῥόδος</placeName> ἀγάλματα, ὧν τὸ
+                     τεχνικὸν καὶ μικροῦ δεῖν ἔμψυχον αἰνιττόμενοι οἱ τεχνῖται ἁλύσεσιν ἐδέσμουν
+                     αὐτὰ, μὴ καὶ λάθοιεν τάχα κινηθέντα μεταστῆναί που ἀλλαχοῦ. Εἰ δὲ χρὴ τὴν νῆσον
+                     ταύτην οὐ <app resp="#CGB">
+                        <lem wit="#Muller">μόνον</lem>
+                        <rdg wit="#R #E #l #z">μέσον</rdg>
+                     </app> τῷ μεγίστῳ <placeName ref="#coloso" resp="#CGB">κολοσσῷ</placeName>
+                     σεμνῦναι, ἀλλὰ καὶ σμικροτάτῳ τινὶ ἐπᾶραι ἀναθήματι· ἐκεῖ γὰρ καὶ ὁ καλὸς
+                     πέρδιξ ἦν, τὸ τοῦ <app>
+                        <lem wit="#R #dseta #Muller">Πρωτογένους</lem>
+                        <rdg wit="#E">πρώτου γένους</rdg>
+                     </app> ὑμνούμενον πάρεργον. Διὰ <app>
+                        <lem wit="#E #z #Muller">δὲ</lem>
+                        <rdg cause="om" wit="#R #l"/>
+                     </app> τὸν ἀνωτέρω ῥηθέντα <placeName ref="#coloso" resp="#CGB">μέγαν
+                        κολοσσὸν</placeName> καὶ <placeName ref="#rodios" resp="#CGB">
+                        <app>
+                           <lem wit="#R #z #Muller">Κολοσσαεῖς</lem>
+                           <rdg wit="#E #l">Κολασαεῖς</rdg>
+                        </app>
+                     </placeName> ὡς ἐκ μεγάλου παρασήμου ἐκαλοῦντο <placeName ref="#rodios"
+                        resp="#CGB">οἱ Ῥόδιοι</placeName> . Λέγεται δὲ καὶ ναύσταθμα ἔχειν
+                        <placeName ref="#Rodas" resp="#CGB">ἡ Ῥόδος</placeName> κρυπτὰ καὶ ἀπόρρητα
+                     τοῖς πολλοῖς, καὶ τῷ κατοπτεύσαντι αὐτὰ θάνατον εἶναι τὴν ζημίαν. Ἐκλήθη δέ
+                     ποτε, <app>
+                        <lem wit="#R #dseta #Muller">φασὶν</lem>
+                        <rdg wit="#E">καὶ</rdg>
+                     </app> , <placeName ref="#Rodas" resp="#CGB">Ὀφίουσα</placeName> · εἶτα
+                        <placeName ref="#Rodas" resp="#CGB">Τελχινὶς</placeName> , διὰ τοὺς ἐκ
+                        <placeName ref="#Creta" resp="#CGB">Κρήτης</placeName>
+                     <placeName ref="#telquines" resp="#CGB">Τελχῖνας</placeName> οἰκήσαντας ἐκεῖ,
+                     ἄνδρας γόητας καὶ βασκάνους. Καίτοι τινὲς μάτην δυσφημηθῆναι τούτους φασί·
+                     βασκανθῆναι γὰρ μᾶλλον ὑπὸ τῶν ἀντιτέχνων αὐτοὺς, ἀρίστους ὑπάρξαντας ἐργάτας
+                     χαλκοῦ καὶ σιδήρου, οἳ καὶ τὴν ἅρπην τῷ Κρόνῳ ἐδημιούργησαν. Ὁ δὲ Γεωγράφος
+                     φησὶ καὶ ὅτι πλεύσαντες <placeName ref="#rodios" resp="#CGB">οἱ
+                        Ῥόδιοι</placeName>
+                     <app>
+                        <lem wit="#E #Muller">μέχρις</lem>
+                        <rdg wit="#dseta" type="orthographic">μέχρι</rdg>
+                     </app>
+                     <placeName ref="#Iberia" resp="#CGB">Ἰβηρίας</placeName> ἔκτισαν ἐκεῖ πόλιν
+                        <placeName ref="#Roda" resp="#CGB">Ῥόδον</placeName> . </p>
+               </div>
+               <div xml:id="par508-509" xml:lang="grc" type="Par." n="508-509">
+                  <p n="2">
+                     <seg> § <num type="cardinal" value="508">508</num> - <num type="cardinal"
+                           value="509">509</num>
+                     </seg> Ὅτι <placeName ref="#Chipre" resp="#CGB">ἡ Κύπρος</placeName>
+                     <app>
+                        <lem wit="#R #dseta #Muller">οὐδεμιᾶς</lem>
+                        <rdg wit="#E">οὐ δὲ μιᾶς</rdg>
+                     </app> νήσου λειπομένη τῇ ἀρετῇ <placeName ref="#Isico" resp="#CGB">
+                        <app>
+                           <lem wit="#Muller">τῷ</lem>
+                           <rdg wit="#R #dseta #E"/>
+                        </app> Παμφυλίῳ </placeName> καὶ <placeName ref="#Isico" resp="#CGB">τῷ
+                        Ἰσσικῷ</placeName> κλύζεται κόλπῳ, ἧς οὐδεμία <app>
+                        <lem wit="#R #dseta #Muller">οὐδεμία</lem>
+                        <rdg wit="#E">οὐ δὲ μιᾶς</rdg>
+                     </app>
+                     <app>
+                        <lem wit="#R #dseta #Muller"/>
+                        <rdg wit="#E" cause="add">νήσου</rdg>
+                     </app> ἔτι ἀνατολικωτέρα <app>
+                        <lem wit="#R #dseta #Muller">νῆσός</lem>
+                        <rdg wit="#E" cause="transpositio"/>
+                     </app> ἐστι. Λέγει δὲ αὐτὴν <app>
+                        <lem wit="#E #l #Muller">Ἀφροδίτης</lem>
+                        <rdg wit="#R #z" type="ortographic">Ἀφροδύτης</rdg>
+                     </app> ἄστυ ἐπήρατον, ὡς καὶ τὴν <placeName ref="#Samotracia" resp="#CGB"
+                        >Σαμοθρᾴκην</placeName>
+                     <placeName ref="#temploCoribantes" resp="#CGB">Κορυβάντιον</placeName> ἄστυ,
+                        <app resp="#CGB">
+                        <lem wit="#R #E #l #Muller">μικροπρεπῶς</lem>
+                        <rdg wit="#z" cause="salto_igual">
+                           <lacunaStart/>
+                        </rdg>
+                     </app> μὲν, οὐ <app>
+                        <lem wit="#R #dseta #Muller">γὰρ</lem>
+                        <rdg wit="#E" cause="omm"/>
+                     </app> μεγαλόφωνον τὸ τὴν <app>
+                        <lem wit="#R #l #Muller">τοσαύτην</lem>
+                        <rdg wit="#E">τοιαύτην</rdg>
+                     </app> νῆσον εἰπεῖν <app>
+                        <lem wit="#R #E #l #Muller">ἄστυ</lem>
+                        <rdg wit="#z">
+                           <lacunaEnd/>
+                        </rdg>
+                     </app> , ἀκολούθως <app>
+                        <lem wit="#R #dseta #Muller">δ᾽</lem>
+                        <rdg wit="#E" cause="omm"/>
+                     </app> οὖν τῷ μύθῳ, διὰ τὴν ἐκεῖ τῆς Ἀφροδίτης μάλιστα διατριβήν. Ἄθυρμα γὰρ ἦν
+                     ἡ νῆσος τῇ δαίμονι, ἀφ᾽ ἧς καὶ <placeName ref="#Chipre" resp="#CGB"
+                        >Κύπρις</placeName> παρωνόμασται· τοῦτο δὲ διὰ τὴν τῶν ἐκεῖ μαχλοσύνην καὶ
+                     τὸ ἐπαφρόδιτον. Τινὲς δέ φασι <placeName ref="#Chipre" resp="#CGB"
+                        >Κύπρον</placeName> κληθῆναι αὐτὴν ἀπὸ Κύπρου υἱοῦ <app>
+                        <lem wit="#R #z #Muller">Κινύρου</lem>
+                        <rdg wit="#E" cause="fonetica">Κιννύρου</rdg>
+                        <rdg wit="#l" cause="fonetica">Κινήρου</rdg>
+                     </app> , ἢ ἀπὸ ἄνθους ἐκεῖ <app>
+                        <lem wit="#R #E #z #Muller">πολλοῦ</lem>
+                        <rdg wit="l">πολλὰ</rdg>
+                     </app> φυομένου, κύπρου καλουμένου. Οἱ δὲ <placeName ref="#Chipre" resp="#CGB"
+                        >Κρύπτον</placeName> ποτὲ <app>
+                        <lem wit="#R #dseta #Muller"/>
+                        <rdg wit="#E" cause="add">καὶ</rdg>
+                     </app> κληθῆναι αὐτὴν λέγουσι, διὰ τὸ κεκρύφθαι ὑπὸ θαλάσσης· ὅπερ καὶ περὶ
+                        <placeName ref="#Delos" resp="#CGB">Δήλου</placeName> μυθεύεται, καὶ περὶ
+                        <placeName ref="#Rodas" resp="#CGB">Ῥόδου</placeName> δὲ κατὰ Πίνδαρον. Ὅτι
+                     δὲ καὶ <placeName ref="#Chipre" resp="#CGB">Σφήκεια</placeName> ἐκλήθη ποτὲ καὶ
+                        <pb n="Müller, p. 313" xml:id="Muller_p313"
+                        facs="data/images/single/Muller_p313.png"/>
+                     <placeName ref="#Chipre" resp="#CGB">Κεραστία</placeName> , ὁ Λυκόφρων δηλοῖ.
+                     Ὀλβιώτατοι δὲ νησιωτῶν <placeName ref="#chipriotas" resp="#CGB">οἱ
+                        Κύπριοι</placeName> . Λέγονται δέ ποτε θαλαττοκρατῆσαι καιρόν τινα καὶ
+                     αὐτοί. Κύκλος δὲ ταύτης τῆς νήσου <app>
+                        <lem wit="#R #E #z #Muller">στάδια</lem>
+                        <rdg wit="#l">σταδίων</rdg>
+                     </app> τρισχίλια τετρακόσια εἴκοσιν τοῖς κατακολπίζουσι. Πολλαχοῦ δὲ καὶ
+                     ἰσθμοὺς ποιεῖ, διὰ τὸ τοῦ σχήματος ἑτερόμηκες. </p>
+               </div>
+               <div xml:id="par511-512" xml:lang="grc" type="Par." n="511-512">
+                  <p n="3">
+                     <seg> § <num type="cardinal" value="511">511</num> - <num type="cardinal"
+                           value="512">512</num>
+                     </seg> Ὅτι πρόσθεν <placeName ref="#Sunio" resp="#CGB">Σουνιάδος</placeName>
+                     κορυφῆς, <app>
+                        <lem wit="#R #l #Muller">ἐφύπερθεν</lem>
+                        <rdg wit="#E" cause="var_orto">ἐφ᾽ ὕπερθεν</rdg>
+                     </app> ἢ ὑπένερθεν τῶν <placeName ref="#abantes" resp="#CGB"
+                        >Ἀβάντων</placeName> , <app>
+                        <lem wit="#Muller">φαίνονται</lem>
+                        <rdg wit="#R #E #dseta">φαίνεται</rdg>
+                     </app>
+                     <placeName ref="#Salamina" resp="#CGB">Σαλαμίς</placeName> τε καὶ <placeName
+                        ref="#Egina" resp="#CGB">Αἴγινα</placeName> . Δεῖ δὲ εἰδέναι ὅτι ταὐτὸν
+                     ἐνταῦθα δηλοῖ καὶ τὸ <app>
+                        <lem wit="#R #l #Muller">ἐφύπερθεν</lem>
+                        <rdg wit="#E" type="var_orto">ἐφ᾽ ὕπερθεν</rdg>
+                     </app>
+                     <placeName ref="#abantes" resp="#CGB">Ἀβάντων</placeName> καὶ τὸ <app>
+                        <lem wit="#R #dseta #Muller">ὑπένερθεν</lem>
+                        <rdg wit="#E">ὕπερθεν</rdg>
+                     </app> , ἵνα <app>
+                        <lem wit="#R #E #l #Muller">λέγῃ</lem>
+                        <rdg wit="#z" cause="fonetica">λέγει</rdg>
+                     </app> δι᾽ ἀμφοῖν τὸ νοτιώτερον· ὅπερ εἰ καὶ ὑπένερθέν ἐστιν, <app>
+                        <lem wit="#R #dseta #Muller"/>
+                        <rdg wit="#E">ὡς</rdg>
+                     </app> διὰ τὸ καθ᾽ ἡμᾶς βόρειον ὕψος, ἀλλὰ κατὰ τὴν τοῦ Περιηγητοῦ συνήθειαν
+                     ὕπερθέν ἐστιν, ὡς τιθέντος ἐπὶ τῶν νοτίων τὴν <app>
+                        <lem wit="#R #E #l #Muller">ὑπέρ πρόθεσιν</lem>
+                        <rdg wit="#z" type="var_orto">ὑπερπρόθεσιν</rdg>
+                     </app> . Ἀκρωτήριον δὲ ᾀδόμενον <placeName ref="#Atica" resp="#CGB"
+                        >Ἀττικῆς</placeName> καὶ <placeName ref="#Eubea" resp="#CGB"
+                        >Εὐβοίας</placeName> τὸ <placeName ref="#Sunio" resp="#CGB">
+                        <app>
+                           <lem wit="#R #E #l #Muller">Σούνιον</lem>
+                           <rdg wit="#z">Σύνιον</rdg>
+                        </app>
+                     </placeName> . Περὶ ἣν <placeName ref="#Eubea" resp="#CGB">Εὔβοιάν</placeName>
+                     εἰσιν <placeName ref="#abantes" resp="#CGB">οἱ Ἄβαντες</placeName> , περὶ ὧν
+                     ἐροῦμεν <app>
+                        <lem wit="#E #Muller">μετ᾽</lem>
+                        <rdg wit="dseta" type="variante_ortografiac">μετὰ</rdg>
+                     </app> ὀλίγα. </p>
+                  <p n="4">
+                     <placeName ref="#Salamina" resp="#CGB">Ἡ δὲ Σαλαμὶς</placeName> πρώτη ἐν
+                        <placeName ref="#marSaronico" resp="#CGB">τῷ Σαρωνικῷ πελάγει</placeName> ,
+                     πρὸς <app>
+                        <lem wit="#R #E #z #Muller">ἀνατολὰς</lem>
+                        <rdg wit="#l">ἀνατολὴν</rdg>
+                     </app>
+                     <placeName ref="#Corinto" resp="#CGB">Κορίνθου</placeName> . <app>
+                        <lem wit="#R #dseta #Muller">Καὶ</lem>
+                        <rdg wit="#E" cause="omm"/>
+                     </app> μετ᾽ αὐτὴν <placeName ref="#Egina" resp="#CGB">ἡ Αἴγινα</placeName> , ἣν
+                     ἐν πολλοῖς καὶ ὁ Πίνδαρος ἐξυμνεῖ. Περὶ ἧς καὶ τοιαῦτα <app>
+                        <lem wit="#R #E #Muller">γράφεται</lem>
+                        <rdg wit="dseta">γράφονται</rdg>
+                     </app> · Νῆσος πρὸ τῆς <placeName ref="#Epidauro" resp="#CGB"
+                        >Ἐπιδαυρίας</placeName>
+                     <placeName ref="#Egina" resp="#CGB">ἡ Αἴγινα</placeName> ἐνδοξοτάτη, <app>
+                        <lem wit="#R #E #z #Muller">κύκλον</lem>
+                        <rdg wit="#l">κύκλου</rdg>
+                     </app> σταδίων ἑκατὸν ὀγδοήκοντα, κλυζομένη <placeName ref="#marDeCreta"
+                        resp="#CGB"> τῷ <app>
+                           <lem wit="#R #dseta #Muller">τε</lem>
+                           <rdg wit="#E" cause="omm"/>
+                        </app> Κρητικῷ πελάγει </placeName> καὶ <placeName ref="#marMirtoo"
+                        resp="#CGB">τῷ Μυρτῴῳ</placeName> , τῷ μεταξὺ <placeName ref="#Creta"
+                        resp="#CGB">Κρήτης</placeName> καὶ <placeName ref="#Argea" resp="#CGB"
+                        >Ἀργείας</placeName> καὶ <placeName ref="#Atica" resp="#CGB"
+                        >Ἀττικῆς</placeName> , ἐν <app>
+                        <lem wit="#E #Muller">βάθει</lem>
+                        <rdg wit="#R #dseta" type="fonetica">βάθη</rdg>
+                     </app> μὲν γεώδης, ἐπιπολῆς δὲ πετρώδης, διὸ καὶ <app>
+                        <lem wit="#R #dseta #Muller">ψιλή</lem>
+                        <rdg wit="#E">ὑψηλὴ</rdg>
+                     </app> ἐστι, κριθοφόρος δὲ ἱκανῶς, Οἰνώνη ποτὲ ὀνομαζομένη. Ἐξ αὐτῆς ὁ Αἰακός.
+                     Οἱ δὲ ἐν αὐτῇ πρῶτοι <placeName ref="#eginetas" resp="#CGB">
+                        <app>
+                           <lem wit="#R #dseta #Muller">Μυρμιδόνες</lem>
+                           <rdg wit="#E" type="fonetica">Μυρμηδόνες</rdg>
+                        </app>
+                     </placeName> ἐκλήθησαν, οὐχ ὅτι κατὰ τὸν μῦθον λοιμοῦ <app>
+                        <lem wit="#R #dseta #Muller"/>
+                        <rdg wit="#E">γενομένου</rdg>
+                     </app> τῇ νήσῳ <app>
+                        <lem wit="#R #dseta #Muller">συμπεσόντος</lem>
+                        <rdg wit="#E"/>
+                     </app> καὶ τῶν ἐκεῖ ἐκτριβέντων τῇ νόσῳ, οἱ μύρμηκες ἄνθρωποι ἐγένοντο, Αἰακοῦ
+                     εὐξαμένου, ἀλλ᾽ ὅτι μυρμήκων δίκην τὴν ἀγαθὴν γῆν κάτω οὖσαν ὑπορύττοντες <app>
+                        <lem wit="#R #Muller">ἐπέφερον</lem>
+                        <rdg wit="#E #dseta">ἐπέβαλον</rdg>
+                     </app> ταῖς πέτραις, ἵνα τὴν μὲν ἔχωσι γεωργεῖν, ἐν δὲ τοῖς ὀρύγμασι κατοικεῖν,
+                     φειδόμενοι τοῦ πλινθοποιεῖν, ἵνα ἔχωσι γῆν. Δωριεῖς δὲ ἀνέκαθεν <placeName
+                        ref="#eginetas" resp="#CGB">οἱ Αἰγινῆται</placeName>
+                     <app>
+                        <lem wit="#R #E #l #Muller">ἀπὸ</lem>
+                        <rdg wit="#z" cause="omm"/>
+                     </app>
+                     <placeName ref="#Epidauro" resp="#CGB">Ἐπιδαύρου</placeName> κατὰ τὸν Ἡρόδοτον.
+                     Ἐκ ταύτης τῆς νήσου καὶ <app>
+                        <lem wit="#R #E #z #Muller">ὁ</lem>
+                        <rdg wit="#l">ἡ</rdg>
+                     </app> ᾀδόμενος Κριὸς, ἀνὴρ γενναῖος ἀθλητής· ὑφ᾽ οὗ ἀπελαυνόμενος <pb
+                        n="Müller, p. 314" xml:id="Muller_p314"
+                        facs="data/images/single/Muller_p314.png"/> τῆς νήσου ὁ τῶν Λακώνων βασιλεὺς
+                     Κλεομένης καὶ θέλων ἐκφοβῆσαι αὐτὸν ἔφη ἀστείως τὸ ὑμνούμενον, ἤδη νῦν
+                     καταχαλκοῦ, ὦ κριὲ, τὰ κέρατα, ὡς μεγάλῳ κακῷ συνοισόμενος. Λέγεται δὲ καὶ
+                     Σώστρατός τις Αἰγινήτης ἔμπορος μεγάλα ἐκ φορτίων κερδῆσαι. </p>
+                  <p n="5"> Καὶ ταῦτα μὲν περὶ <placeName ref="#Egina" resp="#CGB"
+                        >Αἰγίνης</placeName> . Ἡ δὲ <placeName ref="#Salamina" resp="#CGB"
+                        >Σαλαμὶς</placeName> ἑβδομήκοντα σταδίων ἔχει περίμετρον ἢ ὀγδοήκοντα.
+                     Ἐκαλεῖτο δέ ποτε <placeName ref="#Salamina" resp="#CGB">Κυχρεία</placeName> ,
+                     ἀπό <app>
+                        <lem wit="#R #E #l #Muller">τινος Κυχρέως</lem>
+                        <rdg wit="#z">Κυχρέως τινος</rdg>
+                     </app> , οὗ καὶ <app>
+                        <lem wit="#R #E #l #Muller"/>
+                        <rdg wit="#z">ὁ</rdg>
+                     </app> Λυκόφρων καὶ Ἀρριανὸς μέμνηνται, ὃς ὄφις μὲν ἐπεκλήθη διὰ <app>
+                        <lem wit="#R #dseta #Muller">τραχύτητα</lem>
+                        <rdg wit="#E">βραχυτάτου</rdg>
+                     </app>
+                     <app>
+                        <lem wit="#R #E #l #Muller"/>
+                        <rdg wit="#z">τοῦ</rdg>
+                     </app> τρόπου, ἀπηλάθη δὲ τῆς νήσου ὑπὸ Εὐρυλόχου. Ὠνόμασται δὲ ἡ νῆσος αὕτη
+                     καὶ <placeName ref="#Salamina" resp="#CGB">Σκιρὰς</placeName> ἀπό τινος ἥρωος·
+                     ἀφ᾽ οὗ καὶ <placeName ref="#temploAtenea" resp="#CGB">Σκιρὰς</placeName>
+                     <placeName ref="#Atenas" resp="#CGB">Ἀθηνᾶ</placeName> παρ᾽ <placeName
+                        ref="#atenienses" resp="#CGB">Ἀθηναίοις</placeName> , καὶ ὁ μὴν ὁ
+                     Σκιροφοριὼν, καὶ Σκίρα τόπος ἐν <placeName ref="#Atica" resp="#CGB"
+                        >Ἀττικῇ</placeName> . Εἶχε δὲ καὶ ποταμὸν <placeName ref="#Bocaro"
+                        resp="#CGB">Βώκαρον</placeName>
+                     <app>
+                        <lem wit="#R #E #z #Muller">λεγόμενον</lem>
+                        <rdg wit="#l" cause="omm"/>
+                     </app> , ὡς καὶ Λυκόφρων ἱστορεῖ, ὡς ἂν εἴποι τις <placeName ref="#Bocaro"
+                        resp="#CGB">
+                        <app>
+                           <lem wit="#R #E #z #Muller">Βουκέφαλον</lem>
+                           <rdg wit="#l">Βοκέφαλον</rdg>
+                        </app>
+                     </placeName> · καθὰ καὶ πηγή τις παρὰ Θεοκρίτῳ <placeName ref="#Burina"
+                        resp="#CGB">Βούρινα</placeName> Ἰταλικὴ, βοὸς ῥινὶ παρονομαζομένη. Ὅτι δὲ
+                     περὶ <placeName ref="#Salamina" resp="#CGB">Σαλαμῖνα</placeName> κατεναυμαχήθη
+                     ὁ Ξέρξης, καὶ ὅτι ναυτικὸν ἀξιόλογον ἔσχε ἡ νῆσός ποτε, οὐδεὶς τῶν περὶ λόγους
+                     ἠγνόηκε. Τὸν δὲ περὶ <placeName ref="#Salamina" resp="#CGB"
+                        >Σαλαμῖνα</placeName> πορθμὸν <app>
+                        <lem wit="#R #E #Muller">διστάδιον</lem>
+                        <rdg wit="#dseta">στάδιον</rdg>
+                     </app> εἶναί φασιν, ὃν ἐπειρᾶτο μὲν ὁ Ξέρξης <app>
+                        <lem wit="#E #Muller">καταχῶσαι</lem>
+                        <rdg wit="#R">διαχῶσαι</rdg>
+                        <rdg wit="#dseta">διαχώσειν</rdg>
+                     </app> καὶ οὕτως ἀποχερσῶσαι, ἀπεναντίας τι ποιῶν τοῖς περὶ <placeName
+                        ref="#Atos" resp="#CGB"> τὸν <app>
+                           <lem wit="#Muller">Ἄθω</lem>
+                           <rdg wit="#R #dseta">Ἄθων</rdg>
+                           <rdg wit="#E">Ἄθωνα</rdg>
+                        </app>
+                     </placeName>
+                     <app>
+                        <lem wit="#R #z #Muller">νεανιεύμασιν</lem>
+                        <rdg wit="#l" type="no_significativa">νεανιεύμασι</rdg>
+                        <rdg wit="#E">ἀνανεύμασιν</rdg>
+                     </app> , <app>
+                        <lem wit="#R #dseta #Muller">οὗ</lem>
+                        <rdg wit="#E">
+                           <lacunaStart/>
+                        </rdg>
+                     </app> τὸν αὐχένα διορύξας <app>
+                        <lem wit="#R #dseta #Muller">ἀπεθαλάσσωσεν</lem>
+                        <rdg wit="#E">
+                           <lacunaEnd/>
+                        </rdg>
+                     </app> , ἐκωλύθη δὲ φυγών. </p>
+               </div>
+               <div xml:id="par510" xml:lang="grc" type="Par." n="510">
+                  <p n="6">
+                     <seg> § <num type="cardinal" value="510">510</num>
+                     </seg> Ὅτι περὶ Φοινίκην νῆσος <placeName ref="#AradoFenicia" resp="#CGB">ἡ
+                        Ἄραδος</placeName> . Λέγονται δὲ <app>
+                        <lem wit="#R #dseta #Muller">γενέσθαι ποτὲ</lem>
+                        <rdg wit="#E">ποτὲ γενέσθαι</rdg>
+                     </app> ἔνδοξοι <placeName ref="#aradios" resp="#CGB">οἱ Ἀράδιοι</placeName> ,
+                     ὅτε στασιαζόντων τῶν ἀδελφῶν Σελεύκου τοῦ Καλλινίκου καὶ Ἀντιόχου τοῦ Ἱέρακος,
+                     αὐτοὶ τῷ Καλλινίκῳ προσθέμενοι <app>
+                        <lem wit="#R #E #l #Muller">ἔλαβον</lem>
+                        <rdg wit="#z">ἔλαβεν</rdg>
+                     </app> ἐξουσίαν δέχεσθαι τοὺς καταφεύγοντας ἐκ τοῦ βασιλέως παρ᾽ αὐτοὺς, καὶ μὴ <app>
+                        <lem wit="#R #E #z #Muller">ἐκδιδόναι</lem>
+                        <rdg wit="#l">διδόναι</rdg>
+                     </app> ἄκοντας· μὴ μέντοι <app>
+                        <lem wit="#E #dseta #Muller">μηδὲ</lem>
+                        <rdg wit="#R">μὴ δὲ</rdg>
+                     </app> ἐκπλέειν ἐξ αὐτῶν τοὺς πρόσφυγας ἄνευ τοῦ ἐπιτρέψαι τὸν βασιλέα. Ἔστι δὲ
+                     καὶ ἑτέρα νῆσος <placeName ref="#AradoPersico" resp="#CGB">Ἄραδος</placeName> ,
+                     ὡς ῥηθήσεται κατωτέρω. </p>
+               </div>
+               <div xml:id="par513-516" xml:lang="grc" type="Par." n="513-516">
+                  <p n="7">
+                     <seg> § <num type="cardinal" value="513">513</num> - <num type="cardinal"
+                           value="516">516</num>
+                     </seg> Ὅτι <placeName ref="#marEgeo" resp="#CGB">τὸ Αἰγαῖον πέλαγος</placeName>
+                     ἀπειρεσίας <app>
+                        <lem wit="#R #Muller">ἔχειν λέγει</lem>
+                        <rdg wit="#dseta">λέγειν ἔχει</rdg>
+                        <rdg wit="#E">ἔχειν νήσους λέγει</rdg>
+                     </app>
+                     <app>
+                        <lem wit="#R #dseta #Muller">νήσους</lem>
+                        <rdg wit="#E" cause="omm"/>
+                     </app> , καὶ ὅτι <app>
+                        <lem wit="#R #E #Muller">θηητὸν</lem>
+                        <rdg wit="#l">θυητὸν</rdg>
+                        <rdg wit="#z">θνητὸν</rdg>
+                     </app>
+                     <app>
+                        <lem wit="#R #E #l #Muller">βαθὺν</lem>
+                        <rdg wit="#z" type="fonetica">βαθὴν</rdg>
+                     </app> πόρον τὸν τοῦ Αἰγαίου καλεῖ. Καὶ ὅτι <placeName ref="#Helesponto"
+                        resp="#CGB">τὸν Ἑλλήσποντον</placeName>
+                     <app>
+                        <lem wit="#R #dseta #Muller">παραφράζων</lem>
+                        <rdg wit="#E">παραφράζω</rdg>
+                     </app>
+                     <app>
+                        <lem wit="#Muller" cause="redundancia"/>
+                        <rdg wit="#R #E #dseta">ἢ περιφράζων</rdg>
+                     </app> ἢ ἐτυμολογῶν στενωπὸν ὕδωρ Ἀθαμαντίδος Ἕλλης λέγει αὐτὸν, ὡς ἐκεῖ
+                     καταπεσούσης τῆς Ἕλλης τῆς θυγατρὸς <app>
+                        <lem wit="#E #dseta #Muller">τοῦ</lem>
+                        <rdg wit="#R" cause="omm"/>
+                     </app> Ἀθάμαντος, καὶ <app>
+                        <lem wit="#R #dseta #Muller">λιπούσης</lem>
+                        <rdg wit="#E" type="fonetica">λειπούσης</rdg>
+                     </app> τῷ τόπῳ τὸ ὄνομα, ἧς καὶ τάφον Ἡρόδοτος ἱστορεῖ περὶ <placeName
+                        ref="#QuersonesoTracio" resp="#CGB">τὴν Θρᾳκικὴν Χερρόνησον</placeName> . Ὁ
+                     δὲ Διονύσιος λέγει <app>
+                        <lem wit="#R #E #l #Muller">καὶ ὅτι</lem>
+                        <rdg wit="#z">ὅτι καὶ</rdg>
+                     </app>
+                     <placeName ref="#Sesto" resp="#CGB">Σηστὸς</placeName> ἐκεῖ καὶ <placeName
+                        ref="#AbidoMisia" resp="#CGB">Ἄβυδος</placeName> ἐναντίον ὅρμον ἔθεντο·
+                        <placeName ref="#Sesto" resp="#CGB">Σηστὸς</placeName> μὲν, Λεσβίων ἄποικος,
+                     καθὰ καὶ ἡ <placeName ref="#Madito" resp="#CGB">Μάδυτος</placeName> , ὡς ὁ
+                     Γεωγράφος φησὶ, Χερρονησία πόλις, <placeName ref="#AbidoMisia" resp="#CGB"
+                        >Ἀβύδου</placeName> διέ <pb n="Müller, p. 315" xml:id="Muller_p315"
+                        facs="data/images/single/Muller_p315.png"/> χουσα σταδίους τριάκοντα ἐκ
+                     λιμένος εἰς λιμένα. Ἔνθα καὶ ἡ λεγομένη <placeName ref="#Apobatra" resp="#CGB"
+                        >Ἀποβάθρα</placeName> , ὅπου ἡ Ξερξικὴ σχεδία ἐπήγνυτο. <app>
+                        <lem wit="#R #E #l #Muller">Περὶ</lem>
+                        <rdg wit="#z">Παρὰ</rdg>
+                     </app> Εὐρώπην δέ ἐστιν ἡ ῥηθεῖσα πόλις, λεγομένη Ἀττικῶς μὲν <placeName
+                        ref="#Sesto" resp="#CGB">ἡ Σηστὸς</placeName> , παρὰ δ᾽ Ἐφόρῳ <app>
+                        <lem wit="#R #E #z #Muller"/>
+                        <rdg wit="#l" cause="add">δὲ</rdg>
+                     </app>
+                     <placeName ref="#Sesto" resp="#CGB">ὁ Σηστός</placeName> . Ἔσχε δέ ποτε τεῖχος
+                     ἰσχυρὸν, ὡς Ἡρόδοτος ἱστορεῖ. <placeName ref="#AbidoMisia" resp="#CGB"
+                        >Ἄβυδος</placeName> δὲ πρὸς ἀνατολὰς ἀντιπαρήκουσα <placeName ref="#Sesto"
+                        resp="#CGB">
+                        <app>
+                           <lem wit="#R #E #Muller">τῇ</lem>
+                           <rdg wit="#dseta">τῷ</rdg>
+                        </app> Σηστῷ </placeName> , κτίσμα <placeName ref="#milesios" resp="#CGB"
+                        >Μιλησίων</placeName> , ἴσον διέχουσα <placeName ref="#Lampsaco" resp="#CGB"
+                        >Λαμψάκου</placeName> καὶ <placeName ref="#Ilion" resp="#CGB"
+                        >Ἰλίου</placeName> , ὡς ὁ Γεωγράφος φησίν· ἔνθα τὸ <app>
+                        <lem wit="#R #E #z #Muller">ἑπταστάδιον</lem>
+                        <rdg wit="#l">ἑπτὰ στάδιον</rdg>
+                     </app> τοῦ πορθμοῦ, ὅπερ ὁ Ξέρξης ἔζευξεν. Ἐνεπρήσθη δὲ <placeName
+                        ref="#AbidoMisia" resp="#CGB">ἡ Ἄβυδος</placeName> αὕτη ὑπὸ Δαρείου τοῦ
+                     πατρὸς Ξέρξου. Εἶναι δὲ λέγεται ποτε καὶ <placeName ref="#AbidoLibia"
+                        resp="#CGB">Λιβυκὴ Ἄβυδος</placeName>
+                     <placeName ref="#Egipto" resp="#CGB">Αἰγυπτία</placeName> , ἔχουσα <app>
+                        <lem wit="#R #dseta #Muller">Μεμνόνειον</lem>
+                        <rdg wit="#E">Σεμνόνειον</rdg>
+                     </app>
+                     <app>
+                        <lem wit="#R #E #l #Muller">βασίλειον</lem>
+                        <rdg wit="#z">βασιλέα</rdg>
+                     </app> , δευτερεύουσα μετὰ τὰς ἑκατομπύλους <placeName ref="#TebasEgipto"
+                        resp="#CGB">Θήβας</placeName> . Καὶ Ἰταλικὴ δὲ ἱστόρηται <placeName
+                        ref="#AbidoItalia" resp="#CGB"> Ἄβυδος</placeName> . Ὅτι δὲ περὶ <placeName
+                        ref="#Helesponto" resp="#CGB">
+                        <app>
+                           <lem wit="#R #dseta #Muller">Ἑλλησπόντου</lem>
+                           <rdg wit="#E">Ἑλλησπόντον</rdg>
+                        </app>
+                     </placeName> ἀμφεβλήθη τοῖς παλαιοῖς ἄλλα τὲ καὶ πόθεν ἂν ἄρχοιτο, ἤδη
+                     προγέγραπται. Ἴστρον δέ τινά φασιν ἱστορεῖν, τέσσαρας γενέσθαι μεγάλους
+                     κατακλυσμοὺς, ὧν ἐφ᾽ ἑνὶ διαρραγέντα τὸν <placeName ref="#Helesponto"
+                        resp="#CGB">Ἑλλήσποντον</placeName> ἀφορίσαι τῆς Ἀσίας τὴν Εὐρώπην. Ἰστέον
+                     δὲ ὅτι κατὰ τὸν γράψαντα τὰ Ἐθνικὰ <app>
+                        <lem wit="#Muller">ἡ</lem>
+                        <rdg wit="#R #E #dseta">καὶ</rdg>
+                     </app> Ἰταλικὴ πόλις <app>
+                        <lem wit="#E #z #Muller"/>
+                        <rdg wit="#R #l">τὶς</rdg>
+                     </app> λέγεται <app>
+                        <lem wit="#R #dseta #Muller">οὐδετέρως</lem>
+                        <rdg wit="#E">οὐδέτερον</rdg>
+                     </app>
+                     <placeName ref="#AbidoItalia" resp="#CGB">τὸ Ἄβυδον</placeName> , καὶ ὅτι ἐπὶ <app>
+                        <lem wit="#R #dseta #Muller">συκοφαντίᾳ καὶ μαλακίᾳ</lem>
+                        <rdg wit="#E" cause="trasnpositio">μαλακίᾳ καὶ συκοφαντίᾳ</rdg>
+                     </app> διεβάλλοντο οἱ <placeName ref="abidenos" resp="#CGB">Μιλήσιοι
+                        Ἀβυδηνοὶ</placeName> οὗτοι. Ὅθεν καὶ παροιμία, μηδ᾽ εἰκῆ τὴν <placeName
+                        ref="#AbidoMisia" resp="#CGB">Ἄβυδον</placeName> πατεῖν, ἤγουν μὴ θαρρούντως
+                     αὐτῆς ἐπιβαίνειν. Ἐξ αὐτῆς δὲ καὶ ἑτέρα παροιμία ἐπὶ τῶν <app>
+                        <lem wit="#Muller">ἀηδῶν</lem>
+                        <rdg wit="#E #l">Ἀβυδηνῶν</rdg>
+                        <rdg wit="#z">Ἀβύδων</rdg>
+                     </app> , τὸ Ἀβυδηνὸν ἐπιφόρημα. Τὸ δὲ ἐναντίον ὅρμον ἔθεντο ἀντὶ τοῦ <app>
+                        <lem wit="#R #l #Muller">κατεναντία</lem>
+                        <rdg wit="#E">κατ᾽ ἐναντία</rdg>
+                        <rdg wit="#z">κατεναντίον</rdg>
+                     </app> κεῖνται ἀλλήλαις καὶ ἀντίπορθμοί εἰσιν. </p>
+               </div>
+            </body>
+         </text>
+         <text xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="transcripcion_R">
+            <body>
+               <xi:include href="./sources/VatGr1910.xml" xpointer="Dik68539_transcr"/>
+            </body>
+         </text>
+         <text xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="transcripcion_E">
+            <body>
+               <xi:include href="./sources/ParGr2852.xml" xpointer="Dik52490_transcr"/>
+            </body>
+         </text>
+         <text xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="transcripcion_l">
+            <body>
+               <xi:include href="./sources/CantULKkVI29.xml" xpointer="Dik12218_transcr"/>
+            </body>
+         </text>
+         <text xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="transcripcion_z">
+            <body>
+               <xi:include href="./sources/VatPalGr154.xml" xpointer="Dik65886_transcr"/>
+            </body>
+         </text>
+      </group>
+   </text>
+</TEI>

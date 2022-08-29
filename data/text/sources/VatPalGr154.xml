@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../../../../../../../home/carmen/htdocs/evt2-beta2.01/data/text/schema/tei_Eustacio_tfm_v1.0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Transcripción del Vat. Pal. gr. 154</title>
+            <author xml:id="EdT">Eustacio de Tesalónica</author>
+            <respStmt>
+               <resp>Transcripción y anotación en TEI de </resp>
+               <name xml:id="CGB">Carmen García Bueno</name>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <edition n="1">
+               <title>Versión electrónica enriquecida con marcado semántico con TEI.</title>
+               <date when="2022">2022</date>
+            </edition>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Proyecto «El vuelo de Hermes»</publisher>
+            <pubPlace>Madrid</pubPlace>
+            <address>
+               <name type="institution">Centro de Ciencias Humanas y Sociales (CCHS)</name>
+               <name type="institution">Consejo Superior de Investigaciones Científicas (CSIC)</name>
+               <street>C/ Albasanz 26-28, despacho 1B5</street>
+               <postCode>28037</postCode>
+               <name type="city">Madrid</name>
+               <name type="country">España</name>
+            </address>
+            <!-- <availability> Indicar tipo de licencia </availability> -->
+            <date when="2022-09-01">septiembre de 2022</date>
+         </publicationStmt>
+         <notesStmt>
+            <note>Transcrito a partir de las fotografías disponibles en el repositorio digital de la Biblioteca
+               Apostolica Vaticana (DigiVat).</note>
+         </notesStmt>
+         <sourceDesc>
+            <!-- LISTA DE PERSONAS VARIAS -->
+            <listPerson>
+               <person xml:id="copista_z">
+                  <p>Copista del Vat. Pal. gr. 154.</p>
+               </person>
+            </listPerson>
+            <!-- BIBLIOGRAFÍA -->
+            <listBibl>
+               <biblStruct xml:id="Muller">
+                  <monogr>
+                     <title level="a">Eustathii Commentarii</title>
+                     <title level="m"> Geographi Graeci Minores. E codicibus recognovit, prolegomenis, annotatione,
+                        indicibus instruxit, tabulis aeri incisis illustravit. Volumen secundum </title>
+                     <editor role="text curator">Carolus Müller</editor>
+                     <imprint>
+                        <pubPlace>Paris</pubPlace>
+                        <publisher>Firmin Didot</publisher>
+                        <date when="1882">1882</date>
+                        <biblScope>pp. 311-315</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <!-- 
+                    se puede incluir:
+                    <correction method="markup"><p>: explica cómo se han solucionado los errores
+                    <normalization method="markup"><p>: explica si se ha hecho algo con la "pronunciación". Con source y una url se puede indicar qué se ha seguido como norma (OED, RAE...)
+                    <quotation marks="all"><p>: si es una transcripción diplomática y se mantienen las citas originales   
+                -->
+            <interpretation>
+               <p>Cuando aparece un número en forma de cifra se ha optado por utilizar el marcado de abreviatura y
+                  expansión. En la primera etiqueta se incluye la cifra y en la segunda el número en texto. Además, la
+                  cifra está también etiquetada con &lt;num&gt; para indicar que es un numeral griego y dar su valor en
+                  cifras arábigas.</p>
+               <p>Hemos utilizado el atributo @rend de la etiqueta &lt;hi&gt; con el valor <hi rend="italic">sup</hi>
+                  para indicar el texto que está en posición supralineal. Esto no significa que el tamaño de la letra
+                  del texto que se ubica en el interlineado sea más pequeño (lo que entendemos actualmente como
+                  superíndice).</p>
+               <p>Hemos marcado las abreviaturas y su expansión con el juego de etiquetas que ofrece TEI para estos
+                  casos (&lt;choice&gt;, &lt;abbr&gt; y &lt;expan&gt;)</p>
+            </interpretation>
+            <hyphenation>
+               <p>Se mantienen los saltos de línea del original.</p>
+            </hyphenation>
+            <quotation>
+               <p>Las citas directas se han marcado con comillas angulares o españolas («...»). En el texto original no
+                  tienen ningún tipo de marca.</p>
+            </quotation>
+         </editorialDecl>
+         <projectDesc>
+            <p>Texto codificado para la edición crítica del texto de Eustacio que va a realizar el grupo de
+               investigación «El vuelo de Hermes».</p>
+         </projectDesc>
+         <refsDecl>
+            <p>El texto original está dividido en secciones llamadas <hi rend="italic">parécbolas</hi>. En algunos
+               manuscritos se incluye el o los versos a los que hace referencia del poema original de Dionisio
+               Periegeta. Este valor (el número de verso(s)) es el que se ha tomado para identificar cada parécbola, de
+               ahí que sean números alternos. En los manuscritos las parécbolas no están numeradas. Se identifican (no
+               siempre) porque el copista deja delante del comienzo de cada una un espacio en blanco o utiliza una tinta
+               distintiva para la primera letra.</p>
+            <p>La numeración de líneas por página es nuestra.</p>
+         </refsDecl>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="grc">Griego clásico</language>
+         </langUsage>
+      </profileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface n="Dik65886_f093v" xml:id="Dik65886_surf_f093v" corresp="#Dik65886_f093v">
+         <graphic url="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.093v.jpg">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik65886_f093v" rend="visible"/>
+      </surface>
+      <surface n="Dik65886_f094r" xml:id="Dik65886_surf_f094r" corresp="#Dik65886_f094r">
+         <graphic url="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.094r.jpg">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik65886_f094r" rend="visible"/>
+      </surface>
+      <surface n="Dik65886_f094v" xml:id="Dik65886_surf_f094v" corresp="#Dik65886_f094v">
+         <graphic url="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.094v.jpg">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik65886_f094v" rend="visible"/>
+      </surface>
+      <surface n="Dik65886_f095r" xml:id="Dik65886_surf_f095r" corresp="#Dik65886_f095r">
+         <graphic url="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.095r.jpg">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik65886_f095r" rend="visible"/>
+      </surface>
+      <surface n="Dik65886_f095v" xml:id="Dik65886_surf_f095v" corresp="#Dik65886_f095v">
+         <graphic url="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.095v.jpg">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik65886_f095v" rend="visible"/>
+      </surface>
+      <surface n="Dik65886_f096r" xml:id="Dik65886_surf_f096r" corresp="#Dik65886_f096r">
+         <graphic url="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.096r.jpg">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik65886_f096r" rend="visible"/>
+      </surface>
+      <surface n="Dik65886_f096v" xml:id="Dik65886_surf_f096v" corresp="#Dik65886_f096v">
+         <graphic url="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.096v.jpg">
+            <desc>Imagen de alta resolución</desc>
+         </graphic>
+         <zone corresp="#Dik65886_f096v" rend="visible"/>
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div n="de z" type="Transcripción" xml:id="Dik65886_transcr">
+            <pb n="Vat. Pal. gr. 154, f. 93v"
+               facs="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.093v.jpg"
+               xml:id="Dik65886_f093v"/>
+            <p xml:lang="grc"><lb n="1"/> (<seg>§ <num type="cardinal" value="503">503</num></seg>) ἀπὸ μέρους δηλώσας
+               τὸ ὅλον. Μέρος γάρ τι Κρήτης ὁ Ἀμνισὸς,<lb n="&#8195;"/> ἔνθα <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> σπήλαιον Εἰλειθύας, ὡς ἐν Ὀδυσσείᾳ ὁ Ποιητὴς ἱστορεῖ.<lb n="&#8195;"/> (<seg>§ <num
+                     type="cardinal" value="504">504</num>-<num type="cardinal" value="507">507</num></seg>)<hi
+                  rend="red_ink">Ὅ</hi>τι ἀντικρὺ τῆς Αἰγυπτίας πέζης, ἤγουν τῆς τοῦ Δέλτα<lb n="&#8195;"/> βορείας
+               κρηπῖδος ἤγουν στάσεως ἢ βάσεως, ἡ Ῥόδος <choice>
+                  <abbr>κεῖ<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κεῖ<ex>ται</ex></expan>
+               </choice>,<lb n="5"/> ἧς ὁ κύκλος σταδίων ἐστὶ <choice>
+                  <abbr><num type="numGro" value="920">ϡκ᾽</num></abbr>
+                  <expan>ἐννεακοσίων εἴκοσι</expan>
+               </choice>. Περὶ ἣν <choice>
+                  <abbr>πό<hi rend="sup">λ</hi><am>¤</am></abbr>
+                  <expan>πό<ex>λις</ex></expan>
+               </choice> Λίνδος, ἡ καὶ<lb n="&#8195;"/> μέχρι νῦν περιᾳδομένη, ἀφ᾽ ἧς πλοῖα Λινδικὰ, ἔτι<lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰηλυσσὸς, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Κάμιρος διὰ τοῦ ι γραφομένη πρὸς ἀντι-<lb n="&#8195;"/> διαστολὴν τοῦ κυρίου· ὁ γὰρ Κάμειρος τὸ
+               κύριον διὰ <choice>
+                  <abbr>δφ</abbr>
+                  <expan>διφθόγγου</expan>
+               </choice><choice>
+                  <abbr>γρ</abbr>
+                  <expan>γράφετ<hi rend="sup">αι</hi></expan>
+               </choice>.<lb n="&#8195;"/> Μεθ᾽ ἣν πρὸς ἀνατολὰς ἐν ἀρχῇ τῆς τῶν Παμφυλίων παρα-<lb n="10"/> λίας, ἔνδον
+               τῆς τῶν Πατάρων μεγάλης ἄκρας, αἱ Χελιδονίαι τρεῖς νῆσοι<lb n="&#8195;"/>
+               <choice>
+                  <abbr>κεῖν<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κεῖντ<ex>αι</ex></expan>
+               </choice>, πάρισοι τὸ μέγεθος, διέχουσαι ἀλλήλων ὅσον πέν-<lb n="&#8195;"/> τε σταδίους, τῆς δὲ γῆς
+               ἀφεστηκυῖαι ὡς ἑξαστάδιον. Ἀφ᾽ ὧν<lb n="&#8195;"/> οἴονταί τινες ἄρχεσθαι τὸ ᾀδόμενον ὄρος τὸν Ταῦρον, <choice>
+                  <abbr>ἀρχόμ<am>¤</am><am>¤</am></abbr>
+                  <expan>ἀρχόμ<ex>εν</ex><ex>ον</ex></expan>
+               </choice><lb n="&#8195;"/> τῇ ἀληθείᾳ ἀπὸ τῆς τῶν Ῥοδίων περαίας. Ἰστέον <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ὅτι Ἡρω-<lb n="15"/> διανὸς ἐν τῇ καθόλου προσῳδίᾳ Χελιδονιαί ἀναγινώσκει<lb n="&#8195;"/>
+               ὀξυτόνως, ὡς πυρκαϊαί. Πάταρα δὲ κτίσμα Πατάρου,<lb n="&#8195;"/> πόλις μεγάλη, περὶ ἧς προεγράφη
+               πλατύτερον. Ἡ δὲ<lb n="&#8195;"/> Ῥόδος ἄλλα τὲ ἔσχε θαυμαστὰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸν τοῦ Ἡλίου δὲ κολοσσὸν,<lb n="&#8195;"/> Χάρητος ἔργον, ἀνδρὸς Λινδίου, πήχεων
+                  ἑβδομήκοντα·<lb n="20"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἦν <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> αὐτὸς ἓν τῶν ἑπτὰ θεαμάτων, ὃς ἔπεσε σεισμῷ<lb n="&#8195;"/> κλασθεὶς ἀπὸ τῶν γονάτων. Πολλὰ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἄλλα εἶχεν ἡ Ῥόδος<lb n="&#8195;"/> ἀγάλματα, ὧν τὸ τεχνικὸν <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> μικροῦ δεῖν ἔμψυχον <choice>
+                  <abbr>αἰνιττόμ<am>¤</am></abbr>
+                  <expan>αἰνιττόμ<ex>εν</ex></expan>
+               </choice><hi rend="sup">οι</hi><lb n="&#8195;"/>
+            </p>
+            <pb n="Vat. Pal. gr. 154, f. 94r"
+               facs="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.094r.jpg"
+               xml:id="Dik65886_f094r"/>
+            <p xml:lang="grc"><lb n="1"/> οἱ τεχνῖται ἁλύσεσιν ἐδέσμουν αὐτὰ, μὴ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> λάθοιεν τάχα<lb n="&#8195;"/> κινηθέντα μεταστῆναί που ἀλλαχοῦ. Εἰ δὲ χρὴ τὴν νῆσον<lb
+                  n="&#8195;"/> ταύτην οὐ μέσον τῷ μεγίστῳ κολοσσῷ σεμνῦναι, ἀλλὰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice><lb n="&#8195;"/> σμικροτάτῳ τινὶ ἐπᾶραι ἀναθήματι· ἐκεῖ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ καλὸς πέρδι-<lb n="5"/> ξ ἦν, τὸ τοῦ Πρωτογένους ὑμνούμενον πάρεργον. Διὰ δὲ<lb n="&#8195;"/>
+               τὸν ἀνωτέρω ῥηθέντα μέγαν κολοσσὸν <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Κολοσσαεῖς ὡς ἐκ<lb n="&#8195;"/> μεγάλου παρασήμου ἐκαλοῦντο οἱ Ῥόδιοι. <choice>
+                  <abbr>Λέγε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Λέγε<ex>ται</ex></expan>
+               </choice> δὲ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ναύ-<lb n="&#8195;"/> σταθμα ἔχειν ἡ Ῥόδος κρυπτὰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἀπόρρητα τοῖς πολλοῖς, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice><lb n="&#8195;"/> τῷ κατοπτεύσαντι αὐτὰ θάνατον εἶναι τὴν ζημίαν. Ἐκλήθη<lb n="10"/> δέ ποτε,
+               φασὶν, Ὀφίουσα· εἶτα Τελχινὶς, διὰ τοὺς ἐκ Κρήτης<lb n="&#8195;"/> Τελχῖνας οἰκήσαντας ἐκεῖ, ἄνδρας
+               γόητας <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> βασκάνους.<lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>τοι τινὲς μάτην δυσφημηθῆναι τούτους φασί· βασκαν-<lb n="&#8195;"/> θῆναι γὰρ μᾶλλον ὑπὸ τῶν
+               ἀντιτέχνων αὐτοὺς, ἀρίστους ὑ-<lb n="&#8195;"/> πάρξαντας ἐργάτας χαλκοῦ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> σιδήρου, οἳ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὴν ἅρπην τῷ<lb n="15"/> Κρόνῳ ἐδημιούργησαν. Ὁ δὲ Γεωγράφος φησὶ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι<lb n="&#8195;"/> πλεύσαντες οἱ Ῥόδιοι μέχρι Ἰβηρίας ἔκτισαν ἐκεῖ<lb n="&#8195;"/> πόλιν
+               Ῥόδον. (<seg>§ <num type="cardinal" value="508">508</num>-<num type="cardinal" value="509"
+                  >509</num></seg>) <hi rend="red_ink">Ὅ</hi>τι ἡ Κύπρος οὐδεμιᾶς νήσου λει-<lb n="&#8195;"/> πομένη τῇ
+               ἀρετῇ τῷ Παμφυλίῳ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰσσικῷ κλύζε<choice>
+                  <abbr>κλύζε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>κλύζε<ex>ται</ex></expan>
+               </choice> κόλ-<lb n="&#8195;"/> πῳ, ἧς οὐδεμία ἔτι ἀνατολικωτέρα νῆσός ἐστι. Λέ-<lb n="20"/> γει δὲ αὐτὴν
+               Ἀφροδίτης ἄστυ ἐπήρατον, ὡς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὴν Σαμο-<lb n="&#8195;"/> θρᾴκην Κορυβάντιον ἄστυ, <gap reason="salto_igual_igual"
+                  quantity="11" unit="palabras"/> ἀκολούθως δ᾽ οὖν τῷ μύθῳ,<lb n="&#8195;"/> διὰ τὴν ἐκεῖ τῆς Ἀφροδίτης
+               μάλιστα δια<hi rend="sup">τ</hi>ριβήν. Ἄθυρμα<lb n="&#8195;"/>
+            </p>
+            <pb n="Vat. Pal. gr. 154, f. 94v"
+               facs="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.094v.jpg"
+               xml:id="Dik65886_f094v"/>
+            <p xml:lang="grc"><lb n="1"/> γὰρ ἦν ἡ νῆσος τῇ δαίμονι, ἀφ᾽ ἧς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Κύπρις παρωνόμασται·<lb n="&#8195;"/> τοῦτο <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> διὰ τὴν τῶν ἐκεῖ μαχλοσύνην <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ ἐπαφρόδιτον.<lb n="&#8195;"/> Τινὲς δέ φασι Κύπρον κληθῆναι αὐτὴν ἀπὸ Κύπρου υἱοῦ<lb
+                  n="&#8195;"/> Κινύρου, ἢ ἀπὸ ἄνθους ἐκεῖ πολλοῦ φυομένου, κύπρου κα-<lb n="5"/> λουμένου. Οἱ <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> Κρύπτον ποτὲ κληθῆναι αὐτὴν λέγουσι, δι-<lb n="&#8195;"/> ὰ τὸ κεκρύφθαι ὑπὸ θαλάσσης· ὅπερ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> παρὰ Δήλου μυ-<lb n="&#8195;"/>
+               <choice>
+                  <abbr>θεύε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>θεύε<ex>ται</ex></expan>
+               </choice>, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> περὶ <choice>
+                  <abbr>Ῥό<hi rend="sup">δ</hi><am>¤</am></abbr>
+                  <expan>Ῥόδ<ex>ου</ex></expan>
+               </choice> δὲ κατὰ Πίνδαρον. Ὅτι δὲ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Σφήκεια<lb n="&#8195;"/> ἐκλήθη ποτὲ καὶ Κεραστία, ὁ Λυκόφρων δηλοῖ. Ὀλβιώτατοι<lb n="&#8195;"
+               /> δὲ νησιωτῶν οἱ Κύπριοι. <choice>
+                  <abbr>Λέγον<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Λέγοντ<ex>αι</ex></expan>
+               </choice> δέ ποτε θαλαττοκρατῆ-<lb n="10"/> σαι <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice>ρόν τινα <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> αὐτοί. Κύκλος (<seg>§ <num type="cardinal" value="508">508</num>-<num type="cardinal"
+                     value="509">509</num></seg>) τῆς νήσου σταδίων <choice>
+                  <abbr><num type="numGro" value="3420">,γυκ᾽</num></abbr>
+                  <expan>τρισχίλια τετρακόσια εἴκοσιν</expan>
+               </choice><lb n="&#8195;"/> τοῖς κατακολπίζουσι. Πολλαχοῦ δὲ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἰσθμοὺς ποιεῖ, διὰ τὸ<lb n="&#8195;"/> τοῦ σχήματος ἑτερόμηκες. (<seg>§ <num type="cardinal"
+                     value="511">511</num>-<num type="cardinal" value="512">512</num></seg>) <hi rend="red_ink">Ὅ</hi>τι
+               πρόσθεν Σουνιά-<lb n="&#8195;"/> δος κορυφῆς, ὑπέρθεν ἢ ὑπένερθεν τῶν Ἀβάντων, <choice>
+                  <abbr>φαίνε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>φαίνετ<ex>αι</ex></expan>
+               </choice><lb n="&#8195;"/> Σαλαμίς τε <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Αἴγινα. Δεῖ δὲ εἰδέναι ὅτι ταὐτὸν ἐνταῦθα<lb n="&#8195;"/> δηλοῖ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ ἐφύπερθεν Ἀβάντων <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ ὑπέρθεν, ἵνα<lb n="15"/> λέγει δι᾽ ἀμφοῖν τὸ νοτιώτερον· ὅπερ εἰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὑπένερθέν<lb n="&#8195;"/> ἐστι, διὰ τὸ καθ᾽ ἡμᾶς βόρειον ὕψος, ἀλλὰ κατὰ τὴν τοῦ<lb
+                  n="&#8195;"/> Περιηγητοῦ συνήθειαν ὕπε<subst hand="#copista_z">
+                  <del>ρ</del>
+                  <add>ν</add>
+               </subst>ερθέν, ὡς τεθέντος ἐπὶ<lb n="&#8195;"/> τῶν νοτίων τὴν ὑπερπρόθεσιν. Ἀκρωτήριον δὲ <choice>
+                  <abbr>ᾀδόμ<am>¤</am><hi rend="sup">ον</hi></abbr>
+                  <expan>ᾀδόμ<ex>εν</ex>ον</expan>
+               </choice><lb n="&#8195;"/> Ἀττικῆς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Εὐβοίας τὸ Σύνιον. Περὶ ἣν Εὔβοιάν εἰσιν οἱ<lb n="&#8195;"/> Ἄβαντες, περὶ ὧν ἐροῦμεν μετὰ
+               ὀλίγα. Ἡ δὲ Σαλαμὶς<lb n="20"/> πρώτη ἐν τῷ Σαρωνικῷ πελάγει, πρὸς <choice>
+                  <abbr>ἀνατο<hi rend="sup">λ</hi><am>¤</am></abbr>
+                  <expan>ἀνατολ<ex>ὰς</ex></expan>
+               </choice> Κορίνθου. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> με-<lb n="&#8195;"/>
+            </p>
+            <pb n="Vat. Pal. gr. 154, f. 95r"
+               facs="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.095r.jpg"
+               xml:id="Dik65886_f095r"/>
+            <p xml:lang="grc"><lb n="1"/> τ᾽αὐτὴν ἡ Αἴγινα, ἣν ἐν πολλοῖς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ Πίνδαρος ἐξυμνεῖ. Περὶ<lb n="&#8195;"/> ἧς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τοιαῦτα <choice>
+                  <abbr>γράφον<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>γράφοντ<ex>αι</ex></expan>
+               </choice>· Νῆσος πρὸ τῆς Ἐπιδαυρίας ἡ Αἴγινα<lb n="&#8195;"/> ἐνδοξοτάτη, κύκλον σταδίων <choice>
+                  <abbr><num type="numGro" value="180">ρπ᾽</num></abbr>
+                  <expan>ἑκατὸν ὀγδοήκοντα</expan>
+               </choice>, κλυζομένη τῷ τε Κρη-<lb n="&#8195;"/> τικῷ πελάγει <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τῷ Μυρτῴῳ, τῷ μεταξὺ Κρήτης <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἀργείας<lb n="5"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἀττικῆς, ἐν βάθει μὲν γεώδης, ἐπιπολῆς δὲ πε<hi rend="sup">τ</hi>ρώδης,<lb n="&#8195;"/> διὸ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ψιλή ἐστι, κριθοφόρος <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ἱκανῶς, Οἰνώνη ποτὲ ὀ-<lb n="&#8195;"/> νομαζομένη. Ἐξ αὐτῆς ὁ Αἰακός. Οἱ δὲ ἐν αὐτῇ πρῶτοι<lb
+                  n="&#8195;"/> Μυρμιδόνες ἐκλήθησαν, οὐχ ὅτι κατὰ τὸν μῦθον λοιμοῦ<lb n="&#8195;"/> τῇ νόσῳ συμπεσόντος <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τῶν ἐκεῖ ἐκτριβέντων τῇ νόσῳ,<lb n="10"/> οἱ μύρμηκες <choice>
+                  <abbr>ἄνοι</abbr>
+                  <expan>ἄνθροποι</expan>
+               </choice> ἐγένοντο, Αἰακοῦ εὐξαμένου, ἀλλ᾽ ὅτι<lb n="&#8195;"/> μυρμήκων δίκην τὴν ἀγαθὴν γῆν κάτω οὖσαν
+                  ὑπορύπτοντες<lb n="&#8195;"/> ἐπέβαλον <add hand="#copista_z" place="supralineal"><choice>
+                     <abbr>γρ</abbr>
+                     <expan>γράφεται</expan>
+                  </choice> ἐπέφερον</add> ταῖς πέτραις, ἵνα τὴν μὲν ἔχωσι γεωργεῖν, ἐν<lb n="&#8195;"/> δὲ τοῖς
+               ὀρύγμασι κατοικεῖν, φειδόμενοι τοῦ πλινθοποιεῖν,<lb n="&#8195;"/> ἵνα ἔχωσι γῆν. Δωριεῖς <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ἀνέκαθεν οἱ Αἰγινῆται Ἐπιδαύρου<lb n="15"/> κατὰ τὸν Ἡρόδοτον. Ἐκ ταύτης τῆς νήσου <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ ᾀδόμενος Κριὸς,<lb n="&#8195;"/> ἀνὴρ γενναῖος ἀθλητής· ὑφ᾽ οὗ ἀπελαυνόμενος τῆς νήσου<lb
+                  n="&#8195;"/> ὁ τῶν Λακώνων βασιλεὺς Κλεομένης <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> θέλων ἐκφοβῆ-<lb n="&#8195;"/> σαι αὐτὸν ἔφη ἀστείως τὸ ὑμνούμενον, ἤδη νῦν καταχαλκοῦ,<lb
+                  n="&#8195;"/> ὦ κριὲ, τὰ κέρατα, ὡς μεγάλῳ κακῷ συνοισόμενος. Λέ-<lb n="20"/>
+               <choice>
+                  <abbr>γε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>γετ<ex>αι</ex></expan>
+               </choice> δὲ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Σώστρατός τις Αἰγινήτης ἔμπορος μεγάλα ἐκ φορ-<lb n="&#8195;"/> τίων κερδῆσαι. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ταῦτα μὲν περὶ Αἰγίνης. Ἡ δὲ Σαλαμὶς<lb n="&#8195;"/> ἑβδομήκοντα σταδίων ἔχει περίμετρον ἢ
+                  ὀγδοήκοντα.<lb n="&#8195;"/>
+            </p>
+            <pb n="Vat. Pal. gr. 154, f. 95v"
+               facs="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.095v.jpg"
+               xml:id="Dik65886_f095v"/>
+            <p xml:lang="grc"><lb n="1"/> Ἐκαλεῖτο δέ ποτε Κυχρεία, ἀπὸ Κυχρέως τινος, οὗ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ Λυ-<lb n="&#8195;"/> κόφρων <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἀρριανὸς <choice>
+                  <abbr>μέμνην<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>μέμνηντ<ex>αι</ex></expan>
+               </choice>, ὃς ὄφις μὲν ἐπεκλήθη<lb n="&#8195;"/> διὰ τραχύτητα τοῦ τόπου, ἀπηλάθη δὲ τῆς νήσου ὑπὸ<lb
+                  n="&#8195;"/> Εὐρυλόχου. Ὠνόμασται δὲ ἡ νῆσος αὕτη <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Σκιρὰς ἀπό<lb n="5"/> τινος ἥρωος· ἀφ᾽ οὗ <choice>
+                  <abbr>ϗ</abbr>
+                  <am>¤</am>
+                  <expan>καὶ</expan>
+               </choice> Σκιρὰς Ἀθηνᾶ παρ᾽ Ἀθηναίοις, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὁ μὴν<lb n="&#8195;"/> ὁ Σκιροφοριὼν, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Σκίρα τόπος ἐν Ἀττικῇ. Εἶχε δὲ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> πο-<lb n="&#8195;"/> ταμὸν Βώκαρον λεγόμενον, ὡς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Λυκόφρων ἱστορεῖ, ὡς ἂν<lb n="&#8195;"/> εἴποι τις Βουκέφαλον· καθὰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> πηγή τις παρὰ Θεοκρίτῳ<lb n="&#8195;"/> Βούρινα Ἰταλικὴ, βοὸς ῥινὶ παρονομαζομένη.<lb n="10"/>
+               <hi rend="red_ink"> Ὅ</hi>τι δὲ περὶ Σαλαμῖνα κατεναυμαχήθη ὁ Ξέρξης, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι ναυ-<lb n="&#8195;"/> τικὸν ἀξιόλογον ἔσχε ἡ νῆσός ποτε, οὐδεὶς τῶν περὶ λό-<lb n="&#8195;"
+               /> γους ἠγνόηκε. Τὸν δὲ περὶ Σαλαμῖνα πορθμὸν στάδιον εἶ-<lb n="&#8195;"/> ναί φασιν, ὃν ἐπειρᾶτο μὲν ὁ
+               Ξέρξης διαχῶσειν <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> οὕτως<lb n="&#8195;"/> ἀποχερσῶσαι, ἀπεναντίας τι ποιῶν τοῖς περὶ τὸν Ἄθων νε-<lb n="15"/>
+               ανιεύμασιν, οὗ τὸν αὐχένα διβρύξας ἀπεθαλά-<lb n="&#8195;"/> σσωσεν, ἐκωλύθη δὲ φυγών. (<seg>§ <num
+                     type="cardinal" value="510">510</num></seg>) <hi rend="red_ink">Ὅ</hi>τι περὶ Φοινίκην<lb
+                  n="&#8195;"/> νῆσος ἡ Ἄραδος. <choice>
+                  <abbr>Λέγον<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>Λέγοντ<ex>αι</ex></expan>
+               </choice> δὲ γενέσθαι ποτὲ ἔνδοξοι οἱ<lb n="&#8195;"/> Ἀράδιοι, ὅτε στασιαζόντων τῶν ἀδελφῶν Σελεύκου<lb
+                  n="&#8195;"/> τοῦ τε Καλλινίκου <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἀντιόχου τοῦ Ἱέρακος, αὐτοὶ <hi rend="sup">τ</hi>ῷ<lb n="&#8195;"/> Καλλινίκῳ προσθέμενοι
+               ἔλαβεν ἐξουσίαν δέχεσθαι<lb n="20"/> τοὺς καταφεύγοντας ἐκ τοῦ βασιλέως παρ᾽ αὐτοὺς, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice><lb n="&#8195;"/> μὴ ἐκδιδόναι ἄκοντας· μὴ μέντοι μηδὲ ἐκπλέειν ἐξ αὐ<hi rend="sup">τ</hi>ῶν<lb
+                  n="&#8195;"/>
+            </p>
+            <pb n="Vat. Pal. gr. 154, f. 96r"
+               facs="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.096r.jpg"
+               xml:id="Dik65886_f096r"/>
+            <p xml:lang="grc"><lb n="1"/> τοὺς πρόσφυγας ἄνευ τοῦ ἐπιτρέψαι τὸν βασιλέ<hi rend="sup">α</hi>. Ἔστι <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice><lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἑτέρα νῆσος Ἄραδος, ὡς <choice>
+                  <abbr>ῥηθήσε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>ῥηθήσετ<ex>αι</ex></expan>
+               </choice> κατωτέρω.(<seg>§ <num type="cardinal" value="513">513</num>-<num type="cardinal" value="516"
+                     >516</num></seg>) <hi rend="red_ink"> Ὅ</hi>τι τὸ Αἰ-<lb n="&#8195;"/> γαῖον πέλαγος ἀπειρεσίας
+               λέγει ἔχειν νήσους, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι θνη-<lb n="&#8195;"/> τὸν βαθὴν πόρον τὸν τοῦ Αἰγαίου καλεῖ. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι τὸν Ἑλλή-<lb n="5"/> σποντον παραφράζων ἢ περιφράζων ἢ ἐτυμολογῶν<lb n="&#8195;"/> στενωπὸν
+               ὕδωρ Ἀθαμαντίδος Ἕλλης λέγει αὐτὸν, ὡς ἐκεῖ<lb n="&#8195;"/> καταπεσούσης τῆς Ἕλλης τῆς θυγατρὸς τοῦ
+                  Ἀθάμαντος,<lb n="&#8195;"/>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> λιπούσης τῷ τόπῳ τὸ ὄνομα, ἧς <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τάφον Ἡρόδοτος<lb n="&#8195;"/> ἱστορεῖ περὶ τὴν Θρᾳκικὴν Χερρόνησον. Ὁ δὲ Διονύσιος<lb n="10"
+               /> λέγει ὅτι <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Σηστὸς ἐκεῖ καὶ Ἄβυδος ἐναντίον ὅρμον ἔθεντο·<lb n="&#8195;"/> Σηστὸς μὲν, Λεσβίων ἄποικος,
+               καθὰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ Μάδυτος, ὡς<lb n="&#8195;"/> Γεωγράφος φησὶ, Χερρονησία πόλις, Ἀβύδου διέχου-<lb n="&#8195;"
+               /> σα σταδίους <choice>
+                  <abbr><num type="numGro" value="30">λ᾽</num></abbr>
+                  <expan>τριάκοντα</expan>
+               </choice> ἐκ λιμένος εἰς λιμένα. Ἔνθα <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ <choice>
+                  <abbr>λεγομ<am>¤</am><hi rend="sup">η</hi></abbr>
+                  <expan>λεγομ<ex>έν</ex>η</expan>
+               </choice><lb n="&#8195;"/> Ἀποβάθρα, ὅπου ἡ Ξερξικὴ σχεδία ἐπήγνυτο. Πα-<lb n="15"/> ρὰ Εὐρώπην δέ ἐστιν
+               ἡ ῥηθεῖσα πόλις, λεγομένη Ἀττι-<lb n="&#8195;"/> κῶς μὲν ἡ Σηστὸς, παρὰ δ᾽ Ἐφόρῳ ὁ Σηστός. Ἔσχε δέ<lb
+                  n="&#8195;"/> ποτε τεῖχος ἰσχυρὸν, ὡς Ἡρόδοτος ἱστορεῖ. Ἄβυδος δὲ<lb n="&#8195;"/> πρὸς ἀνατολὰς
+               ἀντιπαρήκουσα τῷ Σηστῷ, κτίσμα<lb n="&#8195;"/> Μιλησίων, ἴσον διέχουσα Λαμψάκου <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰλίου, ὡς ὁ Γε-<lb n="20"/> ωγράφος φησίν· ἔνθα τὸ ἑπταστάδιον τοῦ πορθμοῦ,<lb n="&#8195;"/>
+               ὅπερ ὁ Ξέρξης ἔζευξεν. Ἐνεπρήσθη δὲ ἡ Ἄβυδος αὕτη<lb n="&#8195;"/> ὑπὸ Δαρείου τοῦ <choice>
+                  <abbr>πρς</abbr>
+                  <expan>πατρὸς</expan>
+               </choice> Ξέρξου. Εἶναι <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>λέγε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>λέγετ<ex>αι</ex></expan>
+               </choice> ποτε <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Λι-<lb n="&#8195;"/>
+            </p>
+            <pb n="Vat. Pal. gr. 154, f. 96v"
+               facs="https://digi.ub.uni-heidelberg.de/diglitData/image/bav_pal_gr_154/2/Pal.gr.154.f.096v.jpg"
+               xml:id="Dik65886_f096v"/>
+            <p xml:lang="grc"><lb n="1"/> βυκὴ Ἄβυδος Αἰγυπτία, ἔχουσα Μεμνόνειον βασιλέα,<lb n="&#8195;"/> δευτερεύουσα
+               μετὰ τὰς ἑκατομπύλους Θήβας. <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰταλικὴ<lb n="&#8195;"/>
+               <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice> ἱστόρηται Ἄβυδος. Ὅτι δὲ περὶ Ἑλλησπόντου ἀμφεβλή<hi rend="sup">θ</hi><hi rend="sup">η</hi><lb
+                  n="&#8195;"/> τοῖς παλαιοῖς ἄλλα τὲ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> πόθεν ἂν ἄρχοιτο, ἤδη προγέγραπται.<lb n="5"/> Ἴστρον δέ τινά φασιν ἱστορεῖν, τέσσαρας γενέσθαι
+                  μεγά-<lb n="&#8195;"/> λους <choice>
+                  <abbr>κ<am>¤</am><hi rend="sup">τ</hi><am>¤</am>κλυσμοὺς</abbr>
+                  <expan>κ<ex>α</ex>τ<ex>α</ex>κλυσμοὺς</expan>
+               </choice>, ὧν ἐφ᾽ ἑνὶ διαρραγέντα τὸν Ἑλλήσποντον<lb n="&#8195;"/> ἀφορίσαι τῆς Ἀσίας τὴν Εὐρώπην. Ἰστέον
+               δὲ ὅτι κατὰ τὸν<lb n="&#8195;"/> γράψαντα τὰ Ἐθνικὰ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἰταλικὴ πόλις <choice>
+                  <abbr>λέγε<hi rend="sup">τ</hi><am>¤</am></abbr>
+                  <expan>λέγετ<ex>αι</ex></expan>
+               </choice>
+               <choice>
+                  <abbr>οὐδετέρ<am>¤</am></abbr>
+                  <expan>οὐδετέρ<ex>ως</ex></expan>
+               </choice><lb n="&#8195;"/> τὸ Ἄβυδον, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ὅτι ἐπὶ συκοφαντίᾳ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> μαλακίᾳ διεβάλλον-<lb n="10"/> το οἱ Μιλήσιοι Ἀβυδηνοὶ οὗτοι. Ὅθεν <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> παροιμία, μηδ᾽ εἰ-<lb n="&#8195;"/> κῆ τὴν Ἄβυδον πατεῖν, ἤγουν μὴ θαρρούντως αὐτῆς ἐπι-<lb
+                  n="&#8195;"/> βαίνειν. Ἐξ αὐτῆς <choice>
+                  <abbr>𝄢</abbr>
+                  <expan>δὲ</expan>
+               </choice>
+               <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἑτέρα παροιμία ἐπὶ τῶν Ἀβυδῶν,<lb n="&#8195;"/> τὸ Ἀβυδηνὸν ἐπιφόρημα. Τὸ δὲ ἐναντίον ὅρμον
+                  ἔθεντο<lb n="&#8195;"/> ἀντὶ τοῦ κατεναντίον κεῖνται ἀλλήλαις <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἀντίπορθμοί εἰσιν.<lb n="15"/> (<seg>§ <num type="cardinal" value="517">517</num>-<num
+                     type="cardinal" value="524">524</num></seg>) <supplied reason="omision" resp="#CGB">Ὅ</supplied>τι
+               τῶν ἐν τῷ Αἰγαίῳ νήσων ὅσαι ὑπὸ νεύματι χειρὸς<lb n="&#8195;"/> λαιᾶς κεῖνται τοῖς εἰσιοῦσι τὸν
+               Ἑλλήσποντον, τοῖς εὐρω-<lb n="&#8195;"/> πέοις εἰσίν· ὧν ἐστι <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ Μάκρις <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ Σκῦρος <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ Πεπά-<lb n="&#8195;"/> ρηθος <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> ἡ Λῆμνος, ἥτις ῞Ηφαιστον ἐτίμα, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Ἴμβρος <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice><lb n="&#8195;"/> Σάμος Θρᾳκία, ἥτις Καβείρων εἶχεν ἱερὰ, οἳ <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Κορύβαν-<lb n="20"/> τες ἐλέγοντο, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> Θάσος, ἥτις <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> χρυσία εἶχέ ποτε, <choice>
+                  <abbr>ϗ</abbr>
+                  <expan>καὶ</expan>
+               </choice> τὸ Δά-<lb n="&#8195;"/> τον συνῴκισε, πόλιν ἔνδοξον περὶ τὴν τοῦ Στρυμόνος<lb n="&#8195;"/>
+               παραλίαν. Ἀφ᾽ οὗ παροιμίαν οἱ παλαιοί φασι Δάτος<lb n="&#8195;"/>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>
